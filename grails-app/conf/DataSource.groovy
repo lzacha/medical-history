@@ -1,21 +1,45 @@
 dataSource {
     pooled = true
+    /*
     driverClassName = "org.h2.Driver"
     username = "sa"
     password = ""
+    */
 }
+
 hibernate {
     cache.use_second_level_cache = true
     cache.use_query_cache = false
     cache.region.factory_class = 'net.sf.ehcache.hibernate.EhCacheRegionFactory'
 }
+
 // environment specific settings
 environments {
     development {
+
+        dataSource {
+            driverClassName = "com.mysql.jdbc.Driver"
+            dbCreate = "create-drop" // one of 'create', 'create-drop','update'
+            url = "jdbc:mysql://localhost/medical_history"
+            username = "favaloro"
+            password = "123456"
+        }
+
+        /* --> To see
+        hibernate {
+            show_sql = true
+        }
+        <-- */
+
+        /*
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:h2:mem:devDb;MVCC=TRUE"
         }
+        */
+
+
+
     }
     test {
         dataSource {
