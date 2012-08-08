@@ -11,6 +11,6 @@ class SystemUser {
 	
 	Date lastLogin
 		
-    static constraints = {
-    }
+//    static constraints = {
+//    }
 }

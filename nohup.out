@@ -1,1 +1,0 @@
-[ 359959]   WARN - l.treeView.AbstractTreeBuilder - Tree is not dumb-mode-aware; treeBuilder=com.intellij.javaee.module.view.JavaeeTreeBuilderImpl@181f4dd treeStructure=com.intellij.javaee.module.view.JavaeeTreeBuilderImpl$1@37efbe 
