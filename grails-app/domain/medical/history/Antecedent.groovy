@@ -1,7 +1,7 @@
 package medical.history
 
 /*
- * Antecedent Domain class 2
+ * Antecedent Domain class 3
  */
 class Antecedent {
 
