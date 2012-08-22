@@ -1,4 +1,4 @@
-import medical.history.SystemUser
+import medicalhistory.SystemUser
 import grails.util.Environment
 
 class BootStrap {
