@@ -91,3 +91,5 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+//grails.plugin.memcached.hosts = '127.0.0.1:11211'

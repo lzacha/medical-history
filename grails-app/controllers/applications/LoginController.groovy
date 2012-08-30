@@ -4,6 +4,7 @@ import grails.converters.XML
 import grails.converters.JSON
 import medicalhistory.SystemUser
 import javax.servlet.http.Cookie
+import redis.clients.jedis.Jedis
 
 /**
  * /[controller]/[action]/[id]
@@ -37,11 +38,14 @@ class LoginController {
      */
     def validate() {
 
+        /* Jedis test
+        Jedis j = new Jedis("localhost")
+        j.set("foo1", "bar2");
+         */
+
         if (loginService.doLogin(params.username, params.password)) {
             Cookie cookie = new Cookie("myCookie", "CookieMonster")
-            cookie.maxAge = 1000
             response.addCookie(cookie)
-
             redirect(controller: "main", action: "patient")
         } else {
             redirect(action: "index")
