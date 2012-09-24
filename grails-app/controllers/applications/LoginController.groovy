@@ -9,7 +9,7 @@ import redis.clients.jedis.Jedis
 /**
  * /[controller]/[action]/[id]
  */
-class LoginController {
+class LoginController{
 
     /*
      * Services and Dependency Injection, "autowiring"
@@ -44,8 +44,8 @@ class LoginController {
          */
 
         if (loginService.doLogin(params.username, params.password)) {
-            Cookie cookie = new Cookie("myCookie", "CookieMonster")
-            response.addCookie(cookie)
+            //Cookie cookie = new Cookie("myCookie", "CookieMonster")
+            //response.addCookie(cookie)
             redirect(controller: "main", action: "patient")
         } else {
             redirect(action: "index")
