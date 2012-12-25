@@ -12,3 +12,5 @@ target
 /web-app/WEB-INF/classes
 .classpath
 *.class
+.classpath
+.project
