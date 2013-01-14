@@ -7,19 +7,29 @@ dataSource {
     */
 }
 
+/*
 hibernate {
     cache.use_second_level_cache = true
     cache.use_query_cache = true
     cache.provider_class = 'com.googlecode.hibernate.memcached.MemcachedCacheProvider'
+
     memcached {
         servers = "127.0.0.1:11211 127.0.0.1:11311 127.0.0.1:11411 127.0.0.1:11511 127.0.0.1:11611"
     }
+}
+*/
+
+hibernate {
+    cache.use_second_level_cache = true
+    cache.use_query_cache = false
+    cache.region.factory_class = 'net.sf.ehcache.hibernate.EhCacheRegionFactory'
 }
 
 // environment specific settings
 environments {
     development {
 
+        /*
         dataSource {
             driverClassName = "com.mysql.jdbc.Driver"
             dbCreate = "create-drop" // one of 'create', 'create-drop','update'
@@ -27,6 +37,7 @@ environments {
             username = "favaloro"
             password = "123456"
         }
+        */
 
         /* --> To see
         hibernate {
@@ -34,14 +45,11 @@ environments {
         }
         <-- */
 
-        /*
+
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:h2:mem:devDb;MVCC=TRUE"
         }
-        */
-
-
 
     }
     test {

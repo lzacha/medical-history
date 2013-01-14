@@ -16,7 +16,7 @@
   <body>
     <!-- main/patient.gsp body -->
     Patient GSP page
-    Login Hash:<g:cookie name="logingHash" />
+    Login Hash:<g:cookie name="myCookie" />
     <!-- main/patient.gsp body -->
   </body>
 </html>

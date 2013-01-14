@@ -44,8 +44,10 @@ class LoginController{
          */
 
         if (loginService.doLogin(params.username, params.password)) {
-            //Cookie cookie = new Cookie("myCookie", "CookieMonster")
-            //response.addCookie(cookie)
+
+            Cookie loginCookie = loginService.getLoginCookie()
+            response.addCookie(loginCookie)
+
             redirect(controller: "main", action: "patient")
         } else {
             redirect(action: "index")

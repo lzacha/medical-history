@@ -32,6 +32,7 @@ class BootStrap {
 
     def setDevelopmentData(){
         //System users
+
         def su1 = new SystemUser(username: 'lzacharewicz', password: '123456', firstName: 'Leonardo', lastName: 'Zacharewicz', status: 'Active', lastLogin: new Date())
         def su2 = new SystemUser(username: 'mmaceiras', password: '123456', firstName: 'Mariano', lastName: 'Maceiras', status: 'Active', lastLogin: new Date())
         def su3 = new SystemUser(username: 'rgirlando', password: '123456', firstName: 'Rodrigo', lastName: 'Girlando', status: 'Inactive', lastLogin: new Date())

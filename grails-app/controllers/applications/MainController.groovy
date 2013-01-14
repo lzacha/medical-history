@@ -9,7 +9,6 @@ class MainController {
      }
 
     def patient() {
-        //Cookie cookie = new Cookie("myCookie", "CookieMonster")
-        //response.addCookie(cookie)
+
     }
 }
