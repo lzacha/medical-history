@@ -4,7 +4,6 @@ import grails.converters.XML
 import grails.converters.JSON
 import medicalhistory.SystemUser
 import javax.servlet.http.Cookie
-import redis.clients.jedis.Jedis
 
 /**
  * /[controller]/[action]/[id]
@@ -48,7 +47,7 @@ class LoginController{
             Cookie loginCookie = loginService.getLoginCookie()
             response.addCookie(loginCookie)
 
-            redirect(controller: "main", action: "patient")
+            redirect(controller: "medicalHistory", action: "patient")
         } else {
             redirect(action: "index")
         }
