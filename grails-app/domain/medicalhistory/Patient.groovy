@@ -2,12 +2,15 @@ package medicalhistory
 
 class Patient {
 
+    static searchable = {
+        spellCheck "include"
+    }
+
 	String firstName
 	String lastName
 	String sexId
 	Date dateBirth
-		
 
-    static constraints = {
-    }
+    //static constraints = {
+    //}
 }

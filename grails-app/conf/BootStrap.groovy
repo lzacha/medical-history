@@ -1,25 +1,19 @@
 import medicalhistory.SystemUser
 import grails.util.Environment
+import medicalhistory.Patient
 
 class BootStrap {
 
     def init = { servletContext ->
 
-
-
         if(Environment.current == Environment.DEVELOPMENT)
             setDevelopmentData()
-
-
 
         if(Environment.current == Environment.TEST)
             setTestData()
 
-
         if(Environment.current == Environment.PRODUCTION)
             setProductionData()
-
-
 
     }
 
@@ -31,8 +25,8 @@ class BootStrap {
     }
 
     def setDevelopmentData(){
-        //System users
 
+        //System users
         def su1 = new SystemUser(username: 'lzacharewicz', password: '123456', firstName: 'Leonardo', lastName: 'Zacharewicz', status: 'Active', lastLogin: new Date())
         def su2 = new SystemUser(username: 'mmaceiras', password: '123456', firstName: 'Mariano', lastName: 'Maceiras', status: 'Active', lastLogin: new Date())
         def su3 = new SystemUser(username: 'rgirlando', password: '123456', firstName: 'Rodrigo', lastName: 'Girlando', status: 'Inactive', lastLogin: new Date())
@@ -44,6 +38,18 @@ class BootStrap {
         su3.save()
         su4.save()
         su5.save()
+
+        def patient1 = new Patient(firstName: "Ariel", lastName: "Ortega", sexId: "Masculino", dateBirth:new Date())
+        def patient2 = new Patient(firstName: "Diego", lastName: "Latorre", sexId: "Masculino", dateBirth:new Date())
+        def patient3 = new Patient(firstName: "Carlos", lastName: "Tevez", sexId: "Masculino", dateBirth:new Date())
+        def patient4 = new Patient(firstName: "Martin", lastName: "Palremo", sexId: "Masculino", dateBirth:new Date())
+        def patient5 = new Patient(firstName: "Javier", lastName: "Zanetti", sexId: "Masculino", dateBirth:new Date())
+
+        patient1.save()
+        patient2.save()
+        patient3.save()
+        patient4.save()
+        patient5.save()
 
     }
 

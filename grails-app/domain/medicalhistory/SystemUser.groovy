@@ -2,7 +2,11 @@ package medicalhistory
 
 class SystemUser {
 
-	String username
+    static searchable = {
+        spellCheck "include"
+    }
+
+    String username
 	String password
 
 	String firstName

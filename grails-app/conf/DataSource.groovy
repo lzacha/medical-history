@@ -4,6 +4,11 @@ dataSource {
     driverClassName = "org.h2.Driver"
     username = "sa"
     password = ""
+
+    driverClassName = "com.mysql.jdbc.Driver"
+    username = "admin"
+    password = "admin"
+    dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
     */
 }
 
@@ -25,6 +30,7 @@ hibernate {
     cache.region.factory_class = 'net.sf.ehcache.hibernate.EhCacheRegionFactory'
 }
 
+
 // environment specific settings
 environments {
     development {
@@ -32,12 +38,11 @@ environments {
         /*
         dataSource {
             driverClassName = "com.mysql.jdbc.Driver"
-            dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-            url = "jdbc:mysql://localhost/medical_history"
-            username = "favaloro"
-            password = "123456"
-        }
-        */
+            dbCreate = "update" // one of 'create', 'create-drop','update'
+            url = "jdbc:mysql://localhost:8889/mysql"
+
+        } */
+
 
         /* --> To see
         hibernate {

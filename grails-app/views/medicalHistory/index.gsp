@@ -13,7 +13,7 @@
 </head>
 <body>
        <!-- Init medicalHistory/index.gsp -->
-       index
+       Bienvenido al index.gsp del HistoryController
        <!-- Final medicalHistory/index.gsp -->
 </body>
 </html>

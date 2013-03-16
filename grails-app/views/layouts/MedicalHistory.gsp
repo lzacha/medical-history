@@ -47,12 +47,14 @@
     <link rel="stylesheet" href="${resource(dir: 'css/chico-ui/css', file: 'chico-min-0.13.1.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'css/chico-ui/css', file: 'mesh-min-2.1.css')}" type="text/css">
 
-    <!-- chico-ui js-->
-    <g:javascript src="chico-ui/js/chico-min-0.13.1.js"/>
+
     <!-- jquery -->
     <g:javascript library="jquery" plugin="jquery"/>
 
+    <!-- g:layoutHead -->
     <g:layoutHead/>
+
+    <!-- r:layoutResources -->
     <r:layoutResources/>
 
 </head>
@@ -68,8 +70,8 @@
             <li>
                 <span>Pacientes</span>
                 <ul>
-                    <li><a href="#">Buscar Paciente</a></li>
-                    <li><a href="#">Agregar Paciente</a></li>
+                    <li><a href="searchPatient">Buscar Paciente</a></li>
+                    <li><a href="addPatient">Agregar Paciente</a></li>
                 </ul>
             </li>
             <li>
@@ -102,8 +104,43 @@
     <p>Footer de la app</p>
 </div>
 
+<!-- chico-ui js-->
+<g:javascript src="chico-ui/js/chico-min-0.13.1.js"/>
+
+<!-- g:javascript library=application -->
 <g:javascript library="application"/>
+
+<!-- r:layoutResources -->
 <r:layoutResources />
+
+<!-- medicalHistory.gsp script tag-->
+<script>
+
+    //Menu
+    var foo = $("#example").menu();
+
+    //foo.on("select",function(){
+        //alert("alert");
+    //});
+
+    //foo.select(1);
+    //foo.select(2);
+    /*
+    var foo = $("#example").menu({
+        "bar": foobar,
+        "baz": quux
+    });*/
+
+</script>
+<script>
+    var ac = $("#autocomplete").autoComplete({
+        "url": "/medical-history/suggest?q=",
+        "jsonpCallback": "autoComplete"
+    });
+
+    var autoComplete = function(data){ ac.suggest(data); };
+
+</script>
 
 </body>
 </html>
