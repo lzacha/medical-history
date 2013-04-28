@@ -19,10 +19,7 @@ class MedicalHistoryController {
 
     }
 
-    def searchPatient(){
-
-
-    }
+    def searchPatient(){}
 
     def addPatient() {}
 
@@ -36,12 +33,14 @@ class MedicalHistoryController {
 
         try {
 
-            def results = [searchResult: searchableService.search(params.q, params)]
+            def search = searchableService.search(params.q, params)
+            def patients = []
 
-            results.each { k,v -> print "$k = $v"}
+            search.results.each { it ->
+                patients.add(it.firstName+" "+it.lastName)
+            };
 
-            def teams = ["Boca Juniors", "River Plate", "Racing Club"]
-            def json = teams as JSON
+            def json = patients as JSON
             render "autoComplete(" + json + ")"
 
         } catch (SearchEngineQueryParseException ex) {

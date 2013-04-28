@@ -9,7 +9,7 @@ class Patient {
 	String firstName
 	String lastName
 	String sexId
-	Date dateBirth
+	Date birthDate
 
     //static constraints = {
     //}

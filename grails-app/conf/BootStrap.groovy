@@ -39,17 +39,25 @@ class BootStrap {
         su4.save()
         su5.save()
 
-        def patient1 = new Patient(firstName: "Ariel", lastName: "Ortega", sexId: "Masculino", dateBirth:new Date())
-        def patient2 = new Patient(firstName: "Diego", lastName: "Latorre", sexId: "Masculino", dateBirth:new Date())
-        def patient3 = new Patient(firstName: "Carlos", lastName: "Tevez", sexId: "Masculino", dateBirth:new Date())
-        def patient4 = new Patient(firstName: "Martin", lastName: "Palremo", sexId: "Masculino", dateBirth:new Date())
-        def patient5 = new Patient(firstName: "Javier", lastName: "Zanetti", sexId: "Masculino", dateBirth:new Date())
+        def patient1 = new Patient(firstName: "Ariel", lastName: "Ortega", sexId: "Masculino", birthDate: new Date())
+        def patient2 = new Patient(firstName: "Diego", lastName: "Latorre", sexId: "Masculino", birthDate:new Date())
+        def patient3 = new Patient(firstName: "Carlos", lastName: "Tevez", sexId: "Masculino", birthDate:new Date())
+        def patient4 = new Patient(firstName: "Martin", lastName: "Palermo", sexId: "Masculino", birthDate:new Date())
+        def patient5 = new Patient(firstName: "Javier", lastName: "Zanetti", sexId: "Masculino", birthDate:new Date())
+        def patient6 = new Patient(firstName: "Diego", lastName: "Maradona", sexId: "Masculino", birthDate:new Date())
+        def patient7 = new Patient(firstName: "Jose", lastName: "Flores", sexId: "Masculino", birthDate:new Date())
+
+
 
         patient1.save()
         patient2.save()
         patient3.save()
         patient4.save()
         patient5.save()
+        patient6.save()
+        patient7.save()
+
+
 
     }
 

@@ -16,13 +16,14 @@
 
     <form id="example_form" action="#" method="GET" class="ch-form">
         <div class="ch-form-row">
-            <label for="autocomplete">Your country:</label>
+            <label for="autocomplete">Paciente:</label>
             <input id="autocomplete"
                    type="text"
                    name="autocomplete"
-                   placeholder="Equipos de Futbol"
+                   placeholder="Nombre del paciente"
                    class="autoComplete_Example ch-autoComplete"
             />
+            <input type="submit" value="Buscar">
         </div>
     </form>
 
