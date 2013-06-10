@@ -13,6 +13,8 @@ class SystemUser {
 	String lastName
 	String status
 
+    String role
+
 	Date lastLogin
 
 //    static constraints = {

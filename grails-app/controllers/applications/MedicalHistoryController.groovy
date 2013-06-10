@@ -21,7 +21,10 @@ class MedicalHistoryController {
 
     def searchPatient(){}
 
-    def addPatient() {}
+    def addPatient() {
+        //render(template: "/src/templates/scaffolding/form")
+
+    }
 
     def suggest(){
 
