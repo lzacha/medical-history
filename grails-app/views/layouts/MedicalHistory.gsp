@@ -140,6 +140,7 @@
 
     var autoComplete = function(data){ ac.suggest(data); };
 
+    var patientTabs = $("#patientTabs").tabs();
 </script>
 
 </body>

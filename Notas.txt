@@ -1,0 +1,5 @@
+- Poner las contraints a todas las entidades
+
+
+
+Para generar todo el template: generate-all medicalhistory.Antecedent

@@ -6,6 +6,8 @@ class Patient {
         spellCheck "include"
     }
 
+
+    int patientId
 	String firstName
 	String lastName
 	String sexId
@@ -16,11 +18,10 @@ class Patient {
     static hasManyMedicalStudies = [medicalStudies:MedicalStudy]
     static hasManyPlates = [plates:Plate]
 
-
-    //Antecedent antecedent
-    //MedicalStudy medicalStudy
-    //Treatment treatment
-    //Plate plate
-    //static constraints = {
-    //}
+    static constraints = {
+        firstName(blank:false)
+        lastName(blank:false)
+        sexId(blank:false)
+        birthDate(blank:false)
+    }
 }

@@ -6,17 +6,31 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'medicalStudyDetail.label', default: 'MedicalStudyDetail')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
-        <!-- chico-ui css-->
-        <link rel="stylesheet" href="/medical-history/static/css/chico-ui/css/chico-min-0.13.1.css" type="text/css">
-        <link rel="stylesheet" href="/medical-history/static/css/chico-ui/css/mesh-min-2.1.css" type="text/css">
 	</head>
 	<body>
+		<a href="#show-medicalStudyDetail" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		<div class="nav" role="navigation">
+			<ul>
+				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+			</ul>
+		</div>
 		<div id="show-medicalStudyDetail" class="content scaffold-show" role="main">
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<ol class="property-list medicalStudyDetail">
+			
+				<g:if test="${medicalStudyDetailInstance?.ageRange}">
+				<li class="fieldcontain">
+					<span id="ageRange-label" class="property-label"><g:message code="medicalStudyDetail.ageRange.label" default="Age Range" /></span>
+					
+						<span class="property-value" aria-labelledby="ageRange-label"><g:link controller="ageRange" action="show" id="${medicalStudyDetailInstance?.ageRange?.id}">${medicalStudyDetailInstance?.ageRange?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
 			
 			</ol>
 			<g:form>

@@ -5,7 +5,10 @@ package medicalhistory
  */
 class Antecedent {
 
-    static hasMany = [antecedents:AntecedentDetail]
+	Boolean antecedentValue
+    Patient patient
+    
+    static hasMany = [antecedentDetails:AntecedentDetail]
     
     static constraints = {
     }

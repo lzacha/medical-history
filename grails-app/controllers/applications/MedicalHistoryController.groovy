@@ -2,6 +2,7 @@ package applications
 
 import grails.converters.JSON
 import org.compass.core.engine.SearchEngineQueryParseException
+import medicalhistory.Patient
 
 class MedicalHistoryController {
 
@@ -15,11 +16,13 @@ class MedicalHistoryController {
 
     //Patient Views
     def patient() {
-
-
+        Patient p = Patient.get(params.id)
+        [patient:p]
     }
 
-    def searchPatient(){}
+    def searchPatient(){
+        //Patient p = Patient.get(params.id)
+    }
 
     def addPatient() {
         //render(template: "/src/templates/scaffolding/form")

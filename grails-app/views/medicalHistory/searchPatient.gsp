@@ -1,18 +1,9 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: lzacharewicz
-  Date: 27/1/13
-  Time: 9:45 PM
-  To change this template use File | Settings | File Templates.
---%>
-
-<%@ page contentType="text/html;charset=UTF-8" %>
-<html>
-<head>
-  <title>Buscar Paciente</title>
-</head>
-<body>
-    <h1>Buscar Paciente</h1>
+<g:if test="${name == 'leo'}">
+<div>
+    <h1>Leo</h1>
+</g:if>
+<g:else>
+    <h1>Buscar Paciente e</h1>
 
     <form id="example_form" action="#" method="GET" class="ch-form">
         <div class="ch-form-row">
@@ -26,7 +17,8 @@
             <input type="submit" value="Buscar">
         </div>
     </form>
+</div>
+
+</g:else>
 
 
-</body>
-</html>
