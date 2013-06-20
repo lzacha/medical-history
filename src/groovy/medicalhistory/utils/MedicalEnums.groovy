@@ -1,3 +1,4 @@
+package medicalhistory.utils
 class MedicalEnums {
 	
 	enum PatientSex {
