@@ -24,11 +24,15 @@
 				<thead>
 					<tr>
 					
+						<g:sortableColumn property="observation" title="${message(code: 'observation.observation.label', default: 'Observation')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${observationInstanceList}" status="i" var="observationInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${observationInstance.id}">${fieldValue(bean: observationInstance, field: "observation")}</g:link></td>
 					
 					</tr>
 				</g:each>

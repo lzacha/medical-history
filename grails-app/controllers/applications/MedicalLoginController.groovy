@@ -14,17 +14,13 @@ class MedicalLoginController {
     }
 
     def validate(){
-        /* Jedis test
-       Jedis j = new Jedis("localhost")
-       j.set("foo1", "bar2");
-        */
 
         if (loginService.doLogin(params.username, params.password)) {
 
             Cookie loginCookie = loginService.getLoginCookie()
             response.addCookie(loginCookie)
 
-            redirect(controller: "medicalHistory", action: "patient")
+            redirect(controller: "medicalHistory", action: "index")
         } else {
             redirect(action: "index")
         }

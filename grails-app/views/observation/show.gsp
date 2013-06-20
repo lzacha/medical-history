@@ -23,6 +23,15 @@
 			</g:if>
 			<ol class="property-list observation">
 			
+				<g:if test="${observationInstance?.observation}">
+				<li class="fieldcontain">
+					<span id="observation-label" class="property-label"><g:message code="observation.observation.label" default="Observation" /></span>
+					
+						<span class="property-value" aria-labelledby="observation-label"><g:fieldValue bean="${observationInstance}" field="observation"/></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

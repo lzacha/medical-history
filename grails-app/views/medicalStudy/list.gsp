@@ -26,6 +26,14 @@
 					
 						<th><g:message code="medicalStudy.doctor.label" default="Doctor" /></th>
 					
+						<g:sortableColumn property="mainStudy" title="${message(code: 'medicalStudy.mainStudy.label', default: 'Main Study')}" />
+					
+						<th><g:message code="medicalStudy.patient.label" default="Patient" /></th>
+					
+						<g:sortableColumn property="studyDate" title="${message(code: 'medicalStudy.studyDate.label', default: 'Study Date')}" />
+					
+						<th><g:message code="medicalStudy.unit.label" default="Unit" /></th>
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -33,6 +41,14 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${medicalStudyInstance.id}">${fieldValue(bean: medicalStudyInstance, field: "doctor")}</g:link></td>
+					
+						<td>${fieldValue(bean: medicalStudyInstance, field: "mainStudy")}</td>
+					
+						<td>${fieldValue(bean: medicalStudyInstance, field: "patient")}</td>
+					
+						<td><g:formatDate date="${medicalStudyInstance.studyDate}" /></td>
+					
+						<td>${fieldValue(bean: medicalStudyInstance, field: "unit")}</td>
 					
 					</tr>
 				</g:each>

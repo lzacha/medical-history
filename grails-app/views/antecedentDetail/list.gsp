@@ -24,11 +24,17 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="antecedentDetailId" title="${message(code: 'antecedentDetail.antecedentDetailId.label', default: 'Antecedent Detail Id')}" />
+						<g:sortableColumn property="abbreviation" title="${message(code: 'antecedentDetail.abbreviation.label', default: 'Abbreviation')}" />
 					
-						<g:sortableColumn property="description" title="${message(code: 'antecedentDetail.description.label', default: 'Description')}" />
+						<g:sortableColumn property="completeName" title="${message(code: 'antecedentDetail.completeName.label', default: 'Complete Name')}" />
 					
-						<g:sortableColumn property="internalCode" title="${message(code: 'antecedentDetail.internalCode.label', default: 'Internal Code')}" />
+						<g:sortableColumn property="decimalsQuantity" title="${message(code: 'antecedentDetail.decimalsQuantity.label', default: 'Decimals Quantity')}" />
+					
+						<g:sortableColumn property="fieldType" title="${message(code: 'antecedentDetail.fieldType.label', default: 'Field Type')}" />
+					
+						<g:sortableColumn property="maxValue" title="${message(code: 'antecedentDetail.maxValue.label', default: 'Max Value')}" />
+					
+						<g:sortableColumn property="measureUnit" title="${message(code: 'antecedentDetail.measureUnit.label', default: 'Measure Unit')}" />
 					
 					</tr>
 				</thead>
@@ -36,11 +42,17 @@
 				<g:each in="${antecedentDetailInstanceList}" status="i" var="antecedentDetailInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${antecedentDetailInstance.id}">${fieldValue(bean: antecedentDetailInstance, field: "antecedentDetailId")}</g:link></td>
+						<td><g:link action="show" id="${antecedentDetailInstance.id}">${fieldValue(bean: antecedentDetailInstance, field: "abbreviation")}</g:link></td>
 					
-						<td>${fieldValue(bean: antecedentDetailInstance, field: "description")}</td>
+						<td>${fieldValue(bean: antecedentDetailInstance, field: "completeName")}</td>
 					
-						<td>${fieldValue(bean: antecedentDetailInstance, field: "internalCode")}</td>
+						<td>${fieldValue(bean: antecedentDetailInstance, field: "decimalsQuantity")}</td>
+					
+						<td>${fieldValue(bean: antecedentDetailInstance, field: "fieldType")}</td>
+					
+						<td>${fieldValue(bean: antecedentDetailInstance, field: "maxValue")}</td>
+					
+						<td>${fieldValue(bean: antecedentDetailInstance, field: "measureUnit")}</td>
 					
 					</tr>
 				</g:each>

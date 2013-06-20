@@ -23,6 +23,42 @@
 			</g:if>
 			<ol class="property-list ageRange">
 			
+				<g:if test="${ageRangeInstance?.rangeDescription}">
+				<li class="fieldcontain">
+					<span id="rangeDescription-label" class="property-label"><g:message code="ageRange.rangeDescription.label" default="Range Description" /></span>
+					
+						<span class="property-value" aria-labelledby="rangeDescription-label"><g:fieldValue bean="${ageRangeInstance}" field="rangeDescription"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${ageRangeInstance?.minValue}">
+				<li class="fieldcontain">
+					<span id="minValue-label" class="property-label"><g:message code="ageRange.minValue.label" default="Min Value" /></span>
+					
+						<span class="property-value" aria-labelledby="minValue-label"><g:fieldValue bean="${ageRangeInstance}" field="minValue"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${ageRangeInstance?.maxValue}">
+				<li class="fieldcontain">
+					<span id="maxValue-label" class="property-label"><g:message code="ageRange.maxValue.label" default="Max Value" /></span>
+					
+						<span class="property-value" aria-labelledby="maxValue-label"><g:fieldValue bean="${ageRangeInstance}" field="maxValue"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${ageRangeInstance?.sex}">
+				<li class="fieldcontain">
+					<span id="sex-label" class="property-label"><g:message code="ageRange.sex.label" default="Sex" /></span>
+					
+						<span class="property-value" aria-labelledby="sex-label"><g:fieldValue bean="${ageRangeInstance}" field="sex"/></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

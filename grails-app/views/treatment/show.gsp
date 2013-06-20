@@ -23,6 +23,60 @@
 			</g:if>
 			<ol class="property-list treatment">
 			
+				<g:if test="${treatmentInstance?.frequency}">
+				<li class="fieldcontain">
+					<span id="frequency-label" class="property-label"><g:message code="treatment.frequency.label" default="Frequency" /></span>
+					
+						<span class="property-value" aria-labelledby="frequency-label"><g:link controller="treatmentFrequency" action="show" id="${treatmentInstance?.frequency?.id}">${treatmentInstance?.frequency?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${treatmentInstance?.patient}">
+				<li class="fieldcontain">
+					<span id="patient-label" class="property-label"><g:message code="treatment.patient.label" default="Patient" /></span>
+					
+						<span class="property-value" aria-labelledby="patient-label"><g:link controller="patient" action="show" id="${treatmentInstance?.patient?.id}">${treatmentInstance?.patient?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${treatmentInstance?.treatmentCode}">
+				<li class="fieldcontain">
+					<span id="treatmentCode-label" class="property-label"><g:message code="treatment.treatmentCode.label" default="Treatment Code" /></span>
+					
+						<span class="property-value" aria-labelledby="treatmentCode-label"><g:fieldValue bean="${treatmentInstance}" field="treatmentCode"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${treatmentInstance?.treatmentDetail}">
+				<li class="fieldcontain">
+					<span id="treatmentDetail-label" class="property-label"><g:message code="treatment.treatmentDetail.label" default="Treatment Detail" /></span>
+					
+						<span class="property-value" aria-labelledby="treatmentDetail-label"><g:fieldValue bean="${treatmentInstance}" field="treatmentDetail"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${treatmentInstance?.treatmentId}">
+				<li class="fieldcontain">
+					<span id="treatmentId-label" class="property-label"><g:message code="treatment.treatmentId.label" default="Treatment Id" /></span>
+					
+						<span class="property-value" aria-labelledby="treatmentId-label"><g:fieldValue bean="${treatmentInstance}" field="treatmentId"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${treatmentInstance?.treatmentValue}">
+				<li class="fieldcontain">
+					<span id="treatmentValue-label" class="property-label"><g:message code="treatment.treatmentValue.label" default="Treatment Value" /></span>
+					
+						<span class="property-value" aria-labelledby="treatmentValue-label"><g:fieldValue bean="${treatmentInstance}" field="treatmentValue"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${treatmentInstance?.treatments}">
 				<li class="fieldcontain">
 					<span id="treatments-label" class="property-label"><g:message code="treatment.treatments.label" default="Treatments" /></span>
@@ -30,6 +84,15 @@
 						<g:each in="${treatmentInstance.treatments}" var="t">
 						<span class="property-value" aria-labelledby="treatments-label"><g:link controller="treatmentDetail" action="show" id="${t.id}">${t?.encodeAsHTML()}</g:link></span>
 						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${treatmentInstance?.unit}">
+				<li class="fieldcontain">
+					<span id="unit-label" class="property-label"><g:message code="treatment.unit.label" default="Unit" /></span>
+					
+						<span class="property-value" aria-labelledby="unit-label"><g:link controller="measurementUnit" action="show" id="${treatmentInstance?.unit?.id}">${treatmentInstance?.unit?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

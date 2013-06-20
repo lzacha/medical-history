@@ -2,9 +2,13 @@ package medicalhistory
 
 class AntecedentDetail {
 
-    int antecedentDetailId
-    String internalCode
-    String description
+    String abbreviation
+    String completeName
+    String fieldType
+    int minValue
+    int maxValue
+    int decimalsQuantity
+    String measureUnit
 
     static constraints = {
     }

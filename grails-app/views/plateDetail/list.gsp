@@ -24,11 +24,27 @@
 				<thead>
 					<tr>
 					
+						<g:sortableColumn property="fieldPlateDetail1" title="${message(code: 'plateDetail.fieldPlateDetail1.label', default: 'Field Plate Detail1')}" />
+					
+						<g:sortableColumn property="fieldPlateDetail2" title="${message(code: 'plateDetail.fieldPlateDetail2.label', default: 'Field Plate Detail2')}" />
+					
+						<g:sortableColumn property="fieldPlateDetail3" title="${message(code: 'plateDetail.fieldPlateDetail3.label', default: 'Field Plate Detail3')}" />
+					
+						<th><g:message code="plateDetail.plate.label" default="Plate" /></th>
+					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${plateDetailInstanceList}" status="i" var="plateDetailInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${plateDetailInstance.id}">${fieldValue(bean: plateDetailInstance, field: "fieldPlateDetail1")}</g:link></td>
+					
+						<td>${fieldValue(bean: plateDetailInstance, field: "fieldPlateDetail2")}</td>
+					
+						<td>${fieldValue(bean: plateDetailInstance, field: "fieldPlateDetail3")}</td>
+					
+						<td>${fieldValue(bean: plateDetailInstance, field: "plate")}</td>
 					
 					</tr>
 				</g:each>

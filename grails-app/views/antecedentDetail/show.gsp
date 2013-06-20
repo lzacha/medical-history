@@ -23,29 +23,65 @@
 			</g:if>
 			<ol class="property-list antecedentDetail">
 			
-				<g:if test="${antecedentDetailInstance?.antecedentDetailId}">
+				<g:if test="${antecedentDetailInstance?.abbreviation}">
 				<li class="fieldcontain">
-					<span id="antecedentDetailId-label" class="property-label"><g:message code="antecedentDetail.antecedentDetailId.label" default="Antecedent Detail Id" /></span>
+					<span id="abbreviation-label" class="property-label"><g:message code="antecedentDetail.abbreviation.label" default="Abbreviation" /></span>
 					
-						<span class="property-value" aria-labelledby="antecedentDetailId-label"><g:fieldValue bean="${antecedentDetailInstance}" field="antecedentDetailId"/></span>
+						<span class="property-value" aria-labelledby="abbreviation-label"><g:fieldValue bean="${antecedentDetailInstance}" field="abbreviation"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${antecedentDetailInstance?.description}">
+				<g:if test="${antecedentDetailInstance?.completeName}">
 				<li class="fieldcontain">
-					<span id="description-label" class="property-label"><g:message code="antecedentDetail.description.label" default="Description" /></span>
+					<span id="completeName-label" class="property-label"><g:message code="antecedentDetail.completeName.label" default="Complete Name" /></span>
 					
-						<span class="property-value" aria-labelledby="description-label"><g:fieldValue bean="${antecedentDetailInstance}" field="description"/></span>
+						<span class="property-value" aria-labelledby="completeName-label"><g:fieldValue bean="${antecedentDetailInstance}" field="completeName"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${antecedentDetailInstance?.internalCode}">
+				<g:if test="${antecedentDetailInstance?.decimalsQuantity}">
 				<li class="fieldcontain">
-					<span id="internalCode-label" class="property-label"><g:message code="antecedentDetail.internalCode.label" default="Internal Code" /></span>
+					<span id="decimalsQuantity-label" class="property-label"><g:message code="antecedentDetail.decimalsQuantity.label" default="Decimals Quantity" /></span>
 					
-						<span class="property-value" aria-labelledby="internalCode-label"><g:fieldValue bean="${antecedentDetailInstance}" field="internalCode"/></span>
+						<span class="property-value" aria-labelledby="decimalsQuantity-label"><g:fieldValue bean="${antecedentDetailInstance}" field="decimalsQuantity"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${antecedentDetailInstance?.fieldType}">
+				<li class="fieldcontain">
+					<span id="fieldType-label" class="property-label"><g:message code="antecedentDetail.fieldType.label" default="Field Type" /></span>
+					
+						<span class="property-value" aria-labelledby="fieldType-label"><g:fieldValue bean="${antecedentDetailInstance}" field="fieldType"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${antecedentDetailInstance?.maxValue}">
+				<li class="fieldcontain">
+					<span id="maxValue-label" class="property-label"><g:message code="antecedentDetail.maxValue.label" default="Max Value" /></span>
+					
+						<span class="property-value" aria-labelledby="maxValue-label"><g:fieldValue bean="${antecedentDetailInstance}" field="maxValue"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${antecedentDetailInstance?.measureUnit}">
+				<li class="fieldcontain">
+					<span id="measureUnit-label" class="property-label"><g:message code="antecedentDetail.measureUnit.label" default="Measure Unit" /></span>
+					
+						<span class="property-value" aria-labelledby="measureUnit-label"><g:fieldValue bean="${antecedentDetailInstance}" field="measureUnit"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${antecedentDetailInstance?.minValue}">
+				<li class="fieldcontain">
+					<span id="minValue-label" class="property-label"><g:message code="antecedentDetail.minValue.label" default="Min Value" /></span>
+					
+						<span class="property-value" aria-labelledby="minValue-label"><g:fieldValue bean="${antecedentDetailInstance}" field="minValue"/></span>
 					
 				</li>
 				</g:if>

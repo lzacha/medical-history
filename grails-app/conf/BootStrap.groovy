@@ -3,6 +3,13 @@ import grails.util.Environment
 import medicalhistory.Patient
 import medicalhistory.Doctor
 import medicalhistory.AntecedentDetail
+import medicalhistory.Treatment
+import medicalhistory.AgeRange
+import medicalhistory.MeasurementUnit
+import medicalhistory.MedicalStudyDetail
+import medicalhistory.utils.MedicalEnums
+import medicalhistory.StudyType
+import medicalhistory.FieldType
 
 class BootStrap {
 
@@ -29,11 +36,11 @@ class BootStrap {
     def setDevelopmentData(){
 
         //System users
-        def su1 = new SystemUser(username: 'lzacharewicz', password: '123456', firstName: 'Leonardo', lastName: 'Zacharewicz', status: 'Active', lastLogin: new Date())
-        def su2 = new SystemUser(username: 'mmaceiras', password: '123456', firstName: 'Mariano', lastName: 'Maceiras', status: 'Active', lastLogin: new Date())
-        def su3 = new SystemUser(username: 'rgirlando', password: '123456', firstName: 'Rodrigo', lastName: 'Girlando', status: 'Inactive', lastLogin: new Date())
-        def su4 = new SystemUser(username: 'mfava', password: '123456', firstName: 'Martin', lastName: 'Fava', status: 'Active', lastLogin: new Date())
-        def su5 = new SystemUser(username: 'gheinrich', password: '123456', firstName: 'Gabriel', lastName: 'Heinrich', status: 'Active', lastLogin: new Date())
+        def su1 = new SystemUser(username: 'lzacharewicz', password: '123456', firstName: 'Leonardo', lastName: 'Zacharewicz', status: 'Active', role:"admin", lastLogin: new Date())
+        def su2 = new SystemUser(username: 'mmaceiras', password: '123456', firstName: 'Mariano', lastName: 'Maceiras', status: 'Active', role:"admin", lastLogin: new Date())
+        def su3 = new SystemUser(username: 'rgirlando', password: '123456', firstName: 'Rodrigo', lastName: 'Girlando', status: 'Inactive',role:"admin",  lastLogin: new Date())
+        def su4 = new SystemUser(username: 'mfava', password: '123456', firstName: 'Martin', lastName: 'Fava', status: 'Active', role:"admin", lastLogin: new Date())
+        def su5 = new SystemUser(username: 'gheinrich', password: '123456', firstName: 'Gabriel', lastName: 'Heinrich', status: 'Active', role:"admin", lastLogin: new Date())
         su1.save()
         su2.save()
         su3.save()
@@ -86,6 +93,44 @@ class BootStrap {
         doc1.save()
         doc2.save()
         doc3.save()
+
+        def st1 = new StudyType(studyType:"Laboratorio")
+        def st2 = new StudyType(studyType:"Sed Urinario")
+        st1.save()
+        st2.save()
+
+        def ft1 = new FieldType(fieldName:"Numerico")
+        def ft2 = new FieldType(fieldName:"Alfanumerico")
+        def ft3 = new FieldType(fieldName:"Si")
+        def ft4 = new FieldType(fieldName:"No")
+        ft1.save()
+        ft2.save()
+        ft3.save()
+        ft4.save()
+
+        def t1 = new Treatment(antecedentDetailId: 1,internalCode: 'ENF CORONARIA', description: 'ENF CORONARIA')
+        t1.save()
+
+        def ar1 = new AgeRange(rangeDescription:"niños", minValue:1, maxValue:10, sex: "hombre") //, sex: AgeRange.PatientSex.MAN)
+        def ar2 = new AgeRange(rangeDescription:"adolescentes", minValue:11, maxValue:19, sex:"hombre") //, sex: AgeRange.PatientSex.MAN)
+        def ar3 = new AgeRange(rangeDescription:"adultos", minValue:20, maxValue:120, sex:"hombre") //, sex: AgeRange.PatientSex.MAN)
+        ar1.save()
+        ar2.save()
+        ar3.save()
+
+
+        def mu1 = new MeasurementUnit(descriptionUnit:"Centimetros cuadrados", unit:"cm2")
+        def mu2 = new MeasurementUnit(descriptionUnit:"Centimetros cubico", unit:"cm3")
+        mu1.save()
+        mu2.save()
+
+
+        def msd1 = new MedicalStudyDetail(  ageRange: ar1, studyType: st1,
+                                            abbreviation: "HTO", completeName: "Hipo todo zaraza",
+                                            fieldType: ft1, minValue:1, maxValue:10,
+                                            decimalsQuantity: 2, unit:mu1)
+        
+        msd1.save()
 
     }
 

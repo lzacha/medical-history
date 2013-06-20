@@ -23,6 +23,24 @@
 			</g:if>
 			<ol class="property-list measurementUnit">
 			
+				<g:if test="${measurementUnitInstance?.descriptionUnit}">
+				<li class="fieldcontain">
+					<span id="descriptionUnit-label" class="property-label"><g:message code="measurementUnit.descriptionUnit.label" default="Description Unit" /></span>
+					
+						<span class="property-value" aria-labelledby="descriptionUnit-label"><g:fieldValue bean="${measurementUnitInstance}" field="descriptionUnit"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${measurementUnitInstance?.unit}">
+				<li class="fieldcontain">
+					<span id="unit-label" class="property-label"><g:message code="measurementUnit.unit.label" default="Unit" /></span>
+					
+						<span class="property-value" aria-labelledby="unit-label"><g:fieldValue bean="${measurementUnitInstance}" field="unit"/></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

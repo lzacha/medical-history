@@ -24,11 +24,19 @@
 				<thead>
 					<tr>
 					
+						<g:sortableColumn property="descriptionUnit" title="${message(code: 'measurementUnit.descriptionUnit.label', default: 'Description Unit')}" />
+					
+						<g:sortableColumn property="unit" title="${message(code: 'measurementUnit.unit.label', default: 'Unit')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${measurementUnitInstanceList}" status="i" var="measurementUnitInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${measurementUnitInstance.id}">${fieldValue(bean: measurementUnitInstance, field: "descriptionUnit")}</g:link></td>
+					
+						<td>${fieldValue(bean: measurementUnitInstance, field: "unit")}</td>
 					
 					</tr>
 				</g:each>

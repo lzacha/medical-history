@@ -46,3 +46,15 @@ Estilos:
     <!-- chico-ui css-->
     <link rel="stylesheet" href="${resource(dir: 'css/chico-ui/css', file: 'chico-min-0.13.1.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'css/chico-ui/css', file: 'mesh-min-2.1.css')}" type="text/css">
+------------------------------------------
+
+
+<g:form action="save" method="post" enctype="multipart/form-data">
+    <input type="file" name="avatar" id="avatar">
+</g:form>
+
+
+
+
+
+

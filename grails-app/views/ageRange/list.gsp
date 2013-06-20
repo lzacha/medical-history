@@ -24,11 +24,27 @@
 				<thead>
 					<tr>
 					
+						<g:sortableColumn property="rangeDescription" title="${message(code: 'ageRange.rangeDescription.label', default: 'Range Description')}" />
+					
+						<g:sortableColumn property="minValue" title="${message(code: 'ageRange.minValue.label', default: 'Min Value')}" />
+					
+						<g:sortableColumn property="maxValue" title="${message(code: 'ageRange.maxValue.label', default: 'Max Value')}" />
+					
+						<g:sortableColumn property="sex" title="${message(code: 'ageRange.sex.label', default: 'Sex')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${ageRangeInstanceList}" status="i" var="ageRangeInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${ageRangeInstance.id}">${fieldValue(bean: ageRangeInstance, field: "rangeDescription")}</g:link></td>
+					
+						<td>${fieldValue(bean: ageRangeInstance, field: "minValue")}</td>
+					
+						<td>${fieldValue(bean: ageRangeInstance, field: "maxValue")}</td>
+					
+						<td>${fieldValue(bean: ageRangeInstance, field: "sex")}</td>
 					
 					</tr>
 				</g:each>

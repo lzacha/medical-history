@@ -23,6 +23,42 @@
 			</g:if>
 			<ol class="property-list plateDetail">
 			
+				<g:if test="${plateDetailInstance?.fieldPlateDetail1}">
+				<li class="fieldcontain">
+					<span id="fieldPlateDetail1-label" class="property-label"><g:message code="plateDetail.fieldPlateDetail1.label" default="Field Plate Detail1" /></span>
+					
+						<span class="property-value" aria-labelledby="fieldPlateDetail1-label"><g:fieldValue bean="${plateDetailInstance}" field="fieldPlateDetail1"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${plateDetailInstance?.fieldPlateDetail2}">
+				<li class="fieldcontain">
+					<span id="fieldPlateDetail2-label" class="property-label"><g:message code="plateDetail.fieldPlateDetail2.label" default="Field Plate Detail2" /></span>
+					
+						<span class="property-value" aria-labelledby="fieldPlateDetail2-label"><g:fieldValue bean="${plateDetailInstance}" field="fieldPlateDetail2"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${plateDetailInstance?.fieldPlateDetail3}">
+				<li class="fieldcontain">
+					<span id="fieldPlateDetail3-label" class="property-label"><g:message code="plateDetail.fieldPlateDetail3.label" default="Field Plate Detail3" /></span>
+					
+						<span class="property-value" aria-labelledby="fieldPlateDetail3-label"><g:fieldValue bean="${plateDetailInstance}" field="fieldPlateDetail3"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${plateDetailInstance?.plate}">
+				<li class="fieldcontain">
+					<span id="plate-label" class="property-label"><g:message code="plateDetail.plate.label" default="Plate" /></span>
+					
+						<span class="property-value" aria-labelledby="plate-label"><g:link controller="plate" action="show" id="${plateDetailInstance?.plate?.id}">${plateDetailInstance?.plate?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

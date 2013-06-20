@@ -32,13 +32,56 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${plateInstance?.observations}">
+				<g:if test="${plateInstance?.fieldPlate2}">
 				<li class="fieldcontain">
-					<span id="observations-label" class="property-label"><g:message code="plate.observations.label" default="Observations" /></span>
+					<span id="fieldPlate2-label" class="property-label"><g:message code="plate.fieldPlate2.label" default="Field Plate2" /></span>
 					
-						<g:each in="${plateInstance.observations}" var="o">
-						<span class="property-value" aria-labelledby="observations-label"><g:link controller="observation" action="show" id="${o.id}">${o?.encodeAsHTML()}</g:link></span>
-						</g:each>
+						<span class="property-value" aria-labelledby="fieldPlate2-label"><g:fieldValue bean="${plateInstance}" field="fieldPlate2"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${plateInstance?.fieldPlate3}">
+				<li class="fieldcontain">
+					<span id="fieldPlate3-label" class="property-label"><g:message code="plate.fieldPlate3.label" default="Field Plate3" /></span>
+					
+						<span class="property-value" aria-labelledby="fieldPlate3-label"><g:fieldValue bean="${plateInstance}" field="fieldPlate3"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${plateInstance?.imagePlate}">
+				<li class="fieldcontain">
+					<span id="imagePlate-label" class="property-label"><g:message code="plate.imagePlate.label" default="Image Plate" /></span>
+					
+						<span class="property-value" aria-labelledby="imagePlate-label"><g:fieldValue bean="${plateInstance}" field="imagePlate"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${plateInstance?.observation}">
+				<li class="fieldcontain">
+					<span id="observation-label" class="property-label"><g:message code="plate.observation.label" default="Observation" /></span>
+					
+						<span class="property-value" aria-labelledby="observation-label"><g:fieldValue bean="${plateInstance}" field="observation"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${plateInstance?.plateDate}">
+				<li class="fieldcontain">
+					<span id="plateDate-label" class="property-label"><g:message code="plate.plateDate.label" default="Plate Date" /></span>
+					
+						<span class="property-value" aria-labelledby="plateDate-label"><g:formatDate date="${plateInstance?.plateDate}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${plateInstance?.plateDescription}">
+				<li class="fieldcontain">
+					<span id="plateDescription-label" class="property-label"><g:message code="plate.plateDescription.label" default="Plate Description" /></span>
+					
+						<span class="property-value" aria-labelledby="plateDescription-label"><g:fieldValue bean="${plateInstance}" field="plateDescription"/></span>
 					
 				</li>
 				</g:if>

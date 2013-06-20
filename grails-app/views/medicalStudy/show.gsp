@@ -32,6 +32,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${medicalStudyInstance?.mainStudy}">
+				<li class="fieldcontain">
+					<span id="mainStudy-label" class="property-label"><g:message code="medicalStudy.mainStudy.label" default="Main Study" /></span>
+					
+						<span class="property-value" aria-labelledby="mainStudy-label"><g:fieldValue bean="${medicalStudyInstance}" field="mainStudy"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${medicalStudyInstance?.medicalStudies}">
 				<li class="fieldcontain">
 					<span id="medicalStudies-label" class="property-label"><g:message code="medicalStudy.medicalStudies.label" default="Medical Studies" /></span>
@@ -39,6 +48,33 @@
 						<g:each in="${medicalStudyInstance.medicalStudies}" var="m">
 						<span class="property-value" aria-labelledby="medicalStudies-label"><g:link controller="medicalStudyDetail" action="show" id="${m.id}">${m?.encodeAsHTML()}</g:link></span>
 						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${medicalStudyInstance?.patient}">
+				<li class="fieldcontain">
+					<span id="patient-label" class="property-label"><g:message code="medicalStudy.patient.label" default="Patient" /></span>
+					
+						<span class="property-value" aria-labelledby="patient-label"><g:link controller="patient" action="show" id="${medicalStudyInstance?.patient?.id}">${medicalStudyInstance?.patient?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${medicalStudyInstance?.studyDate}">
+				<li class="fieldcontain">
+					<span id="studyDate-label" class="property-label"><g:message code="medicalStudy.studyDate.label" default="Study Date" /></span>
+					
+						<span class="property-value" aria-labelledby="studyDate-label"><g:formatDate date="${medicalStudyInstance?.studyDate}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${medicalStudyInstance?.unit}">
+				<li class="fieldcontain">
+					<span id="unit-label" class="property-label"><g:message code="medicalStudy.unit.label" default="Unit" /></span>
+					
+						<span class="property-value" aria-labelledby="unit-label"><g:link controller="measurementUnit" action="show" id="${medicalStudyInstance?.unit?.id}">${medicalStudyInstance?.unit?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

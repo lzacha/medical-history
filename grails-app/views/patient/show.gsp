@@ -6,56 +6,22 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'patient.label', default: 'Patient')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
-		    <style>
-
-    body {
-        color: #333333;
-        font: 13px/20px Arial,Helvetica,"Nimbus Sans L",sans-serif;
-    }
-
-    .ch-box {
-        border: 1px solid #ccc;
-        padding: 10px;
-        margin: 10px auto;
-    }
-
-    .ch-header {
-        height: 50px;
-        padding: 20px 10px;
-        background: #eee;
-        margin: 10px auto 0px;
-    }
-
-    .ch-footer {
-        clear:both;
-        text-align: center;
-        margin: 10px auto;
-        background: #eee;
-
-    }
-    </style>
-
-    <!-- chico-ui css-->
-    <link rel="stylesheet" href="${resource(dir: 'css/chico-ui/css', file: 'chico-min-0.13.1.css')}" type="text/css">
-    <link rel="stylesheet" href="${resource(dir: 'css/chico-ui/css', file: 'mesh-min-2.1.css')}" type="text/css">
-
 	</head>
 	<body>
+		<a href="#show-patient" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		<div class="nav" role="navigation">
+			<ul>
+				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+			</ul>
+		</div>
 		<div id="show-patient" class="content scaffold-show" role="main">
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<ol class="property-list patient">
-			
-				<g:if test="${patientInstance?.birthDate}">
-				<li class="fieldcontain">
-					<span id="birthDate-label" class="property-label"><g:message code="patient.birthDate.label" default="Birth Date" /></span>
-					
-						<span class="property-value" aria-labelledby="birthDate-label"><g:formatDate date="${patientInstance?.birthDate}" /></span>
-					
-				</li>
-				</g:if>
 			
 				<g:if test="${patientInstance?.firstName}">
 				<li class="fieldcontain">
@@ -75,20 +41,56 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${patientInstance?.patientId}">
-				<li class="fieldcontain">
-					<span id="patientId-label" class="property-label"><g:message code="patient.patientId.label" default="Patient Id" /></span>
-					
-						<span class="property-value" aria-labelledby="patientId-label"><g:fieldValue bean="${patientInstance}" field="patientId"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${patientInstance?.sexId}">
 				<li class="fieldcontain">
 					<span id="sexId-label" class="property-label"><g:message code="patient.sexId.label" default="Sex Id" /></span>
 					
 						<span class="property-value" aria-labelledby="sexId-label"><g:fieldValue bean="${patientInstance}" field="sexId"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${patientInstance?.birthDate}">
+				<li class="fieldcontain">
+					<span id="birthDate-label" class="property-label"><g:message code="patient.birthDate.label" default="Birth Date" /></span>
+					
+						<span class="property-value" aria-labelledby="birthDate-label"><g:formatDate date="${patientInstance?.birthDate}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${patientInstance?.abdominalDiameter}">
+				<li class="fieldcontain">
+					<span id="abdominalDiameter-label" class="property-label"><g:message code="patient.abdominalDiameter.label" default="Abdominal Diameter" /></span>
+					
+						<span class="property-value" aria-labelledby="abdominalDiameter-label"><g:fieldValue bean="${patientInstance}" field="abdominalDiameter"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${patientInstance?.height}">
+				<li class="fieldcontain">
+					<span id="height-label" class="property-label"><g:message code="patient.height.label" default="Height" /></span>
+					
+						<span class="property-value" aria-labelledby="height-label"><g:fieldValue bean="${patientInstance}" field="height"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${patientInstance?.medicalHistory}">
+				<li class="fieldcontain">
+					<span id="medicalHistory-label" class="property-label"><g:message code="patient.medicalHistory.label" default="Medical History" /></span>
+					
+						<span class="property-value" aria-labelledby="medicalHistory-label"><g:fieldValue bean="${patientInstance}" field="medicalHistory"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${patientInstance?.weight}">
+				<li class="fieldcontain">
+					<span id="weight-label" class="property-label"><g:message code="patient.weight.label" default="Weight" /></span>
+					
+						<span class="property-value" aria-labelledby="weight-label"><g:fieldValue bean="${patientInstance}" field="weight"/></span>
 					
 				</li>
 				</g:if>

@@ -26,6 +26,16 @@
 					
 						<th><g:message code="plate.doctor.label" default="Doctor" /></th>
 					
+						<g:sortableColumn property="fieldPlate2" title="${message(code: 'plate.fieldPlate2.label', default: 'Field Plate2')}" />
+					
+						<g:sortableColumn property="fieldPlate3" title="${message(code: 'plate.fieldPlate3.label', default: 'Field Plate3')}" />
+					
+						<g:sortableColumn property="imagePlate" title="${message(code: 'plate.imagePlate.label', default: 'Image Plate')}" />
+					
+						<g:sortableColumn property="observation" title="${message(code: 'plate.observation.label', default: 'Observation')}" />
+					
+						<g:sortableColumn property="plateDate" title="${message(code: 'plate.plateDate.label', default: 'Plate Date')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -33,6 +43,16 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${plateInstance.id}">${fieldValue(bean: plateInstance, field: "doctor")}</g:link></td>
+					
+						<td>${fieldValue(bean: plateInstance, field: "fieldPlate2")}</td>
+					
+						<td>${fieldValue(bean: plateInstance, field: "fieldPlate3")}</td>
+					
+						<td>${fieldValue(bean: plateInstance, field: "imagePlate")}</td>
+					
+						<td>${fieldValue(bean: plateInstance, field: "observation")}</td>
+					
+						<td><g:formatDate date="${plateInstance.plateDate}" /></td>
 					
 					</tr>
 				</g:each>

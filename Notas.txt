@@ -1,5 +1,26 @@
 - Poner las contraints a todas las entidades
-
+- Antecedentes (tabla si/no con checks por paciente	)
 
 
 Para generar todo el template: generate-all medicalhistory.Antecedent
+- Patient: Como manejar el campo de "Historia Clinica"
+
+- Ver como manejar el rango de edad
+
+
+- "salir" del login
+
+- un link de configuracion
+- Seleccionar por default el rango de edad en funcion de la edad del paciente
+
+--------------------------------------------------------------------------------
+
+- miligramos diarios
+- Inicio-FIn
+- Nombre de la droga
+
+
+Placas
+	- Como va a ser la busqueda de archivos (uploader?)
+
+- Ver unidades de medidas si/no

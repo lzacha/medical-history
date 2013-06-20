@@ -23,6 +23,24 @@
 			</g:if>
 			<ol class="property-list treatmentFrequency">
 			
+				<g:if test="${treatmentFrequencyInstance?.field1}">
+				<li class="fieldcontain">
+					<span id="field1-label" class="property-label"><g:message code="treatmentFrequency.field1.label" default="Field1" /></span>
+					
+						<span class="property-value" aria-labelledby="field1-label"><g:fieldValue bean="${treatmentFrequencyInstance}" field="field1"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${treatmentFrequencyInstance?.field2}">
+				<li class="fieldcontain">
+					<span id="field2-label" class="property-label"><g:message code="treatmentFrequency.field2.label" default="Field2" /></span>
+					
+						<span class="property-value" aria-labelledby="field2-label"><g:fieldValue bean="${treatmentFrequencyInstance}" field="field2"/></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

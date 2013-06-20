@@ -17,8 +17,8 @@
 <!-- login/validate.gsp  body -->
 <div>
     <g:form name="myForm" url="[action:'validate',controller:'medicalLogin']">
-        <label>Username:</label> <input type="text" name="username">
-        <label>Password:</label> <input type="text" name="password">
+        <label>Username:</label> <input type="text" name="username"><p>
+        <label>Password:</label> <input type="text" name="password"><p>
         <input type="submit" value="login">
     </g:form>
 </div>
