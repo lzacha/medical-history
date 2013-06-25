@@ -32,6 +32,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${antecedentDetailInstance?.antecedentStudyType}">
+				<li class="fieldcontain">
+					<span id="antecedentStudyType-label" class="property-label"><g:message code="antecedentDetail.antecedentStudyType.label" default="Antecedent Study Type" /></span>
+					
+						<span class="property-value" aria-labelledby="antecedentStudyType-label"><g:fieldValue bean="${antecedentDetailInstance}" field="antecedentStudyType"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${antecedentDetailInstance?.completeName}">
 				<li class="fieldcontain">
 					<span id="completeName-label" class="property-label"><g:message code="antecedentDetail.completeName.label" default="Complete Name" /></span>
@@ -54,16 +63,7 @@
 				<li class="fieldcontain">
 					<span id="fieldType-label" class="property-label"><g:message code="antecedentDetail.fieldType.label" default="Field Type" /></span>
 					
-						<span class="property-value" aria-labelledby="fieldType-label"><g:fieldValue bean="${antecedentDetailInstance}" field="fieldType"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${antecedentDetailInstance?.maxValue}">
-				<li class="fieldcontain">
-					<span id="maxValue-label" class="property-label"><g:message code="antecedentDetail.maxValue.label" default="Max Value" /></span>
-					
-						<span class="property-value" aria-labelledby="maxValue-label"><g:fieldValue bean="${antecedentDetailInstance}" field="maxValue"/></span>
+						<span class="property-value" aria-labelledby="fieldType-label"><g:link controller="fieldType" action="show" id="${antecedentDetailInstance?.fieldType?.id}">${antecedentDetailInstance?.fieldType?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
@@ -72,16 +72,7 @@
 				<li class="fieldcontain">
 					<span id="measureUnit-label" class="property-label"><g:message code="antecedentDetail.measureUnit.label" default="Measure Unit" /></span>
 					
-						<span class="property-value" aria-labelledby="measureUnit-label"><g:fieldValue bean="${antecedentDetailInstance}" field="measureUnit"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${antecedentDetailInstance?.minValue}">
-				<li class="fieldcontain">
-					<span id="minValue-label" class="property-label"><g:message code="antecedentDetail.minValue.label" default="Min Value" /></span>
-					
-						<span class="property-value" aria-labelledby="minValue-label"><g:fieldValue bean="${antecedentDetailInstance}" field="minValue"/></span>
+						<span class="property-value" aria-labelledby="measureUnit-label"><g:link controller="measurementUnit" action="show" id="${antecedentDetailInstance?.measureUnit?.id}">${antecedentDetailInstance?.measureUnit?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

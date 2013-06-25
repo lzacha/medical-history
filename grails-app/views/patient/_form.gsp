@@ -58,6 +58,14 @@
 	<g:textField name="medicalHistory" value="${patientInstance?.medicalHistory}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: patientInstance, field: 'patientId', 'error')} required">
+	<label for="patientId">
+		<g:message code="patient.patientId.label" default="Patient Id" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field name="patientId" type="number" value="${patientInstance.patientId}" required=""/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: patientInstance, field: 'weight', 'error')} required">
 	<label for="weight">
 		<g:message code="patient.weight.label" default="Weight" />

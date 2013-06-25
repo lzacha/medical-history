@@ -4,13 +4,15 @@ class MedicalStudy {
 
 	Doctor doctor
 	Date studyDate
-	String mainStudy //Htal: Hospital, RCVC: ?, DgHTA: ?
-
+	MainStudyType mainStudyType
 	Patient patient
+	//String mainStudy //Htal: Hospital, RCVC: ?, DgHTA: ?
+	//MeasurementUnit unit // -- Ver porque estaba
+	double height   //Altura
+    double weight   //Peso
+    double abdominalDiameter
 
-	MeasurementUnit unit //?
-
-    static hasMany = [medicalStudies:MedicalStudyDetail]
+    //static hasMany = [medicalStudies:Stud]
 	
     static constraints = {
     }

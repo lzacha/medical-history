@@ -26,15 +26,15 @@
 					
 						<g:sortableColumn property="abbreviation" title="${message(code: 'antecedentDetail.abbreviation.label', default: 'Abbreviation')}" />
 					
+						<g:sortableColumn property="antecedentStudyType" title="${message(code: 'antecedentDetail.antecedentStudyType.label', default: 'Antecedent Study Type')}" />
+					
 						<g:sortableColumn property="completeName" title="${message(code: 'antecedentDetail.completeName.label', default: 'Complete Name')}" />
 					
 						<g:sortableColumn property="decimalsQuantity" title="${message(code: 'antecedentDetail.decimalsQuantity.label', default: 'Decimals Quantity')}" />
 					
-						<g:sortableColumn property="fieldType" title="${message(code: 'antecedentDetail.fieldType.label', default: 'Field Type')}" />
+						<th><g:message code="antecedentDetail.fieldType.label" default="Field Type" /></th>
 					
-						<g:sortableColumn property="maxValue" title="${message(code: 'antecedentDetail.maxValue.label', default: 'Max Value')}" />
-					
-						<g:sortableColumn property="measureUnit" title="${message(code: 'antecedentDetail.measureUnit.label', default: 'Measure Unit')}" />
+						<th><g:message code="antecedentDetail.measureUnit.label" default="Measure Unit" /></th>
 					
 					</tr>
 				</thead>
@@ -44,13 +44,13 @@
 					
 						<td><g:link action="show" id="${antecedentDetailInstance.id}">${fieldValue(bean: antecedentDetailInstance, field: "abbreviation")}</g:link></td>
 					
+						<td>${fieldValue(bean: antecedentDetailInstance, field: "antecedentStudyType")}</td>
+					
 						<td>${fieldValue(bean: antecedentDetailInstance, field: "completeName")}</td>
 					
 						<td>${fieldValue(bean: antecedentDetailInstance, field: "decimalsQuantity")}</td>
 					
 						<td>${fieldValue(bean: antecedentDetailInstance, field: "fieldType")}</td>
-					
-						<td>${fieldValue(bean: antecedentDetailInstance, field: "maxValue")}</td>
 					
 						<td>${fieldValue(bean: antecedentDetailInstance, field: "measureUnit")}</td>
 					

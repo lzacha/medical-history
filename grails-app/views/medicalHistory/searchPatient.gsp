@@ -3,7 +3,7 @@
     <h1>Leo</h1>
 </g:if>
 <g:else>
-    <h1>Buscar Paciente e</h1>
+    <h1>Busque el Paciente</h1>
 
     <form id="example_form" action="#" method="GET" class="ch-form">
         <div class="ch-form-row">
@@ -14,10 +14,13 @@
                    placeholder="Nombre del paciente"
                    class="autoComplete_Example ch-autoComplete"
             />
+            <input type="hidden" name="patientId" id="patientId" value=""/>
             <input type="submit" value="Buscar">
         </div>
     </form>
 </div>
+
+
 
 </g:else>
 

@@ -2,18 +2,14 @@ package medicalhistory
 
 class Plate {
 
-	String plateDescription
-	
+	//String plateDescription
 	Date plateDate
-
-	String fieldPlate2
-	String fieldPlate3
-
 	String imagePlate
 
 	Doctor doctor
-	
 	String observation
+
+	Patient patient
 
 	//List observations = new List(
 	//static hasMany = [observations:PlateDetail]

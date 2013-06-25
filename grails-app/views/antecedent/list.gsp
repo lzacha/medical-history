@@ -24,8 +24,6 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="antecedentValue" title="${message(code: 'antecedent.antecedentValue.label', default: 'Antecedent Value')}" />
-					
 						<th><g:message code="antecedent.patient.label" default="Patient" /></th>
 					
 					</tr>
@@ -34,9 +32,7 @@
 				<g:each in="${antecedentInstanceList}" status="i" var="antecedentInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${antecedentInstance.id}">${fieldValue(bean: antecedentInstance, field: "antecedentValue")}</g:link></td>
-					
-						<td>${fieldValue(bean: antecedentInstance, field: "patient")}</td>
+						<td><g:link action="show" id="${antecedentInstance.id}">${fieldValue(bean: antecedentInstance, field: "patient")}</g:link></td>
 					
 					</tr>
 				</g:each>

@@ -2,8 +2,7 @@ package medicalhistory
 
 class TreatmentFrequency {
 
-	String field1
-	String field2
+	String frequencyDescription
 	
     static constraints = {
     }

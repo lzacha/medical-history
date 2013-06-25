@@ -10,6 +10,14 @@
 	<g:textField name="abbreviation" value="${antecedentDetailInstance?.abbreviation}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: antecedentDetailInstance, field: 'antecedentStudyType', 'error')} required">
+	<label for="antecedentStudyType">
+		<g:message code="antecedentDetail.antecedentStudyType.label" default="Antecedent Study Type" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select name="antecedentStudyType" from="${medicalhistory.AntecedentDetail$AntecedentStudyType?.values()}" keys="${medicalhistory.AntecedentDetail$AntecedentStudyType.values()*.name()}" required="" value="${antecedentDetailInstance?.antecedentStudyType?.name()}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: antecedentDetailInstance, field: 'completeName', 'error')} ">
 	<label for="completeName">
 		<g:message code="antecedentDetail.completeName.label" default="Complete Name" />
@@ -26,35 +34,19 @@
 	<g:field name="decimalsQuantity" type="number" value="${antecedentDetailInstance.decimalsQuantity}" required=""/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: antecedentDetailInstance, field: 'fieldType', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: antecedentDetailInstance, field: 'fieldType', 'error')} required">
 	<label for="fieldType">
 		<g:message code="antecedentDetail.fieldType.label" default="Field Type" />
-		
-	</label>
-	<g:textField name="fieldType" value="${antecedentDetailInstance?.fieldType}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: antecedentDetailInstance, field: 'maxValue', 'error')} required">
-	<label for="maxValue">
-		<g:message code="antecedentDetail.maxValue.label" default="Max Value" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="maxValue" type="number" value="${antecedentDetailInstance.maxValue}" required=""/>
+	<g:select id="fieldType" name="fieldType.id" from="${medicalhistory.FieldType.list()}" optionKey="id" required="" value="${antecedentDetailInstance?.fieldType?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: antecedentDetailInstance, field: 'measureUnit', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: antecedentDetailInstance, field: 'measureUnit', 'error')} required">
 	<label for="measureUnit">
 		<g:message code="antecedentDetail.measureUnit.label" default="Measure Unit" />
-		
-	</label>
-	<g:textField name="measureUnit" value="${antecedentDetailInstance?.measureUnit}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: antecedentDetailInstance, field: 'minValue', 'error')} required">
-	<label for="minValue">
-		<g:message code="antecedentDetail.minValue.label" default="Min Value" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="minValue" type="number" value="${antecedentDetailInstance.minValue}" required=""/>
+	<g:select id="measureUnit" name="measureUnit.id" from="${medicalhistory.MeasurementUnit.list()}" optionKey="id" required="" value="${antecedentDetailInstance?.measureUnit?.id}" class="many-to-one"/>
 </div>
 

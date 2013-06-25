@@ -2,19 +2,13 @@ package medicalhistory
 
 class Treatment {
 
-
-	int treatmentId
-	String treatmentCode 	//Abrev...
-	String treatmentDetail  //Complete name..	
-	int treatmentValue  	//Numeric value..	
-
-	MeasurementUnit unit
+	//Boolean antecedentValue
     Patient patient
-
-    TreatmentFrequency frequency
-
-    static hasMany = [treatments:TreatmentDetail]
-
+    
+    static hasMany = [treatmentDetails:TreatmentDetail]
+    
     static constraints = {
     }
+
+    TreatmentFrequency frequency
 }

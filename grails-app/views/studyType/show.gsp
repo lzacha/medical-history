@@ -23,11 +23,20 @@
 			</g:if>
 			<ol class="property-list studyType">
 			
-				<g:if test="${studyTypeInstance?.studyType}">
+				<g:if test="${studyTypeInstance?.description}">
 				<li class="fieldcontain">
-					<span id="studyType-label" class="property-label"><g:message code="studyType.studyType.label" default="Study Type" /></span>
+					<span id="description-label" class="property-label"><g:message code="studyType.description.label" default="Description" /></span>
 					
-						<span class="property-value" aria-labelledby="studyType-label"><g:fieldValue bean="${studyTypeInstance}" field="studyType"/></span>
+						<span class="property-value" aria-labelledby="description-label"><g:fieldValue bean="${studyTypeInstance}" field="description"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${studyTypeInstance?.shortDescription}">
+				<li class="fieldcontain">
+					<span id="shortDescription-label" class="property-label"><g:message code="studyType.shortDescription.label" default="Short Description" /></span>
+					
+						<span class="property-value" aria-labelledby="shortDescription-label"><g:fieldValue bean="${studyTypeInstance}" field="shortDescription"/></span>
 					
 				</li>
 				</g:if>

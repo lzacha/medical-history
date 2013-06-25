@@ -1,11 +1,8 @@
 package medicalhistory
 
-/*
- * Antecedent Domain class
- */
 class Antecedent {
 
-	Boolean antecedentValue
+	//Boolean antecedentValue
     Patient patient
     
     static hasMany = [antecedentDetails:AntecedentDetail]

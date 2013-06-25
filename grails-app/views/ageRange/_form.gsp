@@ -26,11 +26,3 @@
 	<g:field name="maxValue" type="number" min="0" max="200" value="${ageRangeInstance.maxValue}" required=""/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: ageRangeInstance, field: 'sex', 'error')} ">
-	<label for="sex">
-		<g:message code="ageRange.sex.label" default="Sex" />
-		
-	</label>
-	<g:textField name="sex" value="${ageRangeInstance?.sex}"/>
-</div>
-

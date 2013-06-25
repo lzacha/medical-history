@@ -23,6 +23,60 @@
 			</g:if>
 			<ol class="property-list treatmentDetail">
 			
+				<g:if test="${treatmentDetailInstance?.abbreviation}">
+				<li class="fieldcontain">
+					<span id="abbreviation-label" class="property-label"><g:message code="treatmentDetail.abbreviation.label" default="Abbreviation" /></span>
+					
+						<span class="property-value" aria-labelledby="abbreviation-label"><g:fieldValue bean="${treatmentDetailInstance}" field="abbreviation"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${treatmentDetailInstance?.completeName}">
+				<li class="fieldcontain">
+					<span id="completeName-label" class="property-label"><g:message code="treatmentDetail.completeName.label" default="Complete Name" /></span>
+					
+						<span class="property-value" aria-labelledby="completeName-label"><g:fieldValue bean="${treatmentDetailInstance}" field="completeName"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${treatmentDetailInstance?.decimalsQuantity}">
+				<li class="fieldcontain">
+					<span id="decimalsQuantity-label" class="property-label"><g:message code="treatmentDetail.decimalsQuantity.label" default="Decimals Quantity" /></span>
+					
+						<span class="property-value" aria-labelledby="decimalsQuantity-label"><g:fieldValue bean="${treatmentDetailInstance}" field="decimalsQuantity"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${treatmentDetailInstance?.fieldType}">
+				<li class="fieldcontain">
+					<span id="fieldType-label" class="property-label"><g:message code="treatmentDetail.fieldType.label" default="Field Type" /></span>
+					
+						<span class="property-value" aria-labelledby="fieldType-label"><g:link controller="fieldType" action="show" id="${treatmentDetailInstance?.fieldType?.id}">${treatmentDetailInstance?.fieldType?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${treatmentDetailInstance?.measureUnit}">
+				<li class="fieldcontain">
+					<span id="measureUnit-label" class="property-label"><g:message code="treatmentDetail.measureUnit.label" default="Measure Unit" /></span>
+					
+						<span class="property-value" aria-labelledby="measureUnit-label"><g:link controller="measurementUnit" action="show" id="${treatmentDetailInstance?.measureUnit?.id}">${treatmentDetailInstance?.measureUnit?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${treatmentDetailInstance?.treatmentType}">
+				<li class="fieldcontain">
+					<span id="treatmentType-label" class="property-label"><g:message code="treatmentDetail.treatmentType.label" default="Treatment Type" /></span>
+					
+						<span class="property-value" aria-labelledby="treatmentType-label"><g:fieldValue bean="${treatmentDetailInstance}" field="treatmentType"/></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

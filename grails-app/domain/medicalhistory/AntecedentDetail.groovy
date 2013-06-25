@@ -2,14 +2,28 @@ package medicalhistory
 
 class AntecedentDetail {
 
+	enum AntecedentStudyType {
+ 
+        FRC("FRC"), ANT("Antecedente")
+ 
+        final String value
+        AntecedentStudyType(String value) {
+            this.value = value
+        }
+ 
+        String toString() {
+            value
+        }
+    }
+
+	AntecedentStudyType antecedentStudyType
+    //String antecedentStudyType	//Son fijos: Antecedent - FRC
     String abbreviation
     String completeName
-    String fieldType
-    int minValue
-    int maxValue
+    FieldType fieldType
     int decimalsQuantity
-    String measureUnit
-
+    MeasurementUnit measureUnit
+    
     static constraints = {
     }
 }

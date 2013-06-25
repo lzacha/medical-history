@@ -26,13 +26,11 @@
 					
 						<th><g:message code="plate.doctor.label" default="Doctor" /></th>
 					
-						<g:sortableColumn property="fieldPlate2" title="${message(code: 'plate.fieldPlate2.label', default: 'Field Plate2')}" />
-					
-						<g:sortableColumn property="fieldPlate3" title="${message(code: 'plate.fieldPlate3.label', default: 'Field Plate3')}" />
-					
 						<g:sortableColumn property="imagePlate" title="${message(code: 'plate.imagePlate.label', default: 'Image Plate')}" />
 					
 						<g:sortableColumn property="observation" title="${message(code: 'plate.observation.label', default: 'Observation')}" />
+					
+						<th><g:message code="plate.patient.label" default="Patient" /></th>
 					
 						<g:sortableColumn property="plateDate" title="${message(code: 'plate.plateDate.label', default: 'Plate Date')}" />
 					
@@ -44,13 +42,11 @@
 					
 						<td><g:link action="show" id="${plateInstance.id}">${fieldValue(bean: plateInstance, field: "doctor")}</g:link></td>
 					
-						<td>${fieldValue(bean: plateInstance, field: "fieldPlate2")}</td>
-					
-						<td>${fieldValue(bean: plateInstance, field: "fieldPlate3")}</td>
-					
 						<td>${fieldValue(bean: plateInstance, field: "imagePlate")}</td>
 					
 						<td>${fieldValue(bean: plateInstance, field: "observation")}</td>
+					
+						<td>${fieldValue(bean: plateInstance, field: "patient")}</td>
 					
 						<td><g:formatDate date="${plateInstance.plateDate}" /></td>
 					

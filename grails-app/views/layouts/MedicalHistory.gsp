@@ -61,7 +61,7 @@
 <body>
 
 <div class="ch-header ch-box">
-    <h1>Medical History Site Title</h1>
+(Logo) <center><h1>SIGPHA</h1></center>
 </div>
 
 <div class="ch-g1-5">
@@ -72,6 +72,7 @@
                 <ul>
                     <li><a href="searchPatient">Buscar Paciente</a></li>
                     <li><a href="addPatient">Agregar Paciente</a></li>
+                    <li><a href="listPatients">Listar pacientes</a></li>
                 </ul>
             </li>
             <li>
@@ -88,6 +89,19 @@
                     <li><a href="#">Admin 2</a></li>
                 </ul>
             </li>
+            <li>
+                <span>Configuracion</span>
+                <ul>
+                    <li><a href="config">Config 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <span>Exportacion</span>
+                <ul>
+                    <li><a href="#">Exportacion 1</a></li>
+                    <li><a href="#">Exportacion 2</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>
@@ -101,9 +115,8 @@
 </div>
 
 <div class="ch-footer ch-box">
-    <p>Footer de la app</p>
-</div>
-
+    <p>Sistema Integral Gestión de Pacientes del Área de Hipertensión Arterial
+</p>
 <!-- chico-ui js-->
 <g:javascript src="chico-ui/js/chico-min-0.13.1.js"/>
 
@@ -139,6 +152,13 @@
     });
 
     var autoComplete = function(data){ ac.suggest(data); };
+
+    /*
+    ac.on("ready", function () {
+        var that = this; // Where "this" is the returned object of component
+        $("#patientId").val(this);
+    });
+    */
 
     var patientTabs = $("#patientTabs").tabs();
 </script>

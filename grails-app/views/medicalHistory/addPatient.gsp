@@ -1,2 +1,9 @@
-<iframe src="/medical-history/patient/create" frameborder="0" width="100%" height="250">
-</iframe>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<div id="patientTabs">
+	<ul>
+		<li><a href="/medical-history/patient/create">Paciente</a></li>
+	</ul>
+	<div>
+		<div id="tab1"></div>
+	</div>
+</div>

@@ -6,10 +6,13 @@ import medicalhistory.AntecedentDetail
 import medicalhistory.Treatment
 import medicalhistory.AgeRange
 import medicalhistory.MeasurementUnit
-import medicalhistory.MedicalStudyDetail
+import medicalhistory.StudyTypeDetail
+import medicalhistory.MainStudyType
 import medicalhistory.utils.MedicalEnums
 import medicalhistory.StudyType
 import medicalhistory.FieldType
+import medicalhistory.TreatmentFrequency
+import medicalhistory.TreatmentDetail
 
 class BootStrap {
 
@@ -47,45 +50,38 @@ class BootStrap {
         su4.save()
         su5.save()
 
-        def antDet1 = new AntecedentDetail(antecedentDetailId: 1,internalCode: 'ENF CORONARIA', description: 'ENF CORONARIA')
-        def antDet2 = new AntecedentDetail(antecedentDetailId: 2,internalCode: 'EC', description: 'EC')
-        def antDet3 = new AntecedentDetail(antecedentDetailId: 3,internalCode: 'CRM', description: 'CRM')
-        def antDet4 = new AntecedentDetail(antecedentDetailId: 4,internalCode: "ATC", description: "ATC")
-        def antDet5 = new AntecedentDetail(antecedentDetailId: 5,internalCode: "ENF VASC PERIF", description: "ENF VASC PERIF") 
-        def antDet6 = new AntecedentDetail(antecedentDetailId: 6,internalCode: "HIPOTIROIDISMO", description: "HIPOTIROIDISMO")
-        def antDet7 = new AntecedentDetail(antecedentDetailId: 7,internalCode: "BETA  BLOQ", description: "BETA  BLOQ") 
-        def antDet8 = new AntecedentDetail(antecedentDetailId: 8,internalCode: "BLOQ CALCI", description: "BLOQ CALCI")
-        def antDet9 = new AntecedentDetail(antecedentDetailId: 9,internalCode: "IECA", description: "IECA")
-        def antDet10 = new AntecedentDetail(antecedentDetailId: 10,internalCode: "INH  AT2", description: "INH  AT2")
-        def antDet11 = new AntecedentDetail(antecedentDetailId: 11,internalCode: "AAS", description: "AAS")
-        def antDet12 = new AntecedentDetail(antecedentDetailId: 12,internalCode: "CLOPI", description: "CLOPI")
-        antDet1.save()
-        antDet2.save()
-        antDet3.save()
-        antDet4.save()
-        antDet5.save()
-        antDet6.save()
-        antDet7.save()
-        antDet8.save()
-        antDet9.save()
-        antDet10.save()
-        antDet11.save()
-        antDet12.save()
 
-        def patient1 = new Patient(patientId: 1,firstName: "Ariel", lastName: "Ortega", sexId: "Masculino", birthDate: new Date())
-        def patient2 = new Patient(patientId: 2,firstName: "Diego", lastName: "Latorre", sexId: "Masculino", birthDate:new Date())
-        def patient3 = new Patient(patientId: 3,firstName: "Carlos", lastName: "Tevez", sexId: "Masculino", birthDate:new Date())
-        def patient4 = new Patient(patientId: 4,firstName: "Martin", lastName: "Palermo", sexId: "Masculino", birthDate:new Date())
-        def patient5 = new Patient(patientId: 5,firstName: "Martin", lastName: "Zanetti", sexId: "Masculino", birthDate:new Date())
-        def patient6 = new Patient(patientId: 6,firstName: "Martin", lastName: "Maradona", sexId: "Masculino", birthDate:new Date())
-        def patient7 = new Patient(patientId: 7,firstName: "Jose", lastName: "Flores", sexId: "Masculino", birthDate:new Date())
-        patient1.save()
-        patient2.save()
-        patient3.save()
-        patient4.save()
-        patient5.save()
-        patient6.save()
-        patient7.save()
+        def mst1 = new MainStudyType(mainStudyType:"Htal", description:"Hospital")
+        def mst2 = new MainStudyType(mainStudyType:"RCVC", description:"RCVC")
+        def mst3 = new MainStudyType(mainStudyType:"DgHTA", description:"DgHTA")
+        mst1.save()
+        mst2.save()
+        mst3.save()
+
+        //def antDet1 = new AntecedentDetail(internalCode: 'ENF CORONARIA', description: 'ENF CORONARIA')
+        //def antDet2 = new AntecedentDetail(antecedentDetailId: 2,internalCode: 'EC', description: 'EC')
+        //def antDet3 = new AntecedentDetail(antecedentDetailId: 3,internalCode: 'CRM', description: 'CRM')
+        //def antDet4 = new AntecedentDetail(antecedentDetailId: 4,internalCode: "ATC", description: "ATC")
+        //def antDet5 = new AntecedentDetail(antecedentDetailId: 5,internalCode: "ENF VASC PERIF", description: "ENF VASC PERIF") 
+        //def antDet6 = new AntecedentDetail(antecedentDetailId: 6,internalCode: "HIPOTIROIDISMO", description: "HIPOTIROIDISMO")
+        //def antDet7 = new AntecedentDetail(antecedentDetailId: 7,internalCode: "BETA  BLOQ", description: "BETA  BLOQ") 
+        //def antDet8 = new AntecedentDetail(antecedentDetailId: 8,internalCode: "BLOQ CALCI", description: "BLOQ CALCI")
+        //def antDet9 = new AntecedentDetail(antecedentDetailId: 9,internalCode: "IECA", description: "IECA")
+        //def antDet10 = new AntecedentDetail(antecedentDetailId: 10,internalCode: "INH  AT2", description: "INH  AT2")
+        //def antDet11 = new AntecedentDetail(antecedentDetailId: 11,internalCode: "AAS", description: "AAS")
+        //def antDet12 = new AntecedentDetail(antecedentDetailId: 12,internalCode: "CLOPI", description: "CLOPI")
+        //antDet1.save()
+        //antDet2.save()
+        //antDet3.save()
+        //antDet4.save()
+        //antDet5.save()
+        //antDet6.save()
+        //antDet7.save()
+        //antDet8.save()
+        //antDet9.save()
+        //antDet10.save()
+        //antDet11.save()
+        //antDet12.save    
 
         def doc1 = new Doctor(docId:1, medicalEnrollment:"e1", firstName:"Rene1", lastName:"Favaloro1")
         def doc2 = new Doctor(docId:2, medicalEnrollment:"e1", firstName:"Rene2", lastName:"Favaloro2")
@@ -94,10 +90,35 @@ class BootStrap {
         doc2.save()
         doc3.save()
 
-        def st1 = new StudyType(studyType:"Laboratorio")
-        def st2 = new StudyType(studyType:"Sed Urinario")
-        st1.save()
-        st2.save()
+ //       def st1 = new StudyType(studyType:"Laboratorio")
+ //       def st2 = new StudyType(studyType:"Sed Urinario")
+ //      st1.save()
+ //       st2.save()
+
+//        def t1 = new Treatment(antecedentDetailId: 1,internalCode: 'ENF CORONARIA', description: 'ENF CORONARIA')
+//        t1.save()
+
+        def ar1 = new AgeRange(rangeDescription:"niños", minValue:1, maxValue:10, sex: "hombre") //, sex: AgeRange.PatientSex.MAN)
+        def ar2 = new AgeRange(rangeDescription:"adolescentes", minValue:11, maxValue:19, sex:"hombre") //, sex: AgeRange.PatientSex.MAN)
+        def ar3 = new AgeRange(rangeDescription:"adultos", minValue:20, maxValue:120, sex:"hombre") //, sex: AgeRange.PatientSex.MAN)
+        ar1.save()
+        ar2.save()
+        ar3.save()
+
+        def patient1 = new Patient(height:1, weight:1, abdomialDiameter:1, medicalHistory:1, patientId: 1,firstName: "Ariel", lastName: "Ortega", sexId: "Masculino", birthDate: new Date())
+        def patient2 = new Patient(height:2, weight:2, abdomialDiameter:2, medicalHistory:2, patientId: 2,firstName: "Diego", lastName: "Latorre", sexId: "Masculino", birthDate:new Date())
+        def patient3 = new Patient(height:3, weight:3, abdomialDiameter:3, medicalHistory:3, patientId: 3,firstName: "Carlos", lastName: "Tevez", sexId: "Masculino", birthDate:new Date())
+        def patient4 = new Patient(height:4, weight:4, abdomialDiameter:4, medicalHistory:4, patientId: 4,firstName: "Martin", lastName: "Palermo", sexId: "Masculino", birthDate:new Date())
+        def patient5 = new Patient(height:5, weight:5, abdomialDiameter:5, medicalHistory:5, patientId: 5,firstName: "Martin", lastName: "Zanetti", sexId: "Masculino", birthDate:new Date())
+        def patient6 = new Patient(height:6, weight:6, abdomialDiameter:6, medicalHistory:6, patientId: 6,firstName: "Martin", lastName: "Maradona", sexId: "Masculino", birthDate:new Date())
+        def patient7 = new Patient(height:7, weight:7, abdomialDiameter:7, medicalHistory:7, patientId: 7,firstName: "Jose", lastName: "Flores", sexId: "Masculino", birthDate:new Date())
+        patient1.save()
+        patient2.save()
+        patient3.save()
+        patient4.save()
+        patient5.save()
+        patient6.save()
+        patient7.save()
 
         def ft1 = new FieldType(fieldName:"Numerico")
         def ft2 = new FieldType(fieldName:"Alfanumerico")
@@ -108,15 +129,10 @@ class BootStrap {
         ft3.save()
         ft4.save()
 
-        def t1 = new Treatment(antecedentDetailId: 1,internalCode: 'ENF CORONARIA', description: 'ENF CORONARIA')
-        t1.save()
-
-        def ar1 = new AgeRange(rangeDescription:"niños", minValue:1, maxValue:10, sex: "hombre") //, sex: AgeRange.PatientSex.MAN)
-        def ar2 = new AgeRange(rangeDescription:"adolescentes", minValue:11, maxValue:19, sex:"hombre") //, sex: AgeRange.PatientSex.MAN)
-        def ar3 = new AgeRange(rangeDescription:"adultos", minValue:20, maxValue:120, sex:"hombre") //, sex: AgeRange.PatientSex.MAN)
-        ar1.save()
-        ar2.save()
-        ar3.save()
+        def tf1 = new TreatmentFrequency(frequencyDescription:"Diario")
+        def tf2 = new TreatmentFrequency(frequencyDescription:"Semanal")
+        tf1.save()
+        tf2.save()
 
 
         def mu1 = new MeasurementUnit(descriptionUnit:"Centimetros cuadrados", unit:"cm2")
@@ -124,13 +140,26 @@ class BootStrap {
         mu1.save()
         mu2.save()
 
+        def antDet1 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"HTA",completeName:"NombreCompleto HTA", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
+        def antDet2 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"HTA",completeName:"NombreCompleto HTA", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
+        def antDet3 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"HTA",completeName:"NombreCompleto HTA", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
+        antDet1.save()
+        antDet2.save()
+        antDet3.save()
 
-        def msd1 = new MedicalStudyDetail(  ageRange: ar1, studyType: st1,
-                                            abbreviation: "HTO", completeName: "Hipo todo zaraza",
-                                            fieldType: ft1, minValue:1, maxValue:10,
-                                            decimalsQuantity: 2, unit:mu1)
+        def trtDet1 = new TreatmentDetail(treatmentType: TreatmentDetail.TreatmentType.TREATMENT, abbreviation:"BETA  BLOQ",completeName:"Beta Bloqueadores1", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
+        def trtDet2 = new TreatmentDetail(treatmentType: TreatmentDetail.TreatmentType.TREATMENT, abbreviation:"BETA  BLOQ",completeName:"Beta Bloqueadores2", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
+        def trtDet3 = new TreatmentDetail(treatmentType: TreatmentDetail.TreatmentType.TREATMENT, abbreviation:"BETA  BLOQ",completeName:"Beta Bloqueadores3", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
+        trtDet1.save()
+        trtDet2.save()
+        trtDet3.save()
         
-        msd1.save()
+//        def msd1 = new MedicalStudyDetail(  ageRange: ar1, studyType: st1,
+//                                            abbreviation: "HTO", completeName: "Hipo todo zaraza",
+//                                            fieldType: ft1, minValue:1, maxValue:10,
+//                                            decimalsQuantity: 2, unit:mu1)
+//
+//        msd1.save()
 
     }
 

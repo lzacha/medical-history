@@ -50,15 +50,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${ageRangeInstance?.sex}">
-				<li class="fieldcontain">
-					<span id="sex-label" class="property-label"><g:message code="ageRange.sex.label" default="Sex" /></span>
-					
-						<span class="property-value" aria-labelledby="sex-label"><g:fieldValue bean="${ageRangeInstance}" field="sex"/></span>
-					
-				</li>
-				</g:if>
-			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

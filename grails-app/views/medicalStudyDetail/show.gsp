@@ -32,29 +32,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${medicalStudyDetailInstance?.ageRange}">
-				<li class="fieldcontain">
-					<span id="ageRange-label" class="property-label"><g:message code="medicalStudyDetail.ageRange.label" default="Age Range" /></span>
-					
-						<span class="property-value" aria-labelledby="ageRange-label"><g:link controller="ageRange" action="show" id="${medicalStudyDetailInstance?.ageRange?.id}">${medicalStudyDetailInstance?.ageRange?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${medicalStudyDetailInstance?.completeName}">
 				<li class="fieldcontain">
 					<span id="completeName-label" class="property-label"><g:message code="medicalStudyDetail.completeName.label" default="Complete Name" /></span>
 					
 						<span class="property-value" aria-labelledby="completeName-label"><g:fieldValue bean="${medicalStudyDetailInstance}" field="completeName"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${medicalStudyDetailInstance?.decimalsQuantity}">
-				<li class="fieldcontain">
-					<span id="decimalsQuantity-label" class="property-label"><g:message code="medicalStudyDetail.decimalsQuantity.label" default="Decimals Quantity" /></span>
-					
-						<span class="property-value" aria-labelledby="decimalsQuantity-label"><g:fieldValue bean="${medicalStudyDetailInstance}" field="decimalsQuantity"/></span>
 					
 				</li>
 				</g:if>
@@ -68,38 +50,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${medicalStudyDetailInstance?.maxValue}">
-				<li class="fieldcontain">
-					<span id="maxValue-label" class="property-label"><g:message code="medicalStudyDetail.maxValue.label" default="Max Value" /></span>
-					
-						<span class="property-value" aria-labelledby="maxValue-label"><g:fieldValue bean="${medicalStudyDetailInstance}" field="maxValue"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${medicalStudyDetailInstance?.minValue}">
-				<li class="fieldcontain">
-					<span id="minValue-label" class="property-label"><g:message code="medicalStudyDetail.minValue.label" default="Min Value" /></span>
-					
-						<span class="property-value" aria-labelledby="minValue-label"><g:fieldValue bean="${medicalStudyDetailInstance}" field="minValue"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${medicalStudyDetailInstance?.studyType}">
 				<li class="fieldcontain">
 					<span id="studyType-label" class="property-label"><g:message code="medicalStudyDetail.studyType.label" default="Study Type" /></span>
 					
 						<span class="property-value" aria-labelledby="studyType-label"><g:link controller="studyType" action="show" id="${medicalStudyDetailInstance?.studyType?.id}">${medicalStudyDetailInstance?.studyType?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${medicalStudyDetailInstance?.unit}">
-				<li class="fieldcontain">
-					<span id="unit-label" class="property-label"><g:message code="medicalStudyDetail.unit.label" default="Unit" /></span>
-					
-						<span class="property-value" aria-labelledby="unit-label"><g:link controller="measurementUnit" action="show" id="${medicalStudyDetailInstance?.unit?.id}">${medicalStudyDetailInstance?.unit?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

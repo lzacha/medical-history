@@ -5,7 +5,7 @@
 </head>
 <body>
        <!-- Init medicalHistory/index.gsp -->
-       Bienvenido al index.gsp del HistoryController
+      <center><img src="${createLinkTo(dir: 'images', file: 'icon1.png')}" alt="Grails"/></center>
        <!-- Final medicalHistory/index.gsp -->
 </body>
 </html>

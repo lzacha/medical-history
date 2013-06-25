@@ -6,6 +6,13 @@
 </script
 
 
+    <table>
+        <tr>
+            <td><img src="${createLinkTo(dir: 'images', file: '')}" alt="Grails"/></td>
+            <td><h1>SIGPHA</h1></td>
+        </tr>
+    </table>
+
 ----------------------------------------------------------------------------------------------------------------------------
 <g:radioGroup name="amountPayableVariation" labels="['Yes','No']" values="['true','false']" value="${contractInstance?.amountPayableVariation}">
 <span>${it.radio} ${it.label}</span>

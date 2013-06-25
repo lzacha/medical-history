@@ -2,6 +2,14 @@
 
 
 
+<div class="fieldcontain ${hasErrors(bean: medicalStudyInstance, field: 'abdominalDiameter', 'error')} required">
+	<label for="abdominalDiameter">
+		<g:message code="medicalStudy.abdominalDiameter.label" default="Abdominal Diameter" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field name="abdominalDiameter" value="${fieldValue(bean: medicalStudyInstance, field: 'abdominalDiameter')}" required=""/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: medicalStudyInstance, field: 'doctor', 'error')} required">
 	<label for="doctor">
 		<g:message code="medicalStudy.doctor.label" default="Doctor" />
@@ -10,20 +18,20 @@
 	<g:select id="doctor" name="doctor.id" from="${medicalhistory.Doctor.list()}" optionKey="id" required="" value="${medicalStudyInstance?.doctor?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: medicalStudyInstance, field: 'mainStudy', 'error')} ">
-	<label for="mainStudy">
-		<g:message code="medicalStudy.mainStudy.label" default="Main Study" />
-		
+<div class="fieldcontain ${hasErrors(bean: medicalStudyInstance, field: 'height', 'error')} required">
+	<label for="height">
+		<g:message code="medicalStudy.height.label" default="Height" />
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="mainStudy" value="${medicalStudyInstance?.mainStudy}"/>
+	<g:field name="height" value="${fieldValue(bean: medicalStudyInstance, field: 'height')}" required=""/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: medicalStudyInstance, field: 'medicalStudies', 'error')} ">
-	<label for="medicalStudies">
-		<g:message code="medicalStudy.medicalStudies.label" default="Medical Studies" />
-		
+<div class="fieldcontain ${hasErrors(bean: medicalStudyInstance, field: 'mainStudyType', 'error')} required">
+	<label for="mainStudyType">
+		<g:message code="medicalStudy.mainStudyType.label" default="Main Study Type" />
+		<span class="required-indicator">*</span>
 	</label>
-	<g:select name="medicalStudies" from="${medicalhistory.MedicalStudyDetail.list()}" multiple="multiple" optionKey="id" size="5" value="${medicalStudyInstance?.medicalStudies*.id}" class="many-to-many"/>
+	<g:select id="mainStudyType" name="mainStudyType.id" from="${medicalhistory.MainStudyType.list()}" optionKey="id" required="" value="${medicalStudyInstance?.mainStudyType?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: medicalStudyInstance, field: 'patient', 'error')} required">
@@ -42,11 +50,11 @@
 	<g:datePicker name="studyDate" precision="day"  value="${medicalStudyInstance?.studyDate}"  />
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: medicalStudyInstance, field: 'unit', 'error')} required">
-	<label for="unit">
-		<g:message code="medicalStudy.unit.label" default="Unit" />
+<div class="fieldcontain ${hasErrors(bean: medicalStudyInstance, field: 'weight', 'error')} required">
+	<label for="weight">
+		<g:message code="medicalStudy.weight.label" default="Weight" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="unit" name="unit.id" from="${medicalhistory.MeasurementUnit.list()}" optionKey="id" required="" value="${medicalStudyInstance?.unit?.id}" class="many-to-one"/>
+	<g:field name="weight" value="${fieldValue(bean: medicalStudyInstance, field: 'weight')}" required=""/>
 </div>
 

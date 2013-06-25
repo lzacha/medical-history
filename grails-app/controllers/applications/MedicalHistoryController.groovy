@@ -14,6 +14,12 @@ class MedicalHistoryController {
 
     def admin() {}
 
+    def config() {}
+
+    def listPatients() {
+
+    }
+
     //Patient Views
     def patient() {
         Patient p = Patient.get(params.id)
@@ -26,7 +32,6 @@ class MedicalHistoryController {
 
     def addPatient() {
         //render(template: "/src/templates/scaffolding/form")
-
     }
 
     def suggest(){

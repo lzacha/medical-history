@@ -2,11 +2,19 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: studyTypeInstance, field: 'studyType', 'error')} ">
-	<label for="studyType">
-		<g:message code="studyType.studyType.label" default="Study Type" />
+<div class="fieldcontain ${hasErrors(bean: studyTypeInstance, field: 'description', 'error')} ">
+	<label for="description">
+		<g:message code="studyType.description.label" default="Description" />
 		
 	</label>
-	<g:textField name="studyType" value="${studyTypeInstance?.studyType}"/>
+	<g:textField name="description" value="${studyTypeInstance?.description}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: studyTypeInstance, field: 'shortDescription', 'error')} ">
+	<label for="shortDescription">
+		<g:message code="studyType.shortDescription.label" default="Short Description" />
+		
+	</label>
+	<g:textField name="shortDescription" value="${studyTypeInstance?.shortDescription}"/>
 </div>
 

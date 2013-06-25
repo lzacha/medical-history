@@ -2,7 +2,8 @@ package medicalhistory
 
 class StudyType {
 
-    String studyType //Laboratorio, Sed Urinario, etc
+    String shortDescription
+    String description
 
     static constraints = {
     }

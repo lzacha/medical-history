@@ -30,8 +30,6 @@
 					
 						<g:sortableColumn property="maxValue" title="${message(code: 'ageRange.maxValue.label', default: 'Max Value')}" />
 					
-						<g:sortableColumn property="sex" title="${message(code: 'ageRange.sex.label', default: 'Sex')}" />
-					
 					</tr>
 				</thead>
 				<tbody>
@@ -43,8 +41,6 @@
 						<td>${fieldValue(bean: ageRangeInstance, field: "minValue")}</td>
 					
 						<td>${fieldValue(bean: ageRangeInstance, field: "maxValue")}</td>
-					
-						<td>${fieldValue(bean: ageRangeInstance, field: "sex")}</td>
 					
 					</tr>
 				</g:each>

@@ -61,7 +61,7 @@
 <body>
 
 <div class="ch-header ch-box">
-    <h1>Medical History Site Title</h1>
+(Logo) <center><h1>SIGPHA</h1></center>
 </div>
 <div class="ch-g4-5">
     <div class="ch-box ch-rightcolumn">
@@ -71,7 +71,8 @@
 </div>
 
 <div class="ch-footer ch-box">
-    <p>Footer de la app</p>
+    <p>Sistema Integral Gestión de Pacientes del Área de Hipertensión Arterial
+</p>
 </div>
 
 <!-- chico-ui js-->

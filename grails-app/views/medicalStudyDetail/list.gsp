@@ -26,15 +26,11 @@
 					
 						<g:sortableColumn property="abbreviation" title="${message(code: 'medicalStudyDetail.abbreviation.label', default: 'Abbreviation')}" />
 					
-						<th><g:message code="medicalStudyDetail.ageRange.label" default="Age Range" /></th>
-					
 						<g:sortableColumn property="completeName" title="${message(code: 'medicalStudyDetail.completeName.label', default: 'Complete Name')}" />
-					
-						<g:sortableColumn property="decimalsQuantity" title="${message(code: 'medicalStudyDetail.decimalsQuantity.label', default: 'Decimals Quantity')}" />
 					
 						<th><g:message code="medicalStudyDetail.fieldType.label" default="Field Type" /></th>
 					
-						<g:sortableColumn property="maxValue" title="${message(code: 'medicalStudyDetail.maxValue.label', default: 'Max Value')}" />
+						<th><g:message code="medicalStudyDetail.studyType.label" default="Study Type" /></th>
 					
 					</tr>
 				</thead>
@@ -44,15 +40,11 @@
 					
 						<td><g:link action="show" id="${medicalStudyDetailInstance.id}">${fieldValue(bean: medicalStudyDetailInstance, field: "abbreviation")}</g:link></td>
 					
-						<td>${fieldValue(bean: medicalStudyDetailInstance, field: "ageRange")}</td>
-					
 						<td>${fieldValue(bean: medicalStudyDetailInstance, field: "completeName")}</td>
-					
-						<td>${fieldValue(bean: medicalStudyDetailInstance, field: "decimalsQuantity")}</td>
 					
 						<td>${fieldValue(bean: medicalStudyDetailInstance, field: "fieldType")}</td>
 					
-						<td>${fieldValue(bean: medicalStudyDetailInstance, field: "maxValue")}</td>
+						<td>${fieldValue(bean: medicalStudyDetailInstance, field: "studyType")}</td>
 					
 					</tr>
 				</g:each>

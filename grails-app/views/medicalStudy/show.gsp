@@ -23,6 +23,15 @@
 			</g:if>
 			<ol class="property-list medicalStudy">
 			
+				<g:if test="${medicalStudyInstance?.abdominalDiameter}">
+				<li class="fieldcontain">
+					<span id="abdominalDiameter-label" class="property-label"><g:message code="medicalStudy.abdominalDiameter.label" default="Abdominal Diameter" /></span>
+					
+						<span class="property-value" aria-labelledby="abdominalDiameter-label"><g:fieldValue bean="${medicalStudyInstance}" field="abdominalDiameter"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${medicalStudyInstance?.doctor}">
 				<li class="fieldcontain">
 					<span id="doctor-label" class="property-label"><g:message code="medicalStudy.doctor.label" default="Doctor" /></span>
@@ -32,22 +41,20 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${medicalStudyInstance?.mainStudy}">
+				<g:if test="${medicalStudyInstance?.height}">
 				<li class="fieldcontain">
-					<span id="mainStudy-label" class="property-label"><g:message code="medicalStudy.mainStudy.label" default="Main Study" /></span>
+					<span id="height-label" class="property-label"><g:message code="medicalStudy.height.label" default="Height" /></span>
 					
-						<span class="property-value" aria-labelledby="mainStudy-label"><g:fieldValue bean="${medicalStudyInstance}" field="mainStudy"/></span>
+						<span class="property-value" aria-labelledby="height-label"><g:fieldValue bean="${medicalStudyInstance}" field="height"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${medicalStudyInstance?.medicalStudies}">
+				<g:if test="${medicalStudyInstance?.mainStudyType}">
 				<li class="fieldcontain">
-					<span id="medicalStudies-label" class="property-label"><g:message code="medicalStudy.medicalStudies.label" default="Medical Studies" /></span>
+					<span id="mainStudyType-label" class="property-label"><g:message code="medicalStudy.mainStudyType.label" default="Main Study Type" /></span>
 					
-						<g:each in="${medicalStudyInstance.medicalStudies}" var="m">
-						<span class="property-value" aria-labelledby="medicalStudies-label"><g:link controller="medicalStudyDetail" action="show" id="${m.id}">${m?.encodeAsHTML()}</g:link></span>
-						</g:each>
+						<span class="property-value" aria-labelledby="mainStudyType-label"><g:link controller="mainStudyType" action="show" id="${medicalStudyInstance?.mainStudyType?.id}">${medicalStudyInstance?.mainStudyType?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
@@ -70,11 +77,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${medicalStudyInstance?.unit}">
+				<g:if test="${medicalStudyInstance?.weight}">
 				<li class="fieldcontain">
-					<span id="unit-label" class="property-label"><g:message code="medicalStudy.unit.label" default="Unit" /></span>
+					<span id="weight-label" class="property-label"><g:message code="medicalStudy.weight.label" default="Weight" /></span>
 					
-						<span class="property-value" aria-labelledby="unit-label"><g:link controller="measurementUnit" action="show" id="${medicalStudyInstance?.unit?.id}">${medicalStudyInstance?.unit?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="weight-label"><g:fieldValue bean="${medicalStudyInstance}" field="weight"/></span>
 					
 				</li>
 				</g:if>

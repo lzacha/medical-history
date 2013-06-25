@@ -7,7 +7,7 @@ class Patient {
         spellCheck "include"
     }
 
-    //int patientId
+    int patientId
 	String firstName
 	String lastName
 	String sexId

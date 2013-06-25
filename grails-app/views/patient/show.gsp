@@ -86,6 +86,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${patientInstance?.patientId}">
+				<li class="fieldcontain">
+					<span id="patientId-label" class="property-label"><g:message code="patient.patientId.label" default="Patient Id" /></span>
+					
+						<span class="property-value" aria-labelledby="patientId-label"><g:fieldValue bean="${patientInstance}" field="patientId"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${patientInstance?.weight}">
 				<li class="fieldcontain">
 					<span id="weight-label" class="property-label"><g:message code="patient.weight.label" default="Weight" /></span>
