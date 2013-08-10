@@ -1,13 +1,13 @@
 dataSource {
     pooled = true
-    /*
+    
     driverClassName = "org.h2.Driver"
     username = "sa"
     password = ""
-
+    
+    
+    /*
     driverClassName = "com.mysql.jdbc.Driver"
-    username = "admin"
-    password = "admin"
     dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
     */
 }
@@ -37,12 +37,13 @@ environments {
 
         /*
         dataSource {
-            driverClassName = "com.mysql.jdbc.Driver"
-            dbCreate = "update" // one of 'create', 'create-drop','update'
-            url = "jdbc:mysql://localhost:8889/mysql"
+            dbCreate = "create" // one of 'create', 'create-drop','update'
+            url = "jdbc:mysql://localhost:8889/medicalhistory"
+            username = "medicalhistory"
+            password = "medicalhistory"
 
-        } */
-
+        }
+    */
 
         /* --> To see
         hibernate {

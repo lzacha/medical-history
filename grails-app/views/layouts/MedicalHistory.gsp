@@ -78,28 +78,26 @@
             <li>
                 <span>Estadisticas</span>
                 <ul>
-                    <li><a href="#">Estadistica 1</a></li>
-                    <li><a href="#">Estadistica 2</a></li>
+                    <li><a href="#">Estadistica a definir</a></li>
                 </ul>
             </li>
             <li>
                 <span>Administración</span>
                 <ul>
-                    <li><a href="#">Admin 1</a></li>
-                    <li><a href="#">Admin 2</a></li>
+                    <li><a href="#">Seguridad y Roles</a></li>
                 </ul>
             </li>
             <li>
                 <span>Configuracion</span>
                 <ul>
-                    <li><a href="config">Config 1</a></li>
+                    <li><a href="config">Configuracion del sistema</a></li>
                 </ul>
             </li>
             <li>
                 <span>Exportacion</span>
                 <ul>
-                    <li><a href="#">Exportacion 1</a></li>
-                    <li><a href="#">Exportacion 2</a></li>
+                    <li><a href="#">Exportacion PDF</a></li>
+                    <li><a href="#">Exportacion EXCEL</a></li>
                 </ul>
             </li>
         </ul>

@@ -10,7 +10,9 @@ class MedicalHistoryController {
 
     def index() { }
 
-    def stats() {}
+    def stats() {
+    
+    }
 
     def admin() {}
 
