@@ -44,42 +44,10 @@
 	"buffers":
 	[
 		{
-			"file": "grails-app/views/medicalHistoryJsons/stats.gsp",
+			"file": "grails-app/conf/DataSource.groovy",
 			"settings":
 			{
-				"buffer_size": 139,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "grails-app/domain/medicalhistory/Patient.groovy",
-			"settings":
-			{
-				"buffer_size": 722,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "grails-app/controllers/medical/history/MedicalHistoryJsonsController.groovy",
-			"settings":
-			{
-				"buffer_size": 393,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/groovy/mhGroovyTest.groovy",
-			"settings":
-			{
-				"buffer_size": 595,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "grails-app/controllers/applications/MedicalHistoryController.groovy",
-			"settings":
-			{
-				"buffer_size": 1156,
+				"buffer_size": 1978,
 				"line_ending": "Unix"
 			}
 		}
@@ -108,12 +76,14 @@
 	},
 	"file_history":
 	[
+		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/.gitignore",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/controllers/applications/MedicalHistoryController.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/controllers/medical/history/MedicalHistoryJsonsController.groovy",
+		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/domain/medicalhistory/Patient.groovy",
+		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/medicalHistoryJsons/stats.gsp",
+		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/src/groovy/mhGroovyTest.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/plate/list.gsp",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/medicalHistoryJsons/patientAsJson.gsp",
-		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/medicalHistoryJsons/stats.gsp",
-		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/domain/medicalhistory/Patient.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/conf/DataSource.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/controllers/applications/MedicalLoginController.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/medicalHistoryJsons/index.gsp",
@@ -233,9 +203,7 @@
 		"/Users/lzacharewicz/Documents/ML/Querys/Fix PHQLV/Queriers/5",
 		"/Users/lzacharewicz/Documents/ML/Querys/Fix PHQLV/Queriers/4",
 		"/Users/lzacharewicz/Documents/ML/Querys/Fix PHQLV/Queriers/3",
-		"/Users/lzacharewicz/Documents/ML/Querys/Fix PHQLV/Queriers/2",
-		"/Users/lzacharewicz/Documents/ML/Querys/Fix PHQLV/Queriers/1",
-		"/Users/lzacharewicz/Caece/Redes I/Videos de redes 1.txt"
+		"/Users/lzacharewicz/Documents/ML/Querys/Fix PHQLV/Queriers/2"
 	],
 	"find":
 	{
@@ -255,6 +223,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"antecedent",
 			"*/\n",
 			"mainS",
 			"input type",
@@ -327,133 +296,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "grails-app/views/medicalHistoryJsons/stats.gsp",
+					"file": "grails-app/conf/DataSource.groovy",
 					"settings":
 					{
-						"buffer_size": 139,
+						"buffer_size": 1978,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								139,
-								139
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "grails-app/domain/medicalhistory/Patient.groovy",
-					"settings":
-					{
-						"buffer_size": 722,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								1027,
+								1027
 							]
 						],
 						"settings":
@@ -552,356 +406,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "grails-app/controllers/medical/history/MedicalHistoryJsonsController.groovy",
-					"settings":
-					{
-						"buffer_size": 393,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								326,
-								326
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Groovy/Groovy.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/groovy/mhGroovyTest.groovy",
-					"settings":
-					{
-						"buffer_size": 595,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								489,
-								489
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Groovy/Groovy.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "grails-app/controllers/applications/MedicalHistoryController.groovy",
-					"settings":
-					{
-						"buffer_size": 1156,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								22,
-								52
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Groovy/Groovy.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 242.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -951,6 +456,14 @@
 		"selected_items":
 		[
 			[
+				"giti",
+				".gitignore"
+			],
+			[
+				"data",
+				"grails-app/conf/DataSource.groovy"
+			],
+			[
 				"histor",
 				"grails-app/controllers/applications/MedicalHistoryController.groovy"
 			],
@@ -973,10 +486,6 @@
 			[
 				"patie",
 				"grails-app/domain/medicalhistory/Patient.groovy"
-			],
-			[
-				"data",
-				"grails-app/conf/DataSource.groovy"
 			],
 			[
 				"boot",
