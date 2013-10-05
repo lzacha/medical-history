@@ -57,6 +57,8 @@
     <!-- r:layoutResources -->
     <r:layoutResources/>
 
+    <!--r:require module="export"/--> <!-- Modulo de exportacion de tablas -->
+    
 </head>
 <body>
 

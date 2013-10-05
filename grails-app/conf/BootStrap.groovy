@@ -140,6 +140,7 @@ class BootStrap {
         mu1.save()
         mu2.save()
 
+        /*
         def antDet1 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"HTA",completeName:"NombreCompleto HTA", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
         def antDet2 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"HTA",completeName:"NombreCompleto HTA", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
         def antDet3 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"HTA",completeName:"NombreCompleto HTA", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
@@ -153,7 +154,7 @@ class BootStrap {
         trtDet1.save()
         trtDet2.save()
         trtDet3.save()
-        
+        */
 //        def msd1 = new MedicalStudyDetail(  ageRange: ar1, studyType: st1,
 //                                            abbreviation: "HTO", completeName: "Hipo todo zaraza",
 //                                            fieldType: ft1, minValue:1, maxValue:10,
