@@ -44,18 +44,37 @@
 	"buffers":
 	[
 		{
-			"file": "grails-app/controllers/applications/MedicalHistoryController.groovy",
+			"file": "application.properties",
 			"settings":
 			{
-				"buffer_size": 1156,
+				"buffer_size": 238,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "grails-app/views/medicalHistory/searchPatient.gsp",
+			"file": "grails-app/controllers/medicalhistory/AgeRangeController.groovy",
 			"settings":
 			{
-				"buffer_size": 676,
+				"buffer_size": 3736,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "package medical.history\n\nimport medicalhistory.Patient\nimport grails.converters.JSON\n\nclass MedicalHistoryJsonsController {\n\n    def index() { \n\n    }\n\n    def stats(){\n\n    }\n\n    def  patientAsJson() {\n    	Patient p = Patient.get(params.id)\n        render p as JSON\n    }\n\n    def AgeRangeAsJson(){\n\n    }\n\n    def AntecedentAsJson(){\n\n    }\n    \n    def AntecedentAsJson(){\n        \n    }\n    def AntecedentAsJson(){\n        \n    }\n    def AntecedentAsJson(){\n        \n    }\n    def AntecedentAsJson(){\n        \n    }\n    def AntecedentAsJson(){\n        \n    }\n    def AntecedentAsJson(){\n        \n    }\n    def AntecedentAsJson(){\n        \n    }\n    def AntecedentAsJson(){\n        \n    }\n    \n}\n",
+			"file": "grails-app/controllers/medical/history/MedicalHistoryJsonsController.groovy",
+			"file_size": 334,
+			"file_write_time": 1382984501000000,
+			"settings":
+			{
+				"buffer_size": 701,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "grails-app/domain/medicalhistory/Patient.groovy",
+			"settings":
+			{
+				"buffer_size": 767,
 				"line_ending": "Unix"
 			}
 		},
@@ -63,7 +82,15 @@
 			"file": "grails-app/conf/BootStrap.groovy",
 			"settings":
 			{
-				"buffer_size": 9066,
+				"buffer_size": 8133,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "grails-app/domain/medicalhistory/Plate.groovy",
+			"settings":
+			{
+				"buffer_size": 272,
 				"line_ending": "Unix"
 			}
 		}
@@ -71,11 +98,15 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 287.0,
 		"selected_items":
 		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
 		],
-		"width": 449.0
+		"width": 629.0
 	},
 	"console":
 	{
@@ -92,22 +123,28 @@
 	},
 	"file_history":
 	[
+		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/medicalLogin/login.gsp",
+		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/services/medicalhistory/history/LoginService.groovy",
+		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/controllers/applications/MedicalLoginController.groovy",
+		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/Medical-history-grailsPlugins.iml",
+		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/medicalLogin/validate.gsp",
+		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/controllers/applications/MedicalHistoryController.groovy",
+		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/medicalHistory/searchPatient.gsp",
+		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/conf/BootStrap.groovy",
+		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/application.properties",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/medicalHistory/index.gsp",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/layouts/medicalHistory.gsp",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/conf/DataSource.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/target/classes/application.properties",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/.gitignore",
-		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/controllers/applications/MedicalHistoryController.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/controllers/medical/history/MedicalHistoryJsonsController.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/domain/medicalhistory/Patient.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/medicalHistoryJsons/stats.gsp",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/src/groovy/mhGroovyTest.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/plate/list.gsp",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/medicalHistoryJsons/patientAsJson.gsp",
-		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/controllers/applications/MedicalLoginController.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/medicalHistoryJsons/index.gsp",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/medicalHistory/stats.gsp",
-		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/conf/BootStrap.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/medicalHistory/config.gsp",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/medicalHistory/addPatient.gsp",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/medicalHistory/patient.gsp",
@@ -115,7 +152,6 @@
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/domain/medicalhistory/MedicalStudy.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/domain/medicalhistory/StudyTypeDetail.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/domain/medicalhistory/Plate.groovy",
-		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/medicalHistory/searchPatient.gsp",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/domain/medicalhistory/Antecedent.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/domain/medicalhistory/AntecedentDetail.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/domain/medicalhistory/Treatment.groovy",
@@ -125,7 +161,6 @@
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/patient/create.gsp",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/domain/medicalhistory/MeasurementUnit.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/domain/medicalhistory/FieldType.groovy",
-		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/medicalLogin/login.gsp",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/test/unit/medicalhistory/DoctorControllerTests.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/web-app/css/chico-ui/assets/icons.otf",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/Notas.txt",
@@ -137,7 +172,6 @@
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/domain/medicalhistory/ValueReference.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/domain/medicalhistory/AgeRange.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/domain/medicalhistory/MedicalStudyDetail.groovy",
-		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/application.properties",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/src/groovy/MedicalEnums.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/test/unit/medicalhistory/history/TreatmentControllerTests.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/src/groovy/FileUploadService.groovy",
@@ -166,7 +200,6 @@
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/src/templates/scaffolding/Controller.groovy",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/layouts/systemUser.gsp",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/domain/medicalhistory/SystemUser.groovy",
-		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/medicalLogin/validate.gsp",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/antecedent/list.gsp",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/patient/list.gsp",
 		"/Users/lzacharewicz/Documents/Personal/Practica Profesional/Development/medical-history/grails-app/views/antecedent/create.gsp",
@@ -217,9 +250,7 @@
 		"/Users/lzacharewicz/Documents/ML/Querys/Fix PHQLV/Queriers/8",
 		"/Users/lzacharewicz/Documents/ML/Querys/Fix PHQLV/Queriers/7",
 		"/Users/lzacharewicz/Documents/ML/Querys/Fix PHQLV/Queriers/6",
-		"/Users/lzacharewicz/Documents/ML/Querys/Fix PHQLV/Queriers/5",
-		"/Users/lzacharewicz/Documents/ML/Querys/Fix PHQLV/Queriers/4",
-		"/Users/lzacharewicz/Documents/ML/Querys/Fix PHQLV/Queriers/3"
+		"/Users/lzacharewicz/Documents/ML/Querys/Fix PHQLV/Queriers/5"
 	],
 	"find":
 	{
@@ -239,6 +270,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"getLoginCookieFor",
 			"antecedent",
 			"*/\n",
 			"mainS",
@@ -307,132 +339,41 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "grails-app/controllers/applications/MedicalHistoryController.groovy",
+					"file": "application.properties",
 					"settings":
 					{
-						"buffer_size": 1156,
+						"buffer_size": 238,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								488,
-								488
+								238,
+								238
 							]
 						],
 						"settings":
 						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Groovy/Groovy.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Java/JavaProperties.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 120.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "grails-app/views/medicalHistory/searchPatient.gsp",
+					"file": "grails-app/controllers/medicalhistory/AgeRangeController.groovy",
 					"settings":
 					{
-						"buffer_size": 676,
+						"buffer_size": 3736,
 						"regions":
 						{
 						},
@@ -445,97 +386,8 @@
 						],
 						"settings":
 						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/Groovy/Groovy.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -546,117 +398,111 @@
 				},
 				{
 					"buffer": 2,
-					"file": "grails-app/conf/BootStrap.groovy",
+					"file": "grails-app/controllers/medical/history/MedicalHistoryJsonsController.groovy",
 					"settings":
 					{
-						"buffer_size": 9066,
+						"buffer_size": 701,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								86,
-								93
+								301,
+								301
 							]
 						],
 						"settings":
 						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
 							"syntax": "Packages/Groovy/Groovy.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1153.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "grails-app/domain/medicalhistory/Patient.groovy",
+					"settings":
+					{
+						"buffer_size": 767,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								274,
+								291
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Groovy/Groovy.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "grails-app/conf/BootStrap.groovy",
+					"settings":
+					{
+						"buffer_size": 8133,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2128,
+								2128
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Groovy/Groovy.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 231.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "grails-app/domain/medicalhistory/Plate.groovy",
+					"settings":
+					{
+						"buffer_size": 272,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								272,
+								272
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Groovy/Groovy.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -705,6 +551,30 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"b",
+				"grails-app/conf/BootStrap.groovy"
+			],
+			[
+				"appli",
+				"application.properties"
+			],
+			[
+				"plugin",
+				"Medical-history-grailsPlugins.iml"
+			],
+			[
+				"login",
+				"grails-app/views/medicalLogin/login.gsp"
+			],
+			[
+				"val",
+				"grails-app/views/medicalLogin/validate.gsp"
+			],
+			[
+				"logins",
+				"grails-app/services/medicalhistory/history/LoginService.groovy"
+			],
 			[
 				"boots",
 				"grails-app/conf/BootStrap.groovy"
@@ -886,10 +756,6 @@
 				"grails-app/domain/medicalhistory/StudyType.groovy"
 			],
 			[
-				"b",
-				"grails-app/conf/BootStrap.groovy"
-			],
-			[
 				"main",
 				"grails-app/domain/medicalhistory/MainStudyType.groovy"
 			],
@@ -1052,6 +918,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 309.0,
+	"side_bar_width": 332.0,
 	"status_bar_visible": true
 }

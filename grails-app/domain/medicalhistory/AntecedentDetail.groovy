@@ -2,7 +2,7 @@ package medicalhistory
 
 class AntecedentDetail {
 
-	/*
+
     enum AntecedentStudyType {
  
         FRC("FRC"), ANT("Antecedente")
@@ -15,9 +15,9 @@ class AntecedentDetail {
         String toString() {
             value
         }
-    }*/
+    }
 
-	//AntecedentStudyType antecedentStudyType
+	AntecedentStudyType antecedentStudyType
     //String antecedentStudyType	//Son fijos: Antecedent - FRC
     String abbreviation
     String completeName

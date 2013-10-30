@@ -50,6 +50,25 @@ class BootStrap {
         su4.save()
         su5.save()
 
+        
+        def mu1 = new MeasurementUnit(descriptionUnit:"Centimetros cuadrados", unit:"cm2")
+        def mu2 = new MeasurementUnit(descriptionUnit:"Centimetros cubico", unit:"cm3")
+        mu1.save()
+        mu2.save()
+
+        def ft1 = new FieldType(fieldName:"Numerico")
+        def ft2 = new FieldType(fieldName:"Alfanumerico")
+        def ft3 = new FieldType(fieldName:"Si")
+        def ft4 = new FieldType(fieldName:"No")
+        ft1.save()
+        ft2.save()
+        ft3.save()
+        ft4.save()
+
+        def tf1 = new TreatmentFrequency(frequencyDescription:"Diario")
+        def tf2 = new TreatmentFrequency(frequencyDescription:"Semanal")
+        tf1.save()
+        tf2.save()
 
         def mst1 = new MainStudyType(mainStudyType:"Htal", description:"Hospital")
         def mst2 = new MainStudyType(mainStudyType:"RCVC", description:"RCVC")
@@ -58,30 +77,22 @@ class BootStrap {
         mst2.save()
         mst3.save()
 
-        //def antDet1 = new AntecedentDetail(internalCode: 'ENF CORONARIA', description: 'ENF CORONARIA')
-        //def antDet2 = new AntecedentDetail(antecedentDetailId: 2,internalCode: 'EC', description: 'EC')
-        //def antDet3 = new AntecedentDetail(antecedentDetailId: 3,internalCode: 'CRM', description: 'CRM')
-        //def antDet4 = new AntecedentDetail(antecedentDetailId: 4,internalCode: "ATC", description: "ATC")
-        //def antDet5 = new AntecedentDetail(antecedentDetailId: 5,internalCode: "ENF VASC PERIF", description: "ENF VASC PERIF") 
-        //def antDet6 = new AntecedentDetail(antecedentDetailId: 6,internalCode: "HIPOTIROIDISMO", description: "HIPOTIROIDISMO")
-        //def antDet7 = new AntecedentDetail(antecedentDetailId: 7,internalCode: "BETA  BLOQ", description: "BETA  BLOQ") 
-        //def antDet8 = new AntecedentDetail(antecedentDetailId: 8,internalCode: "BLOQ CALCI", description: "BLOQ CALCI")
-        //def antDet9 = new AntecedentDetail(antecedentDetailId: 9,internalCode: "IECA", description: "IECA")
-        //def antDet10 = new AntecedentDetail(antecedentDetailId: 10,internalCode: "INH  AT2", description: "INH  AT2")
-        //def antDet11 = new AntecedentDetail(antecedentDetailId: 11,internalCode: "AAS", description: "AAS")
-        //def antDet12 = new AntecedentDetail(antecedentDetailId: 12,internalCode: "CLOPI", description: "CLOPI")
-        //antDet1.save()
-        //antDet2.save()
-        //antDet3.save()
-        //antDet4.save()
-        //antDet5.save()
-        //antDet6.save()
-        //antDet7.save()
-        //antDet8.save()
-        //antDet9.save()
-        //antDet10.save()
-        //antDet11.save()
-        //antDet12.save    
+
+        
+        def antDet1 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"HTA",completeName:"NombreCompleto HTA", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
+        def antDet2 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"DLP",completeName:"NombreCompleto DLP", fieldType:ft2, decimalsQuantity:2, measureUnit:mu2)
+        def antDet3 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"TBQ",completeName:"NombreCompleto TBQ", fieldType:ft3, decimalsQuantity:2, measureUnit:mu1)
+        def antDet4 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"EXTBQ",completeName:"NombreCompleto EXTBQ", fieldType:ft4, decimalsQuantity:2, measureUnit:mu2)
+
+        def antDet5 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"AHF",completeName:"NombreCompleto AHF", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
+        def antDet6 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"DBT",completeName:"NombreCompleto DBT", fieldType:ft2, decimalsQuantity:2, measureUnit:mu2)
+        antDet1.save()
+        antDet2.save()
+        antDet3.save()
+        antDet4.save()
+        antDet5.save()
+        antDet6.save()
+                
 
         def doc1 = new Doctor(docId:1, medicalEnrollment:"e1", firstName:"Rene1", lastName:"Favaloro1")
         def doc2 = new Doctor(docId:2, medicalEnrollment:"e1", firstName:"Rene2", lastName:"Favaloro2")
@@ -120,34 +131,11 @@ class BootStrap {
         patient6.save()
         patient7.save()
 
-        def ft1 = new FieldType(fieldName:"Numerico")
-        def ft2 = new FieldType(fieldName:"Alfanumerico")
-        def ft3 = new FieldType(fieldName:"Si")
-        def ft4 = new FieldType(fieldName:"No")
-        ft1.save()
-        ft2.save()
-        ft3.save()
-        ft4.save()
-
-        def tf1 = new TreatmentFrequency(frequencyDescription:"Diario")
-        def tf2 = new TreatmentFrequency(frequencyDescription:"Semanal")
-        tf1.save()
-        tf2.save()
 
 
-        def mu1 = new MeasurementUnit(descriptionUnit:"Centimetros cuadrados", unit:"cm2")
-        def mu2 = new MeasurementUnit(descriptionUnit:"Centimetros cubico", unit:"cm3")
-        mu1.save()
-        mu2.save()
+
 
         /*
-        def antDet1 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"HTA",completeName:"NombreCompleto HTA", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
-        def antDet2 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"HTA",completeName:"NombreCompleto HTA", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
-        def antDet3 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"HTA",completeName:"NombreCompleto HTA", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
-        antDet1.save()
-        antDet2.save()
-        antDet3.save()
-
         def trtDet1 = new TreatmentDetail(treatmentType: TreatmentDetail.TreatmentType.TREATMENT, abbreviation:"BETA  BLOQ",completeName:"Beta Bloqueadores1", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
         def trtDet2 = new TreatmentDetail(treatmentType: TreatmentDetail.TreatmentType.TREATMENT, abbreviation:"BETA  BLOQ",completeName:"Beta Bloqueadores2", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
         def trtDet3 = new TreatmentDetail(treatmentType: TreatmentDetail.TreatmentType.TREATMENT, abbreviation:"BETA  BLOQ",completeName:"Beta Bloqueadores3", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)

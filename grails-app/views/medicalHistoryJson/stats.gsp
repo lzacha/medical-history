@@ -7,7 +7,7 @@
 </head>
 
 <body>
-	<!-- Jquery -> //MedicalHistoryJsonsController/patientAsJson/1 -->
+	<!-- Jquery -> //MedicalHistoryJsonController/patientAsJson/1 -->
 
 
 </body>	

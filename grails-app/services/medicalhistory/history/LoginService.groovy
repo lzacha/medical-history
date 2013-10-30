@@ -26,8 +26,8 @@ class LoginService {
      * path: /
      * @return cookie
      */
-    def getLoginCookie(){
-        Cookie cookie = new Cookie("myCookie", "CookieMonster")
+    def getLoginCookieFor(username){
+        Cookie cookie = new Cookie("isLogin", username)
         cookie.maxAge = 60 * 60 * 24  * 30
         cookie.setPath("/")
         cookie
