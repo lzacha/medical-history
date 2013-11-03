@@ -19,11 +19,7 @@ class Patient {
 
     String medicalHistory //Ver como es este campo...
 
-
-    static hasManyAntecedents = [antecedents:Antecedent]
-    static hasManyTreatments = [treatments:Treatment]
-    static hasManyMedicalStudies = [medicalStudies:MedicalStudy]
-    static hasManyPlates = [plates:Plate]
+    //static hasMany = [antecedents:Antecedent, treatments:Treatment, medicalStudies:MedicalStudy,plates:Plate]
 
     static constraints = {
         firstName(blank:false)

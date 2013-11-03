@@ -14,4 +14,4 @@ target
 *.class
 .classpath
 .project
-.sublime-workspace
+*.sublime-workspace

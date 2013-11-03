@@ -68,6 +68,17 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${patientInstance?.antecedents}">
+				<li class="fieldcontain">
+					<span id="antecedents-label" class="property-label"><g:message code="patient.antecedents.label" default="Antecedents" /></span>
+					
+						<g:each in="${patientInstance.antecedents}" var="a">
+						<span class="property-value" aria-labelledby="antecedents-label"><g:link controller="antecedent" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${patientInstance?.height}">
 				<li class="fieldcontain">
 					<span id="height-label" class="property-label"><g:message code="patient.height.label" default="Height" /></span>
@@ -86,11 +97,44 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${patientInstance?.medicalStudies}">
+				<li class="fieldcontain">
+					<span id="medicalStudies-label" class="property-label"><g:message code="patient.medicalStudies.label" default="Medical Studies" /></span>
+					
+						<g:each in="${patientInstance.medicalStudies}" var="m">
+						<span class="property-value" aria-labelledby="medicalStudies-label"><g:link controller="medicalStudy" action="show" id="${m.id}">${m?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${patientInstance?.patientId}">
 				<li class="fieldcontain">
 					<span id="patientId-label" class="property-label"><g:message code="patient.patientId.label" default="Patient Id" /></span>
 					
 						<span class="property-value" aria-labelledby="patientId-label"><g:fieldValue bean="${patientInstance}" field="patientId"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${patientInstance?.plates}">
+				<li class="fieldcontain">
+					<span id="plates-label" class="property-label"><g:message code="patient.plates.label" default="Plates" /></span>
+					
+						<g:each in="${patientInstance.plates}" var="p">
+						<span class="property-value" aria-labelledby="plates-label"><g:link controller="plate" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${patientInstance?.treatments}">
+				<li class="fieldcontain">
+					<span id="treatments-label" class="property-label"><g:message code="patient.treatments.label" default="Treatments" /></span>
+					
+						<g:each in="${patientInstance.treatments}" var="t">
+						<span class="property-value" aria-labelledby="treatments-label"><g:link controller="treatment" action="show" id="${t.id}">${t?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>

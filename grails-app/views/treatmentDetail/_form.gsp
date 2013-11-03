@@ -42,11 +42,3 @@
 	<g:select id="measureUnit" name="measureUnit.id" from="${medicalhistory.MeasurementUnit.list()}" optionKey="id" required="" value="${treatmentDetailInstance?.measureUnit?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: treatmentDetailInstance, field: 'treatmentType', 'error')} required">
-	<label for="treatmentType">
-		<g:message code="treatmentDetail.treatmentType.label" default="Treatment Type" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select name="treatmentType" from="${medicalhistory.TreatmentDetail$TreatmentType?.values()}" keys="${medicalhistory.TreatmentDetail$TreatmentType.values()*.name()}" required="" value="${treatmentDetailInstance?.treatmentType?.name()}"/>
-</div>
-

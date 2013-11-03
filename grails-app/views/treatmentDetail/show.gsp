@@ -68,15 +68,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${treatmentDetailInstance?.treatmentType}">
-				<li class="fieldcontain">
-					<span id="treatmentType-label" class="property-label"><g:message code="treatmentDetail.treatmentType.label" default="Treatment Type" /></span>
-					
-						<span class="property-value" aria-labelledby="treatmentType-label"><g:fieldValue bean="${treatmentDetailInstance}" field="treatmentType"/></span>
-					
-				</li>
-				</g:if>
-			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

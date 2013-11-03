@@ -2,7 +2,7 @@ package medicalhistory
 
 class TreatmentDetail {
 
-	/*
+
     enum TreatmentType {
  
         TREATMENT("Tratamiento")
@@ -15,9 +15,9 @@ class TreatmentDetail {
         String toString() {
             value
         }
-    }*/
+    }
 
-    //TreatmentType treatmentType    //String antecedentStudyType	//Son fijos: Antecedent - FRC
+    TreatmentType treatmentType    //String antecedentStudyType	//Son fijos: Antecedent - FRC
     String abbreviation
     String completeName
     FieldType fieldType

@@ -109,20 +109,20 @@ class BootStrap {
 //        def t1 = new Treatment(antecedentDetailId: 1,internalCode: 'ENF CORONARIA', description: 'ENF CORONARIA')
 //        t1.save()
 
-        def ar1 = new AgeRange(rangeDescription:"niños", minValue:1, maxValue:10, sex: "hombre") //, sex: AgeRange.PatientSex.MAN)
-        def ar2 = new AgeRange(rangeDescription:"adolescentes", minValue:11, maxValue:19, sex:"hombre") //, sex: AgeRange.PatientSex.MAN)
-        def ar3 = new AgeRange(rangeDescription:"adultos", minValue:20, maxValue:120, sex:"hombre") //, sex: AgeRange.PatientSex.MAN)
+        def ar1 = new AgeRange(rangeDescription:"niños", minValue:1, maxValue:10)//, sex: "hombre") //, sex: AgeRange.PatientSex.MAN)
+        def ar2 = new AgeRange(rangeDescription:"adolescentes", minValue:11, maxValue:19)//, sex:"hombre") //, sex: AgeRange.PatientSex.MAN)
+        def ar3 = new AgeRange(rangeDescription:"adultos", minValue:20, maxValue:120)//, sex:"hombre") //, sex: AgeRange.PatientSex.MAN)
         ar1.save()
         ar2.save()
         ar3.save()
 
-        def patient1 = new Patient(height:1, weight:1, abdomialDiameter:1, medicalHistory:1, patientId: 1,firstName: "Ariel", lastName: "Ortega", sexId: "Masculino", birthDate: new Date())
-        def patient2 = new Patient(height:2, weight:2, abdomialDiameter:2, medicalHistory:2, patientId: 2,firstName: "Diego", lastName: "Latorre", sexId: "Masculino", birthDate:new Date())
-        def patient3 = new Patient(height:3, weight:3, abdomialDiameter:3, medicalHistory:3, patientId: 3,firstName: "Carlos", lastName: "Tevez", sexId: "Masculino", birthDate:new Date())
-        def patient4 = new Patient(height:4, weight:4, abdomialDiameter:4, medicalHistory:4, patientId: 4,firstName: "Martin", lastName: "Palermo", sexId: "Masculino", birthDate:new Date())
-        def patient5 = new Patient(height:5, weight:5, abdomialDiameter:5, medicalHistory:5, patientId: 5,firstName: "Martin", lastName: "Zanetti", sexId: "Masculino", birthDate:new Date())
-        def patient6 = new Patient(height:6, weight:6, abdomialDiameter:6, medicalHistory:6, patientId: 6,firstName: "Martin", lastName: "Maradona", sexId: "Masculino", birthDate:new Date())
-        def patient7 = new Patient(height:7, weight:7, abdomialDiameter:7, medicalHistory:7, patientId: 7,firstName: "Jose", lastName: "Flores", sexId: "Masculino", birthDate:new Date())
+        def patient1 = new Patient(height:1, weight:1, abdominalDiameter:1, medicalHistory:1, patientId: 1,firstName: "Ariel", lastName: "Ortega", sexId: "Masculino", birthDate: new Date())
+        def patient2 = new Patient(height:2, weight:2, abdominalDiameter:2, medicalHistory:2, patientId: 2,firstName: "Diego", lastName: "Latorre", sexId: "Masculino", birthDate:new Date())
+        def patient3 = new Patient(height:3, weight:3, abdominalDiameter:3, medicalHistory:3, patientId: 3,firstName: "Carlos", lastName: "Tevez", sexId: "Masculino", birthDate:new Date())
+        def patient4 = new Patient(height:4, weight:4, abdominalDiameter:4, medicalHistory:4, patientId: 4,firstName: "Martin", lastName: "Palermo", sexId: "Masculino", birthDate:new Date())
+        def patient5 = new Patient(height:5, weight:5, abdominalDiameter:5, medicalHistory:5, patientId: 5,firstName: "Martin", lastName: "Zanetti", sexId: "Masculino", birthDate:new Date())
+        def patient6 = new Patient(height:6, weight:6, abdominalDiameter:6, medicalHistory:6, patientId: 6,firstName: "Martin", lastName: "Maradona", sexId: "Masculino", birthDate:new Date())
+        def patient7 = new Patient(height:7, weight:7, abdominalDiameter:7, medicalHistory:7, patientId: 7,firstName: "Jose", lastName: "Flores", sexId: "Masculino", birthDate:new Date())
         patient1.save()
         patient2.save()
         patient3.save()
@@ -131,18 +131,13 @@ class BootStrap {
         patient6.save()
         patient7.save()
 
-
-
-
-
-        /*
         def trtDet1 = new TreatmentDetail(treatmentType: TreatmentDetail.TreatmentType.TREATMENT, abbreviation:"BETA  BLOQ",completeName:"Beta Bloqueadores1", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
         def trtDet2 = new TreatmentDetail(treatmentType: TreatmentDetail.TreatmentType.TREATMENT, abbreviation:"BETA  BLOQ",completeName:"Beta Bloqueadores2", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
         def trtDet3 = new TreatmentDetail(treatmentType: TreatmentDetail.TreatmentType.TREATMENT, abbreviation:"BETA  BLOQ",completeName:"Beta Bloqueadores3", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
         trtDet1.save()
         trtDet2.save()
         trtDet3.save()
-        */
+
 //        def msd1 = new MedicalStudyDetail(  ageRange: ar1, studyType: st1,
 //                                            abbreviation: "HTO", completeName: "Hipo todo zaraza",
 //                                            fieldType: ft1, minValue:1, maxValue:10,

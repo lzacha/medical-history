@@ -93,6 +93,33 @@
 				"buffer_size": 272,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"contents": "package applications\n\nimport medicalhistory.Patient\nimport grails.converters.JSON\n\nclass MedicalHistoryJsonController {\n\n    def index() { \n        render \"MedicalHistoryJsonController\"\n    }\n\n    def stats(){\n\n    }\n        \n\n    def patient() {\n    	Patient p = Patient.get(params.id)\n        render p as JSON\n    }\n\n\n    /*\n    def antecedentByPatien() {\n        Patient p = Patient.get(params.id)\n        Antecedent a = Antecedent.findBy(p.id)\n\n        render p as JSON\n    }\n    */\n\n}\n",
+			"file": "grails-app/controllers/applications/MedicalHistoryJsonController.groovy",
+			"file_size": 490,
+			"file_write_time": 1383174194000000,
+			"settings":
+			{
+				"buffer_size": 490,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "grails-app/domain/medicalhistory/AntecedentDetail.groovy",
+			"settings":
+			{
+				"buffer_size": 575,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "grails-app/domain/medicalhistory/Antecedent.groovy",
+			"settings":
+			{
+				"buffer_size": 194,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -339,7 +366,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -464,8 +491,8 @@
 						"selection":
 						[
 							[
-								2128,
-								2128
+								6654,
+								6654
 							]
 						],
 						"settings":
@@ -475,7 +502,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 231.0,
+						"translation.y": 1719.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -500,6 +527,92 @@
 						{
 							"syntax": "Packages/Groovy/Groovy.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "grails-app/controllers/applications/MedicalHistoryJsonController.groovy",
+					"settings":
+					{
+						"buffer_size": 490,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								424,
+								424
+							],
+							[
+								490,
+								490
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Groovy/Groovy.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "grails-app/domain/medicalhistory/AntecedentDetail.groovy",
+					"settings":
+					{
+						"buffer_size": 575,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								30,
+								46
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Groovy/Groovy.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "grails-app/domain/medicalhistory/Antecedent.groovy",
+					"settings":
+					{
+						"buffer_size": 194,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								83,
+								90
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Groovy/Groovy.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
