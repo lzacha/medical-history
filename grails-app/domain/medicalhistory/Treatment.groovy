@@ -2,14 +2,20 @@ package medicalhistory
 
 class Treatment {
 
-	//Boolean antecedentValue
+    /* Patient link */
     Patient patient
+
+    /* Treatment Frequency */
     TreatmentFrequency frequency
 
-    static hasMany = [treatmentDetails:TreatmentDetail]
-    
-    static constraints = {
-    }
+    /* Treatment Value */
+    int treatmentValue
 
+    /* Get all antecedent Details */
+    static hasMany = [treatmentDetails:TreatmentDetail]
+
+    static constraints = {
+
+    }
 
 }

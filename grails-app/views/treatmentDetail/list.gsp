@@ -34,6 +34,8 @@
 					
 						<th><g:message code="treatmentDetail.measureUnit.label" default="Measure Unit" /></th>
 					
+						<g:sortableColumn property="treatmentType" title="${message(code: 'treatmentDetail.treatmentType.label', default: 'Treatment Type')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -49,6 +51,8 @@
 						<td>${fieldValue(bean: treatmentDetailInstance, field: "fieldType")}</td>
 					
 						<td>${fieldValue(bean: treatmentDetailInstance, field: "measureUnit")}</td>
+					
+						<td>${fieldValue(bean: treatmentDetailInstance, field: "treatmentType")}</td>
 					
 					</tr>
 				</g:each>

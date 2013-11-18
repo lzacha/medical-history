@@ -34,6 +34,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${antecedentInstance?.antecedentValue}">
+				<li class="fieldcontain">
+					<span id="antecedentValue-label" class="property-label"><g:message code="antecedent.antecedentValue.label" default="Antecedent Value" /></span>
+					
+						<span class="property-value" aria-labelledby="antecedentValue-label"><g:fieldValue bean="${antecedentInstance}" field="antecedentValue"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${antecedentInstance?.patient}">
 				<li class="fieldcontain">
 					<span id="patient-label" class="property-label"><g:message code="antecedent.patient.label" default="Patient" /></span>

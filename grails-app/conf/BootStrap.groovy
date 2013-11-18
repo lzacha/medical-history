@@ -13,6 +13,7 @@ import medicalhistory.StudyType
 import medicalhistory.FieldType
 import medicalhistory.TreatmentFrequency
 import medicalhistory.TreatmentDetail
+import medicalhistory.Antecedent
 
 class BootStrap {
 
@@ -137,6 +138,9 @@ class BootStrap {
         trtDet1.save()
         trtDet2.save()
         trtDet3.save()
+
+        def antecendet1 = new Antecedent(patienta:patient1, antecedentDetail:antDet1, antecedentValue:"2"  )
+        antecendet1.save()
 
 //        def msd1 = new MedicalStudyDetail(  ageRange: ar1, studyType: st1,
 //                                            abbreviation: "HTO", completeName: "Hipo todo zaraza",

@@ -26,3 +26,11 @@
 	<g:select name="treatmentDetails" from="${medicalhistory.TreatmentDetail.list()}" multiple="multiple" optionKey="id" size="5" value="${treatmentInstance?.treatmentDetails*.id}" class="many-to-many"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: treatmentInstance, field: 'treatmentValue', 'error')} required">
+	<label for="treatmentValue">
+		<g:message code="treatment.treatmentValue.label" default="Treatment Value" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field name="treatmentValue" type="number" value="${treatmentInstance.treatmentValue}" required=""/>
+</div>
+

@@ -52,6 +52,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${treatmentInstance?.treatmentValue}">
+				<li class="fieldcontain">
+					<span id="treatmentValue-label" class="property-label"><g:message code="treatment.treatmentValue.label" default="Treatment Value" /></span>
+					
+						<span class="property-value" aria-labelledby="treatmentValue-label"><g:fieldValue bean="${treatmentInstance}" field="treatmentValue"/></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

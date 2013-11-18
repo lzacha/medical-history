@@ -18,13 +18,14 @@ class AntecedentDetail {
     }
 
 	AntecedentStudyType antecedentStudyType
-    //String antecedentStudyType	//Son fijos: Antecedent - FRC
     String abbreviation
     String completeName
     FieldType fieldType
     int decimalsQuantity
     MeasurementUnit measureUnit
-    
+
+    /* TODO: constraints definition */
     static constraints = {
+
     }
 }

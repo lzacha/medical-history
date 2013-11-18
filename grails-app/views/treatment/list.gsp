@@ -28,6 +28,8 @@
 					
 						<th><g:message code="treatment.patient.label" default="Patient" /></th>
 					
+						<g:sortableColumn property="treatmentValue" title="${message(code: 'treatment.treatmentValue.label', default: 'Treatment Value')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -37,6 +39,8 @@
 						<td><g:link action="show" id="${treatmentInstance.id}">${fieldValue(bean: treatmentInstance, field: "frequency")}</g:link></td>
 					
 						<td>${fieldValue(bean: treatmentInstance, field: "patient")}</td>
+					
+						<td>${fieldValue(bean: treatmentInstance, field: "treatmentValue")}</td>
 					
 					</tr>
 				</g:each>

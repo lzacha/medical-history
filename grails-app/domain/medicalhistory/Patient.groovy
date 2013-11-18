@@ -13,8 +13,8 @@ class Patient {
 	String sexId
 	Date birthDate
 
-    double height   //Altura
-    double weight   //Peso
+    double height
+    double weight
     double abdominalDiameter //Porque esta esto aca? cambia con el tiempo
 
     String medicalHistory //Ver como es este campo...

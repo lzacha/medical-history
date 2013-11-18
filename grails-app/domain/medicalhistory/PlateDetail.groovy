@@ -1,5 +1,8 @@
 package medicalhistory
 
+/*
+ * Not used
+ */
 class PlateDetail {
 
 	String fieldPlateDetail1
