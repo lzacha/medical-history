@@ -17,6 +17,10 @@
             <input type="hidden" name="patientId" id="patientId" value=""/>
             <input type="submit" value="Buscar">
         </div>
+
+        <div>
+            Patient Content
+        </div>
     </form>
 </div>
 

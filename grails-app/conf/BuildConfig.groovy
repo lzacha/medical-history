@@ -36,6 +36,9 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
+
+        compile ':cookie:0.51'
+
         runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.8.3"
         runtime ":resources:1.2.RC2"
