@@ -52,9 +52,11 @@ class BootStrap {
         su5.save()
 
         
+		def mu0 = new MeasurementUnit(descriptionUnit:"Unidades", unit:"uni")
         def mu1 = new MeasurementUnit(descriptionUnit:"Centimetros cuadrados", unit:"cm2")
-        def mu2 = new MeasurementUnit(descriptionUnit:"Centimetros cubico", unit:"cm3")
-        mu1.save()
+        def mu2 = new MeasurementUnit(descriptionUnit:"Centimetros cubicos", unit:"cm3")
+        mu0.save()
+		mu1.save()
         mu2.save()
 
         def ft1 = new FieldType(fieldName:"Numerico")
@@ -68,8 +70,15 @@ class BootStrap {
 
         def tf1 = new TreatmentFrequency(frequencyDescription:"Diario")
         def tf2 = new TreatmentFrequency(frequencyDescription:"Semanal")
+		def tf3 = new TreatmentFrequency(frequencyDescription:"Quincenal")
+		def tf4 = new TreatmentFrequency(frequencyDescription:"Mensual")
+		def tf5 = new TreatmentFrequency(frequencyDescription:"Bimestral")
         tf1.save()
         tf2.save()
+		tf3.save()
+		tf4.save()
+		tf5.save()
+		
 
         def mst1 = new MainStudyType(mainStudyType:"Htal", description:"Hospital")
         def mst2 = new MainStudyType(mainStudyType:"RCVC", description:"RCVC")
@@ -85,15 +94,33 @@ class BootStrap {
         def antDet3 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"TBQ",completeName:"NombreCompleto TBQ", fieldType:ft3, decimalsQuantity:2, measureUnit:mu1)
         def antDet4 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"EXTBQ",completeName:"NombreCompleto EXTBQ", fieldType:ft4, decimalsQuantity:2, measureUnit:mu2)
 
-        def antDet5 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"AHF",completeName:"NombreCompleto AHF", fieldType:ft1, decimalsQuantity:2, measureUnit:mu1)
-        def antDet6 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"DBT",completeName:"NombreCompleto DBT", fieldType:ft2, decimalsQuantity:2, measureUnit:mu2)
+		def antDet5 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"AHF",completeName:"Factor Anti-Hemofílico", fieldType:ft1, decimalsQuantity:0, measureUnit:mu0)
+		def antDet6 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"DBT",completeName:"Diabetes", fieldType:ft1, decimalsQuantity:0, measureUnit:mu0)
+		def antDet7 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"IAM",completeName:"Infarto Aguso de Miocardio", fieldType:ft1, decimalsQuantity:0, measureUnit:mu0)
+		def antDet8 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"ACV/TIA",completeName:"Accidente Cerebro Vascular / Accidente Isquémico Transitorio", fieldType:ft1, decimalsQuantity:0, measureUnit:mu0)
+		def antDet9 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"ENF CORONARIA",completeName:"Enfermedad Coronaria", fieldType:ft1, decimalsQuantity:0, measureUnit:mu0)
+		def antDet10 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"EC",completeName:"Enfermedad Celíaca", fieldType:ft1, decimalsQuantity:0, measureUnit:mu0)
+		def antDet11 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"CRM",completeName:"Cirugía de Revascularización Miocárdica", fieldType:ft1, decimalsQuantity:0, measureUnit:mu0)
+		def antDet12 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"ATC",completeName:"Angioplastía Transluminal Coronaria", fieldType:ft1, decimalsQuantity:0, measureUnit:mu0)
+		def antDet13 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"EVP",completeName:"Enfermedad Vascular Periférica", fieldType:ft1, decimalsQuantity:0, measureUnit:mu0)
+		def antDet14 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"HIPO",completeName:"Hipotiroidismo", fieldType:ft1, decimalsQuantity:0, measureUnit:mu0)
+		
+		
         antDet1.save()
         antDet2.save()
         antDet3.save()
         antDet4.save()
         antDet5.save()
         antDet6.save()
-                
+		antDet7.save()
+		antDet8.save()
+		antDet9.save()
+		antDet10.save()
+		antDet11.save()
+		antDet12.save()
+		antDet13.save()
+		antDet14.save()
+ 
 
         def doc1 = new Doctor(docId:1, medicalEnrollment:"e1", firstName:"Rene1", lastName:"Favaloro1")
         def doc2 = new Doctor(docId:2, medicalEnrollment:"e1", firstName:"Rene2", lastName:"Favaloro2")
