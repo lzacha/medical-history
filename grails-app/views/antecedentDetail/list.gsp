@@ -34,8 +34,6 @@
 					
 						<th><g:message code="antecedentDetail.fieldType.label" default="Field Type" /></th>
 					
-						<th><g:message code="antecedentDetail.measureUnit.label" default="Measure Unit" /></th>
-					
 					</tr>
 				</thead>
 				<tbody>
@@ -51,8 +49,6 @@
 						<td>${fieldValue(bean: antecedentDetailInstance, field: "decimalsQuantity")}</td>
 					
 						<td>${fieldValue(bean: antecedentDetailInstance, field: "fieldType")}</td>
-					
-						<td>${fieldValue(bean: antecedentDetailInstance, field: "measureUnit")}</td>
 					
 					</tr>
 				</g:each>

@@ -37,11 +37,16 @@ grails.project.dependency.resolution = {
 
     plugins {
 
-        compile ':cookie:0.51'
+        compile ":cookie:0.51"
+        compile ":blueprint:1.0.2"
+        compile ":jquery-ui:1.10.3"
 
         runtime ":hibernate:$grailsVersion"
-        runtime ":jquery:1.8.3"
-        runtime ":resources:1.2.RC2"
+        runtime ":jquery:1.10.2"
+        runtime ":resources:1.2.7"
+
+        //runtime ":cached-resources:1.0"
+        //runtime ":zipped-resources:1.0"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0"
@@ -49,5 +54,6 @@ grails.project.dependency.resolution = {
         //runtime ":yui-minify-resources:0.1.4"
 
         build ":tomcat:$grailsVersion"
+
     }
 }

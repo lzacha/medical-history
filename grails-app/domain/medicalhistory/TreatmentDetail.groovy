@@ -22,7 +22,7 @@ class TreatmentDetail {
     String completeName
     FieldType fieldType
     int decimalsQuantity
-    MeasurementUnit measureUnit
+    //MeasurementUnit measureUnit
     
     static constraints = {
     }

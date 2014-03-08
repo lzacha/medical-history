@@ -6,7 +6,7 @@ class Treatment {
     Patient patient
 
     /* Treatment Frequency */
-    TreatmentFrequency frequency
+    TreatmentFrequency frequency    //No deberia ser todas las frecuencias?
 
     /* Treatment Value */
     int treatmentValue

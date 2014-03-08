@@ -42,11 +42,3 @@
 	<g:select id="fieldType" name="fieldType.id" from="${medicalhistory.FieldType.list()}" optionKey="id" required="" value="${antecedentDetailInstance?.fieldType?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: antecedentDetailInstance, field: 'measureUnit', 'error')} required">
-	<label for="measureUnit">
-		<g:message code="antecedentDetail.measureUnit.label" default="Measure Unit" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="measureUnit" name="measureUnit.id" from="${medicalhistory.MeasurementUnit.list()}" optionKey="id" required="" value="${antecedentDetailInstance?.measureUnit?.id}" class="many-to-one"/>
-</div>
-

@@ -1,12 +1,9 @@
 package medicalhistory
 
-
-
-import org.junit.*
 import grails.test.mixin.*
 
 @TestFor(ValueReferenceController)
-@Mock(ValueReference)
+@Mock(ReferenceValue)
 class ValueReferenceControllerTests {
 
     def populateValidParams(params) {
@@ -47,7 +44,7 @@ class ValueReferenceControllerTests {
 
         assert response.redirectedUrl == '/valueReference/show/1'
         assert controller.flash.message != null
-        assert ValueReference.count() == 1
+        assert ReferenceValue.count() == 1
     }
 
     void testShow() {
@@ -57,7 +54,7 @@ class ValueReferenceControllerTests {
         assert response.redirectedUrl == '/valueReference/list'
 
         populateValidParams(params)
-        def valueReference = new ValueReference(params)
+        def valueReference = new ReferenceValue(params)
 
         assert valueReference.save() != null
 
@@ -75,7 +72,7 @@ class ValueReferenceControllerTests {
         assert response.redirectedUrl == '/valueReference/list'
 
         populateValidParams(params)
-        def valueReference = new ValueReference(params)
+        def valueReference = new ReferenceValue(params)
 
         assert valueReference.save() != null
 
@@ -95,7 +92,7 @@ class ValueReferenceControllerTests {
         response.reset()
 
         populateValidParams(params)
-        def valueReference = new ValueReference(params)
+        def valueReference = new ReferenceValue(params)
 
         assert valueReference.save() != null
 
@@ -139,17 +136,17 @@ class ValueReferenceControllerTests {
         response.reset()
 
         populateValidParams(params)
-        def valueReference = new ValueReference(params)
+        def valueReference = new ReferenceValue(params)
 
         assert valueReference.save() != null
-        assert ValueReference.count() == 1
+        assert ReferenceValue.count() == 1
 
         params.id = valueReference.id
 
         controller.delete()
 
-        assert ValueReference.count() == 0
-        assert ValueReference.get(valueReference.id) == null
+        assert ReferenceValue.count() == 0
+        assert ReferenceValue.get(valueReference.id) == null
         assert response.redirectedUrl == '/valueReference/list'
     }
 }

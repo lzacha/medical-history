@@ -17,12 +17,12 @@ class AntecedentDetail {
         }
     }
 
-	AntecedentStudyType antecedentStudyType
+	AntecedentStudyType antecedentStudyType //FRC or ANT
     String abbreviation
     String completeName
     FieldType fieldType
     int decimalsQuantity
-    MeasurementUnit measureUnit
+    //MeasurementUnit measureUnit
 
     /* TODO: constraints definition */
     static constraints = {

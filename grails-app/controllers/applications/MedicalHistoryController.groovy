@@ -3,6 +3,7 @@ package applications
 import grails.converters.JSON
 import org.compass.core.engine.SearchEngineQueryParseException
 import medicalhistory.Patient
+import medicalhistory.Antecedent
 
 class MedicalHistoryController {
 
@@ -24,7 +25,7 @@ class MedicalHistoryController {
 
     //Patient Views
     def patient() {
-        Patient p = Patient.get(params.id)
+        Patient p = Patient.get(params.hiddenPatient)
         [patient:p]
     }
 
@@ -62,4 +63,23 @@ class MedicalHistoryController {
 
      }
 
+    def listAntecedentsByPatient(){
+        Patient p = Patient.get(params.id)
+        def results = Antecedent.findAllByPatient(p)
+        render (template:'listAntecedentsByPatient', model: [ants:results])
+    }
+
+    def listStudiesByPatient(){
+        Patient p = Patient.get(params.id)
+        def results = Antecedent.findAllByPatient(p)
+        render (template:'listAntecedentsByPatient', model: [ants:results])
+    }
+
+    def systemConfig(){
+        //Patient p = Patient.get(params.id)
+    }
+
+    def listSystemUsers(){
+
+    }
 }

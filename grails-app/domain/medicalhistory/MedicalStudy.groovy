@@ -2,17 +2,17 @@ package medicalhistory
 
 class MedicalStudy {
 
-	Doctor doctor
+    Patient patient
+    Doctor doctor
 	Date studyDate
-	MainStudyType mainStudyType
-	Patient patient
-	//String mainStudy //Htal: Hospital, RCVC: ?, DgHTA: ?
-	//MeasurementUnit unit // -- Ver porque estaba
+
+    MainStudyType mainStudyType //Htal / RCVC
+
 	double height   //Altura
     double weight   //Peso
     double abdominalDiameter
 
-    //static hasMany = [medicalStudies:Stud]
+    //static hasMany = [studyType:StudyType]
 	
     static constraints = {
     }

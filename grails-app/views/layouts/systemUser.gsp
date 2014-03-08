@@ -1,18 +1,21 @@
-<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 ie6" lang="en"> <![endif]-->
-<!--[if IE 7]>	<html class="no-js  lt-ie10 lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
-<!--[if IE 8]>	<html class="no-js lt-ie10 lt-ie9 ie8" lang="en"> <![endif]-->
-<!--[if IE 9]>	<html class="no-js lt-ie10 ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="es"> <!--<![endif]-->
+<!doctype html>
+<!--[if IE 7]>    <html class="no-js lt-ie10 lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie10 lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js lt-ie10 ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 
 <html>
 <head>
+
+    <title><g:layoutTitle default="Grails"/></title>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title><g:layoutTitle default="Grails"/></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <r:require modules="jquery-ui, blueprint"/>
+
     <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
-    <link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
-    <link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
 
     <style>
 
@@ -44,12 +47,8 @@
     </style>
 
     <!-- chico-ui css-->
-    <link rel="stylesheet" href="${resource(dir: 'css/chico-ui/css', file: 'chico-min-0.13.1.css')}" type="text/css">
-    <link rel="stylesheet" href="${resource(dir: 'css/chico-ui/css', file: 'mesh-min-2.1.css')}" type="text/css">
-
-
-    <!-- jquery -->
-    <g:javascript library="jquery" plugin="jquery"/>
+    <link rel="stylesheet" href="${resource(dir: 'css/new-chico-ui', file: 'chico.min.css')}" type="text/css">
+    <link rel="stylesheet" href="${resource(dir: 'js/new-chico-ui', file: 'chico.min.js')}" type="text/css">
 
     <!-- g:layoutHead -->
     <g:layoutHead/>
@@ -75,7 +74,7 @@
 </div>
 
 <!-- chico-ui js-->
-<g:javascript src="chico-ui/js/chico-min-0.13.1.js"/>
+<!-- g:javascript src="chico-ui/js/chico-min-0.13.1.js"/ -->
 
 <!-- g:javascript library=application -->
 <g:javascript library="application"/>
@@ -87,7 +86,7 @@
 <script>
 
     //Menu
-    var foo = $("#example").menu();
+    //var foo = $("#example").menu();
 
     //foo.on("select",function(){
         //alert("alert");
@@ -103,6 +102,8 @@
 
 </script>
 <script>
+
+    /*
     var ac = $("#autocomplete").autoComplete({
         "url": "/medical-history/suggest?q=",
         "jsonpCallback": "autoComplete"
@@ -111,6 +112,7 @@
     var autoComplete = function(data){ ac.suggest(data); };
 
     var patientTabs = $("#patientTabs").tabs();
+    */
 </script>
 
 </body>

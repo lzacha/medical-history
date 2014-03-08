@@ -68,15 +68,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${antecedentDetailInstance?.measureUnit}">
-				<li class="fieldcontain">
-					<span id="measureUnit-label" class="property-label"><g:message code="antecedentDetail.measureUnit.label" default="Measure Unit" /></span>
-					
-						<span class="property-value" aria-labelledby="measureUnit-label"><g:link controller="measurementUnit" action="show" id="${antecedentDetailInstance?.measureUnit?.id}">${antecedentDetailInstance?.measureUnit?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">
