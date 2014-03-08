@@ -51,7 +51,6 @@ class BootStrap {
         su4.save()
         su5.save()
 
-        
        //def mu1 = new MeasurementUnit(descriptionUnit:"Centimetros cuadrados", unit:"cm2")
         //def mu2 = new MeasurementUnit(descriptionUnit:"Centimetros cubico", unit:"cm3")
         //mu1.save()
@@ -68,8 +67,15 @@ class BootStrap {
 
         def tf1 = new TreatmentFrequency(frequencyDescription:"Diario")
         def tf2 = new TreatmentFrequency(frequencyDescription:"Semanal")
+		def tf3 = new TreatmentFrequency(frequencyDescription:"Quincenal")
+		def tf4 = new TreatmentFrequency(frequencyDescription:"Mensual")
+		def tf5 = new TreatmentFrequency(frequencyDescription:"Bimestral")
         tf1.save()
         tf2.save()
+		tf3.save()
+		tf4.save()
+		tf5.save()
+		
 
         def mst1 = new MainStudyType(mainStudyType:"Htal", description:"Hospital")
         def mst2 = new MainStudyType(mainStudyType:"RCVC", description:"RCVC")
@@ -84,15 +90,13 @@ class BootStrap {
         def antDet4 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"EXTBQ",completeName:"NombreCompleto EXTBQ", fieldType:ft4, decimalsQuantity:2/*, measureUnit:mu2*/)
         def antDet5 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"AHF",completeName:"NombreCompleto AHF", fieldType:ft1, decimalsQuantity:2/*, measureUnit:mu1*/)
         def antDet6 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"DBT",completeName:"NombreCompleto DBT", fieldType:ft2, decimalsQuantity:2/*, measureUnit:mu2*/)
+
         antDet1.save()
         antDet2.save()
         antDet3.save()
         antDet4.save()
         antDet5.save()
         antDet6.save()
-
-
-
 
         def doc1 = new Doctor(docId:1, medicalEnrollment:"e1", firstName:"Rene1", lastName:"Favaloro1")
         def doc2 = new Doctor(docId:2, medicalEnrollment:"e1", firstName:"Rene2", lastName:"Favaloro2")
