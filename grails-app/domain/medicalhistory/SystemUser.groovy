@@ -11,9 +11,9 @@ class SystemUser {
 
 	String firstName
 	String lastName
-	String status
+	String status  //activo/inactivo
 
-    String role
+    String role //3 roles
 
 	Date lastLogin
 
