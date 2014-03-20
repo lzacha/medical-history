@@ -1,6 +1,6 @@
 package medicalhistory
 
-class MeasureUnit {
+class Units {
 
     String desc
 

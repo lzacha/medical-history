@@ -34,7 +34,8 @@ hibernate {
 // environment specific settings
 environments {
     development {
-        
+
+        /*
         dataSource {
             dbCreate = "create" // one of 'create', 'create-drop','update'
             url = "jdbc:mysql://localhost/medicalhistory"
@@ -42,6 +43,7 @@ environments {
             password = "medicalhistory"
 
         }
+        */
     
 
         /* --> To see
@@ -50,11 +52,11 @@ environments {
         }
         <-- */
 
-        /*
+
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:h2:mem:devDb;MVCC=TRUE"
-        }*/
+        }
 
     }
     test {
