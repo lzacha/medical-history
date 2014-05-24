@@ -38,7 +38,8 @@ environments {
         /*
         dataSource {
             dbCreate = "create" // one of 'create', 'create-drop','update'
-            url = "jdbc:mysql://localhost/medicalhistory"
+            url = "jdbc:mys
+            ql://localhost/medicalhistory"
             username = "medicalhistory"
             password = "medicalhistory"
 

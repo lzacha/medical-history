@@ -25,6 +25,7 @@ $("#searchPatientFormId").submit(function() {
 });
 
 
+/*
 $(function() {
     $( "#tabs" ).tabs({
         beforeLoad: function( event, ui ) {
@@ -36,4 +37,20 @@ $(function() {
         }
     });
 });
+*/
 
+$(function() {
+    $( "#tabs" ).tabs();
+});
+
+
+$("#sub").click(function(){
+    $.ajax({
+        type: "POST",
+        url: "myjsp.jsp",
+        data: $("#myform").serialize(),
+        complete: function(xhr, textStatus) {
+            $("#resultContainer").html(xhr.responseText);
+        }
+    });
+});

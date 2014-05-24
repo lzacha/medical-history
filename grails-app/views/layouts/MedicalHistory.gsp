@@ -23,7 +23,7 @@
         <!-- shortcut icon -->
         <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
 
-        <link href="/medical-history/static/css/medicalHistory.css" type="text/css" rel="stylesheet" media="screen, projection" />
+        <link href="/medical-history/css/medicalHistory.css" type="text/css" rel="stylesheet" media="screen, projection" />
 
         <!-- chico-ui css-->
 
