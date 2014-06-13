@@ -2,118 +2,120 @@
 <!--[if IE 7]>    <html class="no-js lt-ie10 lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie10 lt-ie9 ie8" lang="en"> <![endif]-->
 <!--[if IE 9]>    <html class="no-js lt-ie10 ie9" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 <html>
 <head>
 
-    <title><g:layoutTitle default="Grails"/></title>
+<title><g:layoutTitle default="Grails" /></title>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <r:require modules="jquery-ui, blueprint"/>
+<r:require modules="jquery-ui, blueprint" />
 
-    <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
+<link rel="shortcut icon"
+	href="${resource(dir: 'images', file: 'favicon.ico')}"
+	type="image/x-icon">
 
-    <style>
+<style>
+body {
+	color: #333333;
+	font: 13px/20px Arial, Helvetica, "Nimbus Sans L", sans-serif;
+}
 
-    body {
-        color: #333333;
-        font: 13px/20px Arial,Helvetica,"Nimbus Sans L",sans-serif;
-    }
+.ch-box {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 10px auto;
+}
 
-    .ch-box {
-        border: 1px solid #ccc;
-        padding: 10px;
-        margin: 10px auto;
-    }
+.ch-header {
+	height: 50px;
+	padding: 20px 10px;
+	background: #eee;
+	margin: 10px auto 0px;
+}
 
-    .ch-header {
-        height: 50px;
-        padding: 20px 10px;
-        background: #eee;
-        margin: 10px auto 0px;
-    }
+.ch-footer {
+	clear: both;
+	text-align: center;
+	margin: 10px auto;
+	background: #eee;
+}
+</style>
 
-    .ch-footer {
-        clear:both;
-        text-align: center;
-        margin: 10px auto;
-        background: #eee;
+<!-- chico-ui css-->
+<link rel="stylesheet"
+	href="${resource(dir: 'css/new-chico-ui', file: 'chico.min.css')}"
+	type="text/css">
+<link rel="stylesheet"
+	href="${resource(dir: 'js/new-chico-ui', file: 'chico.min.js')}"
+	type="text/css">
 
-    }
-    </style>
-
-    <!-- chico-ui css-->
-    <link rel="stylesheet" href="${resource(dir: 'css/new-chico-ui', file: 'chico.min.css')}" type="text/css">
-    <link rel="stylesheet" href="${resource(dir: 'js/new-chico-ui', file: 'chico.min.js')}" type="text/css">
-
-    <!-- g:layoutHead -->
-    <g:layoutHead/>
-
-    <!-- r:layoutResources -->
-    <r:layoutResources/>
-
-</head>
-<body>
-
-<div class="ch-header ch-box">
-    <h1>Medical History Site Title</h1>
-</div>
-<div class="ch-g4-5">
-    <div class="ch-box ch-rightcolumn">
-        <h2></h2>
-        <g:layoutBody/>
-    </div>
-</div>
-
-<div class="ch-footer ch-box">
-    <p>Footer de la app</p>
-</div>
-
-<!-- chico-ui js-->
-<!-- g:javascript src="chico-ui/js/chico-min-0.13.1.js"/ -->
-
-<!-- g:javascript library=application -->
-<g:javascript library="application"/>
+<!-- g:layoutHead -->
+<g:layoutHead />
 
 <!-- r:layoutResources -->
 <r:layoutResources />
 
-<!-- medicalHistory.gsp script tag-->
-<script>
+</head>
+<body>
 
-    //Menu
-    //var foo = $("#example").menu();
+	<div class="ch-header ch-box">
+		<h1>Medical History Site Title</h1>
+	</div>
+	<div class="ch-g4-5">
+		<div class="ch-box ch-rightcolumn">
+			<h2></h2>
+			<g:layoutBody />
+		</div>
+	</div>
 
-    //foo.on("select",function(){
-        //alert("alert");
-    //});
+	<div class="ch-footer ch-box">
+		<p>Footer de la app</p>
+	</div>
 
-    //foo.select(1);
-    //foo.select(2);
-    /*
-    var foo = $("#example").menu({
-        "bar": foobar,
-        "baz": quux
-    });*/
+	<!-- chico-ui js-->
+	<!-- g:javascript src="chico-ui/js/chico-min-0.13.1.js"/ -->
 
-</script>
-<script>
+	<!-- g:javascript library=application -->
+	<g:javascript library="application" />
 
-    /*
-    var ac = $("#autocomplete").autoComplete({
-        "url": "/medical-history/suggest?q=",
-        "jsonpCallback": "autoComplete"
-    });
+	<!-- r:layoutResources -->
+	<r:layoutResources />
 
-    var autoComplete = function(data){ ac.suggest(data); };
+	<!-- medicalHistory.gsp script tag-->
+	<script>
+		//Menu
+		//var foo = $("#example").menu();
 
-    var patientTabs = $("#patientTabs").tabs();
-    */
-</script>
+		//foo.on("select",function(){
+		//alert("alert");
+		//});
+
+		//foo.select(1);
+		//foo.select(2);
+		/*
+		var foo = $("#example").menu({
+		    "bar": foobar,
+		    "baz": quux
+		});*/
+	</script>
+	<script>
+		/*
+		var ac = $("#autocomplete").autoComplete({
+		    "url": "/medical-history/suggest?q=",
+		    "jsonpCallback": "autoComplete"
+		});
+
+		var autoComplete = function(data){ ac.suggest(data); };
+
+		var patientTabs = $("#patientTabs").tabs();
+		 */
+	</script>
 
 </body>
 </html>

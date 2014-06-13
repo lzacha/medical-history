@@ -44,13 +44,5 @@ $(function() {
 });
 
 
-$("#sub").click(function(){
-    $.ajax({
-        type: "POST",
-        url: "myjsp.jsp",
-        data: $("#myform").serialize(),
-        complete: function(xhr, textStatus) {
-            $("#resultContainer").html(xhr.responseText);
-        }
-    });
-});
+//var href = "/alert/index/";
+//$("#alert-tab").load(href);

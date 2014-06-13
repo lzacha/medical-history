@@ -22,6 +22,8 @@
 
         <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
 
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
         <!-- shortcut icon -->
         <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
 

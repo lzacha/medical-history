@@ -40,6 +40,10 @@ grails.project.dependency.resolution = {
         compile ":cookie:0.51"
         compile ":blueprint:1.0.2"
         compile ":jquery-ui:1.10.3"
+        compile ":excel-export:0.2.1"
+
+        compile ":joda-time:1.4"
+        compile ":excel-import:1.0.0"
 
         runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.10.2"

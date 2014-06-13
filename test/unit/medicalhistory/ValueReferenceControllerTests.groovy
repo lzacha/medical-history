@@ -2,7 +2,7 @@ package medicalhistory
 
 import grails.test.mixin.*
 
-@TestFor(ValueReferenceController)
+
 @Mock(ReferenceValue)
 class ValueReferenceControllerTests {
 
