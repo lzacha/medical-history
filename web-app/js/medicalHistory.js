@@ -43,6 +43,18 @@ $(function() {
     $( "#tabs" ).tabs();
 });
 
+/*
+$("#upload").click(function() {
+	  alert('');
+});
+*/
 
+/*
+$("#upload").change(function () {
+	  var filename = $(this).val();
+	  $('#imagePlate').val(filename);
+}).change();
+
+*/
 //var href = "/alert/index/";
 //$("#alert-tab").load(href);

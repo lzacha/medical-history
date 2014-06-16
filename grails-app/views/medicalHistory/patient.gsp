@@ -23,9 +23,9 @@
     </iframe>
 
     <iframe id="iframe5" src="/medical-history/antecedent/list" style="width:100%;">
-    </iframe
+    </iframe>
 
-    <iframe id="iframe6" src="/medical-history/plate/${patient.id}" style="width:100%;">
-    </iframe
+    <iframe id="iframe6" src="/medical-history/plate/show/${patient.id}" style="width:100%;">
+    </iframe>
 
 </div>

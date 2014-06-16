@@ -1,0 +1,37 @@
+http://articulo.mercadolibre.com.ar/MLA-466368064-item-de-testeo-apparel-lzacha-1-_JM
+
+MLA466368064
+
+MLA-APP- Item free newbie foto
+
+
+127.0.0.1    vip.mercadolibre.com.ar
+127.0.0.1    vip.mercadolibre.com.uy
+127.0.0.1    vip.mercadolivre.com.br
+127.0.0.1    vip.mercadolibre.com.mx
+127.0.0.1    vip.mercadolibre.com.ve
+127.0.0.1    vip.mercadolivre.pt
+127.0.0.1    vip.mercadolibre.cl
+127.0.0.1    vip.mercadolibre.com.co
+127.0.0.1    vip.mercadolibre.com.pa
+127.0.0.1    vip.mercadolibre.com.do
+127.0.0.1    vip.mercadolibre.co.cr
+127.0.0.1    vip.tucarro.com.ve
+127.0.0.1    vip.tucarro.com.co
+127.0.0.1    labs.mercadolibre.com.ar
+
+
+127.0.0.1    desa.mercadolibre.com.ar
+127.0.0.1    desa.mercadolibre.com.uy
+127.0.0.1    desa.mercadolivre.com.br
+127.0.0.1    desa.mercadolibre.com.mx
+127.0.0.1    desa.mercadolibre.com.ve
+127.0.0.1    desa.mercadolivre.pt
+127.0.0.1    desa.mercadolibre.cl
+127.0.0.1    desa.mercadolibre.com.co
+127.0.0.1    desa.mercadolibre.com.pa
+127.0.0.1    desa.mercadolibre.com.do
+127.0.0.1    desa.mercadolibre.co.cr
+127.0.0.1    desa.tucarro.com.ve
+127.0.0.1    desa.tucarro.com.co
+127.0.0.1    labs.mercadolibre.com.ar

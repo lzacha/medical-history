@@ -41,9 +41,10 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${plateInstance.id}">${fieldValue(bean: plateInstance, field: "doctor")}</g:link></td>
-					
-						<td>${fieldValue(bean: plateInstance, field: "imagePlate")}</td>
-					
+
+                        <td><a href="${"file:/"+plateInstance.imagePlate}">Bajar Placa</td>
+
+
 						<td>${fieldValue(bean: plateInstance, field: "observation")}</td>
 					
 						<td>${fieldValue(bean: plateInstance, field: "patient")}</td>

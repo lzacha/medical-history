@@ -13,9 +13,11 @@
 <div class="fieldcontain ${hasErrors(bean: plateInstance, field: 'imagePlate', 'error')} ">
 	<label for="imagePlate">
 		<g:message code="plate.imagePlate.label" default="Image Plate" />
-		
 	</label>
-	<g:textField name="imagePlate" value="${plateInstance?.imagePlate}"/>
+	<!--  g:textField name="imagePlate2" value="${plateInstance?.imagePlate}"/-->
+	<input type="hidden" name="imagePlate" id="imagePlate" value="" />
+	<input type="file" name="imagePlateFile" id="imagePlateFile" />
+	<!--input type="submit" /-->		
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: plateInstance, field: 'observation', 'error')} ">
@@ -41,4 +43,3 @@
 	</label>
 	<g:datePicker name="plateDate" precision="day"  value="${plateInstance?.plateDate}"  />
 </div>
-

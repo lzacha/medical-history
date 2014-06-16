@@ -1,10 +1,13 @@
 package medicalhistory
 
+import medicalhistory.history.FileUploadService
 import org.springframework.dao.DataIntegrityViolationException
 
 class PlateController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+	FileUploadService fileUploadService
+	
 
     def index() {
         redirect(action: "list", params: params)
@@ -20,12 +23,33 @@ class PlateController {
     }
 
     def save() {
-        def plateInstance = new Plate(params)
+		
+		//System.out.println "params --> " +params
+		//System.out.println "request.getFileMap --> " +request.getFileNames().toString()
+
+        def imagePlateFile = request.getFile('imagePlateFile')
+		def imagePlate
+
+		//println imagePlateFile.getFileItem().getName().toString()
+        //plateInstance.getPatient().getId() + "-date-"+plateInstance.getPlateDate().fastTime
+
+		if (!imagePlateFile.isEmpty()) {
+			imagePlate = fileUploadService.uploadFile(imagePlateFile, 
+					//plateInstance.getPatient().getId()
+                    //+ "-date-"+plateInstance.getPlateDate().fastTime
+					imagePlateFile.getFileItem().getName()
+                    , "plateFiles")
+		}
+		
+		params.imagePlate = imagePlate
+		def plateInstance = new Plate(params)
+
+		//System.out.println "params --> e" +params
         if (!plateInstance.save(flush: true)) {
-            render(view: "create", model: [plateInstance: plateInstance])
+			render(view: "create", model: [plateInstance: plateInstance])
             return
         }
-
+		
         flash.message = message(code: 'default.created.message', args: [message(code: 'plate.label', default: 'Plate'), plateInstance.id])
         redirect(action: "show", id: plateInstance.id)
     }
@@ -59,6 +83,11 @@ class PlateController {
             redirect(action: "list")
             return
         }
+		
+		def imagePlate = request.getFile('imagePlate')
+		if (!imagePlate.isEmpty()) {
+			plateInstance.imagePlate = fileUploadService.uploadFile(imagePlate, "${plateInstance.id}.png", "plateFiles")
+		}
 
         if (version != null) {
             if (plateInstance.version > version) {
@@ -99,4 +128,10 @@ class PlateController {
             redirect(action: "show", id: id)
         }
     }
+	
+	def patient(Integer patient) {
+		//params.max = Math.min(max ?: 10, 100)
+		[plateInstanceList: Plate.findByPatient(patient), plateInstanceTotal: Plate.count()]
+	}
+
 }
