@@ -17,4 +17,13 @@ class ChartController {
     def example3() { 
 
 	}
+	def example4() {
+	
+		}
+	def example5() {
+	
+		}
+	def example6() {
+	
+		}
 }
