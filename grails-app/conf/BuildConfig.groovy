@@ -44,7 +44,7 @@ grails.project.dependency.resolution = {
 
         compile ":joda-time:1.4"
         compile ":excel-import:1.0.0"
-        compile ":file-server:0.2"
+        //compile ":file-server:0.2"
 
         runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.10.2"

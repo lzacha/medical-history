@@ -7,10 +7,10 @@ import grails.test.mixin.*
 /**
  * See the API for {@link grails.test.mixin.web.ControllerUnitTestMixin} for usage instructions
  */
-@TestFor(MedicalHistoryGraphsController)
-class MedicalHistoryGraphsControllerTests {
+@TestFor(StudyController)
+class StudyControllerTests {
 
     void testSomething() {
-        fail "Implement me"
+       fail "Implement me"
     }
 }

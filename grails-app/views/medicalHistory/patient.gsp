@@ -13,19 +13,19 @@
     <iframe id="iframe1" src="/medical-history/patient/show/${patient.id}" class="frameref">
     </iframe>
 
-    <iframe id="iframe2" src="/medical-history/medicalStudy/show/${patient.id}" style="width:100%;">
+    <iframe id="iframe2" src="/medical-history/study/loadStudyTypes?patiend.id=${patient.id}" style="width:100%;">
     </iframe>
 
-    <iframe id="iframe3" src="/medical-history/" style="width:100%;">
+    <iframe id="iframe3" src="/medical-history/study/listStudies?patiend.id=${patient.id}" style="width:100%;">
     </iframe>
 
-    <iframe id="iframe4" src="/medical-history/treatment/show/${patient.id}" style="width:100%;">
+    <iframe id="iframe4" src="/medical-history/study/listTreatments?patiend.id=${patient.id}" style="width:100%;">
     </iframe>
 
-    <iframe id="iframe5" src="/medical-history/antecedent/list" style="width:100%;">
+    <iframe id="iframe5" src="/medical-history/study/listAntecedents?patiend.id=${patient.id}" style="width:100%;">
     </iframe>
 
-    <iframe id="iframe6" src="/medical-history/plate/show/${patient.id}" style="width:100%;">
+    <iframe id="iframe6" src="/medical-history/plate/show?patiend.id${patient.id}" style="width:100%;">
     </iframe>
 
 </div>

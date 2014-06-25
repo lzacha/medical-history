@@ -3,6 +3,7 @@ import grails.util.Environment
 import medicalhistory.Patient
 import medicalhistory.Doctor
 import medicalhistory.AntecedentDetail
+import medicalhistory.StudyTypesValues
 import medicalhistory.Treatment
 import medicalhistory.AgeRanges
 //import medicalhistory.MeasurementUnit
@@ -113,7 +114,7 @@ class BootStrap {
         def st3 = new StudyTypes(description:"Lab HTA")
         def st4 = new StudyTypes(description:"Pletismografia")
         def st5 = new StudyTypes(description:"PEG")
-        def st6 = new StudyTypes(description:"Cámara Gamma")
+        def st6 = new StudyTypes(description:"Cï¿½mara Gamma")
 		def st7 = new StudyTypes(description:"ECO Doppler Abdominal")
 		def st8 = new StudyTypes(description:"ECO Vasos de Cuello")
 		def st9 = new StudyTypes(description:"Espesor Miointimal")
@@ -122,7 +123,7 @@ class BootStrap {
 		def st12 = new StudyTypes(description:"MAPA Dia")
 		def st13 = new StudyTypes(description:"MAPA Noche")
 		def st14 = new StudyTypes(description:"RxTx")
-		def st15 = new StudyTypes(description:"Variabilidad de la tensión arterial y Sensibilidad de Barorreflejo")
+		def st15 = new StudyTypes(description:"Variabilidad de la tensiï¿½n arterial y Sensibilidad de Barorreflejo")
 				
         st1.save()
         st2.save()
@@ -197,6 +198,13 @@ class BootStrap {
         antecendet4.save()
         antecendet5.save()
 
+		def stv1 = new StudyTypesValues(studyTypesDetails:std1,value:1)
+		def stv2 = new StudyTypesValues(studyTypesDetails:std2,value:2)
+		def stv3 = new StudyTypesValues(studyTypesDetails:std3,value:3)
+		stv1.save()
+		stv2.save()
+		stv3.save()
+		
 //        def msd1 = new MedicalStudyDetail(  ageRange: ar1, studyType: st1,
 //                                            abbreviation: "HTO", completeName: "Hipo todo zaraza",
 //                                            fieldType: ft1, minValue:1, maxValue:10,

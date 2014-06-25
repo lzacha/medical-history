@@ -82,4 +82,9 @@ class MedicalHistoryController {
     def listSystemUsers(){
 
     }
+
+    def studyEntry() {
+    
+    }
+
 }
