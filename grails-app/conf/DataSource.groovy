@@ -35,16 +35,15 @@ hibernate {
 environments {
     development {
 
-        /*
+        
         dataSource {
-            dbCreate = "create" // one of 'create', 'create-drop','update'
-            url = "jdbc:mys
-            ql://localhost/medicalhistory"
+            dbCreate = "create-drop" // one of 'create', 'create-drop','update'
+            url = "jdbc:mysql://localhost/medicalhistory"
             username = "medicalhistory"
             password = "medicalhistory"
 
         }
-        */
+        
     
 
         /* --> To see
@@ -53,11 +52,12 @@ environments {
         }
         <-- */
 
-
+		/*
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:h2:mem:devDb;MVCC=TRUE"
         }
+        */
 
     }
     test {
