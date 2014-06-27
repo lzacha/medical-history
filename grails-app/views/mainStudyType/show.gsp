@@ -1,12 +1,4 @@
 
-<%@ page import="medicalhistory.MainStudyType" %>
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'mainStudyType.label', default: 'MainStudyType')}" />
-		<title><g:message code="default.show.label" args="[entityName]" /></title>
-	</head>
 	<body>
 		<a href="#show-mainStudyType" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
@@ -51,4 +43,4 @@
 			</g:form>
 		</div>
 	</body>
-</html>
+
