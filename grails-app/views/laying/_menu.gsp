@@ -4,9 +4,12 @@
             <li>
                 <a href="#">Pacientes</a>
                 <ul>
-                    <li><a href="/medical-history/medicalHistory/searchPatient">Buscar paciente</a></li>
-                    <li><a href="/medical-history/medicalHistory/addPatient">Agregar paciente</a></li>
-                    <li><a href="/medical-history/medicalHistory/listPatients">Pacientes unificados</a></li>
+                    <!-- <li><a href="/medical-history/medicalHistory/searchPatient">Buscar paciente</a></li> -->
+                    <li><a href="/medical-history/medicalHistory/addPatient">Alta Paciente</a></li>
+                    <li><a href="/medical-history/medicalHistory/searchPatient">Alta Datos</a></li>
+                    <li><a href="/medical-history/medicalHistory/searchPatient?webCtx=modif">Modificacion</a></li>
+                    <li><a href="/medical-history/medicalHistory/searchPatient?webCtx=view">Visualizacion</a></li>
+                    <!--  <li><a href="/medical-history/medicalHistory/listPatients">Pacientes unificados</a></li>  -->
                 </ul>
             </li>
             <li>

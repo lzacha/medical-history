@@ -16,3 +16,5 @@ target
 .project
 *.sublime-workspace
 /target-eclipse
+/bin
+bin
