@@ -6,6 +6,9 @@ class ChartController {
 
 	}
 	
+	def example0() { 
+
+	}
 	def example1() { 
 
 	}

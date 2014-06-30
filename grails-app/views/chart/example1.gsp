@@ -8,48 +8,35 @@
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 
-<head>
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
+      google.load("visualization", "1", {packages:["imagebarchart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'DgHTA', 'HTAL', 'RCVC'],
+          ['2002 - Hombre',  100,      40, 33],
+          ['2002 - Mujer',  50,      20, 43],
+          ['2003 - Hombre',  17,      60,67],
+          ['2003 - Mujer',  37,      40,27],
+          ['2004 - Hombre',  20,       11,86],
+          ['2004 - Mujer',  29,       21,56],
+          ['2005 - Hombre',  30,      20,50],
+          ['2005 - Mujer',  10,      40,20]
+        ]);
 
-        // Load the Visualization API and the piechart package.
-        google.load('visualization', '1.0', {'packages':['corechart']});
-
-        // Set a callback to run when the Google Visualization API is loaded.
-        google.setOnLoadCallback(drawChart);
-
-
-        // Callback that creates and populates a data table,
-        // instantiates the pie chart, passes in the data and
-        // draws it.
-        function drawChart() {
-
-            // Create the data table.
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Topping');
-            data.addColumn('number', 'Slices');
-            data.addRows([
-                ['Mushrooms', 3],
-                ['Onions', 1],
-                ['Olives', 1],
-                ['Zucchini', 1],
-                ['Pepperoni', 2]
-            ]);
-
-            // Set chart options
-            var options = {'title':'How Much Pizza I Ate Last Night',
-                'width':400,
-                'height':300};
-
-            // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-            chart.draw(data, options);
-        }
+        var chart = new google.visualization.ImageBarChart(document.getElementById('chart_div'));
+        chart.draw(data, {title: 'Evolucion Anual por Tipo de Estudio' , width: 900, height: 350, min: 0, isVertical:true} );
+      }
     </script>
-</head>
+  </head>
 
-<!--Div that will hold the pie chart-->
-<div id="chart_div" style="width:900; height:500"></div>
-
+  <body>
+    <div id="chart_div"></div>
+  </body>
+</html>
 
 <script>
 
