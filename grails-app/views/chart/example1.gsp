@@ -48,7 +48,7 @@
 </head>
 
 <!--Div that will hold the pie chart-->
-<div id="chart_div" style="width:400; height:300"></div>
+<div id="chart_div" style="width:900; height:500"></div>
 
 
 <script>

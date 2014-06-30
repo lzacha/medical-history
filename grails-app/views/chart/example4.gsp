@@ -8,64 +8,67 @@
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 
-<head>
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var dataH = google.visualization.arrayToDataTable([
+          ['Rango de Edad', 'Pacientes'],
+          ['Entre 26 y 35',     1],
+          ['Entre 46 y 55',      2],
+          ['Entre 56 y 65',  9],
+          ['Entre 66 y 75', 2],
+          ['Mayor a 75',    2]
+        ]);
 
-        // Load the Visualization API and the piechart package.
-        google.load('visualization', '1.0', {'packages':['corechart']});
 
-        // Set a callback to run when the Google Visualization API is loaded.
-        google.setOnLoadCallback(drawChart);
+        var dataM = google.visualization.arrayToDataTable([
+          ['Rango de Edad', 'Pacientes'],
+          ['Entre 36 y 45',     1],
+          ['Entre 46 y 55',      2],
+          ['Entre 56 y 65',  4],
+          ['Entre 66 y 75', 4]
+        ]);
 
 
-        // Callback that creates and populates a data table,
-        // instantiates the pie chart, passes in the data and
-        // draws it.
-        function drawChart() {
+        var options = {
+          title: 'Hombre'
+        };
 
-            // Create the data table.
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Topping');
-            data.addColumn('number', 'Slices');
-            data.addRows([
-                ['Mushrooms', 3],
-                ['Onions', 1],
-                ['Olives', 1],
-                ['Zucchini', 1],
-                ['Pepperoni', 2]
-            ]);
+        var chartH = new google.visualization.PieChart(document.getElementById('piechartH'));
+        chartH.draw(dataH, options);
 
-            // Set chart options
-            var options = {'title':'How Much Pizza I Ate Last Night',
-                'width':400,
-                'height':300};
+        options = {
+          title: 'Mujer'
+        };
 
-            // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-            chart.draw(data, options);
-        }
+
+        var chartM = new google.visualization.PieChart(document.getElementById('piechartM'));
+        chartM.draw(dataM, options);
+
+	  
+	  }
     </script>
-</head>
+  </head>
+  <body>
+  <table border=0 >
+  
+  <tr>
 
-<!--Div that will hold the pie chart-->
-<div id="chart_div" style="width:400; height:300"></div>
+  <td colspan="2"><font face="Arial"><h3>Antecedentes DBT por Sexo</h3></font></td>
+  </tr>
+  <tr>
 
-
-<script>
-
-    // Using YQL and JSONP
-    $.ajax({
-        url: "http://localhost:8080/medical-history/medicalHistoryJson/patient/1",
-
-        jsonp: "callback",
-
-        dataType: "jsonp",
-
-        // work with the response
-        success: function( response ) {
-            console.log( response ); // server response
-        }
-    });
-
-</script>
-
+  <td width= "500px" >
+	<div id="piechartH" style="width: 500px; height: 500px;"></div>
+  </td>
+  <td width= "500px" style ="border-left:solid">
+	<div id="piechartM" style="width: 500px; height: 500px;"></div>
+  </td>
+  </tr>
+  </table>
+  </body>
+</html>

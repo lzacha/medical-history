@@ -8,64 +8,40 @@
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 
-<head>
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
+      google.load("visualization", "1", {packages:["treemap"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        // Create and populate the data table.
+        var data = google.visualization.arrayToDataTable([
+          ['Location', 'Parent', 'Market trade volume (size)'],
+		  [' ',    null,                 0],
+          ['Entre 56 y 65',' ',            13],
+          ['Entre 66 y 75', ' ',            6],
+          ['Entre 46 y 55',    ' ',            4],
+          ['Mayor a 75',    ' ',            8],
+          ['Entre 26 y 35',   ' ',             3],
+          ['Entre 36 y 45',   ' ',             1]
+        ]);
 
-        // Load the Visualization API and the piechart package.
-        google.load('visualization', '1.0', {'packages':['corechart']});
-
-        // Set a callback to run when the Google Visualization API is loaded.
-        google.setOnLoadCallback(drawChart);
-
-
-        // Callback that creates and populates a data table,
-        // instantiates the pie chart, passes in the data and
-        // draws it.
-        function drawChart() {
-
-            // Create the data table.
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Topping');
-            data.addColumn('number', 'Slices');
-            data.addRows([
-                ['Mushrooms', 3],
-                ['Onions', 1],
-                ['Olives', 1],
-                ['Zucchini', 1],
-                ['Pepperoni', 2]
-            ]);
-
-            // Set chart options
-            var options = {'title':'How Much Pizza I Ate Last Night',
-                'width':400,
-                'height':300};
-
-            // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-            chart.draw(data, options);
+        // Create and draw the visualization.
+        var tree = new google.visualization.TreeMap(document.getElementById('chart_div'));
+        tree.draw(data, {
+          title: 'Antecedente DBT por Rango de Edad',
+		  minColor: '#f00',
+          midColor: '#dfd',
+          maxColor: '#0d0',
+          headerHeight: 15,
+          fontColor: 'black',
+          showScale: false});
         }
     </script>
-</head>
+  </head>
 
-<!--Div that will hold the pie chart-->
-<div id="chart_div" style="width:400; height:300"></div>
-
-
-<script>
-
-    // Using YQL and JSONP
-    $.ajax({
-        url: "http://localhost:8080/medical-history/medicalHistoryJson/patient/1",
-
-        jsonp: "callback",
-
-        dataType: "jsonp",
-
-        // work with the response
-        success: function( response ) {
-            console.log( response ); // server response
-        }
-    });
-
-</script>
-
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
