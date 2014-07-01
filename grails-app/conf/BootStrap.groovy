@@ -57,47 +57,39 @@ class BootStrap {
         //mu1.save()
         //mu2.save()
 
-        def ft1 = new FieldType(fieldName:"Numerico")
-        def ft2 = new FieldType(fieldName:"Alfanumerico")
-        def ft3 = new FieldType(fieldName:"Si")
-        def ft4 = new FieldType(fieldName:"No")
-        ft1.save()
-        ft2.save()
-        ft3.save()
-        ft4.save()
+        def ft1 = new FieldType(fieldName:"Numerico").save()
+        def ft2 = new FieldType(fieldName:"Alfanumerico").save()
+        def ft3 = new FieldType(fieldName:"Si").save()
+        def ft4 = new FieldType(fieldName:"No").save()
+        
 
-        def tf1 = new TreatmentFrequency(frequencyDescription:"Diario")
-        def tf2 = new TreatmentFrequency(frequencyDescription:"Semanal")
-		def tf3 = new TreatmentFrequency(frequencyDescription:"Quincenal")
-		def tf4 = new TreatmentFrequency(frequencyDescription:"Mensual")
-		def tf5 = new TreatmentFrequency(frequencyDescription:"Bimestral")
-        tf1.save()
-        tf2.save()
-		tf3.save()
-		tf4.save()
-		tf5.save()
+        def tf1 = new TreatmentFrequency(frequencyDescription:"Diario").save()
+        def tf2 = new TreatmentFrequency(frequencyDescription:"Semanal").save()
+		def tf3 = new TreatmentFrequency(frequencyDescription:"Quincenal").save()
+		def tf4 = new TreatmentFrequency(frequencyDescription:"Mensual").save()
+		def tf5 = new TreatmentFrequency(frequencyDescription:"Bimestral").save()
+        
+
+        def mst1 = new MainStudyType(mainStudyType:"Htal", description:"Hospital").save()
+        def mst2 = new MainStudyType(mainStudyType:"RCVC", description:"RCVC").save()
+        def mst3 = new MainStudyType(mainStudyType:"DgHTA", description:"DgHTA").save()
+        
 		
-
-        def mst1 = new MainStudyType(mainStudyType:"Htal", description:"Hospital")
-        def mst2 = new MainStudyType(mainStudyType:"RCVC", description:"RCVC")
-        def mst3 = new MainStudyType(mainStudyType:"DgHTA", description:"DgHTA")
-        mst1.save()
-        mst2.save()
-        mst3.save()
-
-        def antDet1 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"HTA",completeName:"NombreCompleto HTA", fieldType:ft1, decimalsQuantity:2/*, measureUnit:mu1*/)
-        def antDet2 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"DLP",completeName:"NombreCompleto DLP", fieldType:ft2, decimalsQuantity:2/*, measureUnit:mu2*/)
-        def antDet3 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"TBQ",completeName:"NombreCompleto TBQ", fieldType:ft3, decimalsQuantity:2/*, measureUnit:mu1*/)
-        def antDet4 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"EXTBQ",completeName:"NombreCompleto EXTBQ", fieldType:ft4, decimalsQuantity:2/*, measureUnit:mu2*/)
-        def antDet5 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"AHF",completeName:"NombreCompleto AHF", fieldType:ft1, decimalsQuantity:2/*, measureUnit:mu1*/)
-        def antDet6 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"DBT",completeName:"NombreCompleto DBT", fieldType:ft2, decimalsQuantity:2/*, measureUnit:mu2*/)
-
-        antDet1.save()
-        antDet2.save()
-        antDet3.save()
-        antDet4.save()
-        antDet5.save()
-        antDet6.save()
+        def antDet1 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"HTA",completeName:"Hipertension Arterial", fieldType:ft1, decimalsQuantity:0).save()
+        def antDet2 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"DLP",completeName:"Dislipemia", fieldType:ft2, decimalsQuantity:0).save()
+        def antDet3 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"TBQ",completeName:"Tabaquismo", fieldType:ft3, decimalsQuantity:0).save()
+        def antDet4 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"EXTBQ",completeName:"Ex Tabaquismo", fieldType:ft4, decimalsQuantity:0).save()
+        def antDet5 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"AHF",completeName:"Factor Anti-Hemofilico", fieldType:ft1, decimalsQuantity:0).save()
+        def antDet6 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"DBT",completeName:"Diabetes", fieldType:ft2, decimalsQuantity:0).save()
+		def antDet7 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"IAM",completeName:"Infarto Agudo de Miocardio", fieldType:ft1, decimalsQuantity:0).save()
+		def antDet8 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"ACV/ TIA",completeName:"Accidente Cerebro Vascular / Accidente Isquémico Transitorio", fieldType:ft2, decimalsQuantity:0).save()
+		def antDet9 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"ENF CORONARIA",completeName:"Enfermedad Coronoaria", fieldType:ft3, decimalsQuantity:0).save()
+		def antDet10 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.FRC, abbreviation:"EC",completeName:"Enfermedad Celiaca", fieldType:ft4, decimalsQuantity:0).save()
+		def antDet11 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"CRM",completeName:"Cirugia de Revascularización Miocardica", fieldType:ft1, decimalsQuantity:0).save()
+		def antDet12 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"ATC",completeName:"Angioplastia Transluminal Coronaria", fieldType:ft2, decimalsQuantity:0).save()
+		def antDet13 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"EVP",completeName:"Enfermedad Vascular Periferica", fieldType:ft2, decimalsQuantity:0).save()
+		def antDet14 = new AntecedentDetail(antecedentStudyType: AntecedentDetail.AntecedentStudyType.ANT, abbreviation:"HIPO",completeName:"Hipotiroidismo", fieldType:ft2, decimalsQuantity:0).save()
+	
 
         def doc1 = new Doctor(docId:1, medicalEnrollment:"e1", firstName:"Rene1", lastName:"Favaloro1")
         def doc2 = new Doctor(docId:2, medicalEnrollment:"e1", firstName:"Rene2", lastName:"Favaloro2")
@@ -165,20 +157,28 @@ class BootStrap {
 		def std37 = new StudyTypesDetails(abbreviation: "Homocisteina", description: "Homocisteina", completeName: "Homocisteina", decimalsQuantity: 0, minRange: 0, maxRange: 1000, studyTypes: st1 ).save()
 		def std38 = new StudyTypesDetails(abbreviation: "Fibrinogeno", description: "Fibrinogeno", completeName: "Fibrinógeno", decimalsQuantity: 0, minRange: 0, maxRange: 1000, studyTypes: st1 ).save()
 		
+		// 	StudyTypesDetails de StudyTypes = "Sed Urinario"
 		
+		def std39 = new StudyTypesDetails(abbreviation: "Sed prot", description: "Sedimento - Proteina total", completeName: "Sedimento - Proteina total", decimalsQuantity: 0, minRange: 0, maxRange: 100, studyTypes: st2 ).save()
+		def std40 = new StudyTypesDetails(abbreviation: "Sed Hb", description: "Sedimento - Hemoglobina", completeName: "Sedimento - Hemoglobina", decimalsQuantity: 0, minRange: 0, maxRange: 100, studyTypes: st2 ).save()
+		def std41 = new StudyTypesDetails(abbreviation: "Sed Glu", description: "Sedimento - Glucosuria", completeName: "Sedimento - Glucosuria", decimalsQuantity: 0, minRange: 0, maxRange: 100, studyTypes: st2 ).save()
+		def std42 = new StudyTypesDetails(abbreviation: "Sed hematies", description: "Sedimento - Hematiescosuria", completeName: "Sedimento - Hematiescosuria", decimalsQuantity: 0, minRange: 0, maxRange: 100, studyTypes: st2 ).save()
+		def std43 = new StudyTypesDetails(abbreviation: "Sed Cilindros", description: "Sedimento - Cilindroscosuria", completeName: "Sedimento - Cilindroscosuria", decimalsQuantity: 0, minRange: 0, maxRange: 100, studyTypes: st2 ).save()
         
 
-//        def t1 = new Treatment(antecedentDetailId: 1,internalCode: 'ENF CORONARIA', description: 'ENF CORONARIA')
+//		def t1 = new Treatment(antecedentDetailId: 1,internalCode: 'ENF CORONARIA', description: 'ENF CORONARIA')
 //        t1.save()
 
 
-        def ar1 = new AgeRanges(rangeDescription:"niÃ±os", minValue:1, maxValue:10)//, sex: "hombre") //, sex: AgeRange.PatientSex.MAN)
-        def ar2 = new AgeRanges(rangeDescription:"adolescentes", minValue:11, maxValue:19)//, sex:"hombre") //, sex: AgeRange.PatientSex.MAN)
-        def ar3 = new AgeRanges(rangeDescription:"adultos", minValue:20, maxValue:120)//, sex:"hombre") //, sex: AgeRange.PatientSex.MAN)
-        ar1.save()
-        ar2.save()
-        ar3.save()
-
+        def ar1 = new AgeRanges(rangeDescription:"Menor de 18", minValue:1, maxValue:17).save()
+        def ar2 = new AgeRanges(rangeDescription:"Entre 18 y 25", minValue:18, maxValue:25).save()
+		def ar3 = new AgeRanges(rangeDescription:"Entre 26 y 35", minValue:26, maxValue:35).save()
+		def ar4 = new AgeRanges(rangeDescription:"Entre 36 y 45", minValue:36, maxValue45).save()
+		def ar5 = new AgeRanges(rangeDescription:"Entre 46 y 55", minValue:46, maxValue:55).save()
+		def ar6 = new AgeRanges(rangeDescription:"Entre 56 y 65", minValue:56, maxValue:65).save()
+		def ar7 = new AgeRanges(rangeDescription:"Entre 66 y 75", minValue:66, maxValue:75).save()
+		def ar8 = new AgeRanges(rangeDescription:"Mayor de 75", minValue:76, maxValue:120).save()
+        
 
         def patient1 = new Patient(height:1, weight:1, abdominalDiameter:1, medicalHistory:1, patientId: 1,firstName: "Ariel", lastName: "Ortega", sexId: "Masculino", birthDate: new Date())
         def patient2 = new Patient(height:2, weight:2, abdominalDiameter:2, medicalHistory:2, patientId: 2,firstName: "Diego", lastName: "Latorre", sexId: "Masculino", birthDate:new Date())
