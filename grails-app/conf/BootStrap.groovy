@@ -140,19 +140,60 @@ class BootStrap {
 
 		// 	StudyTypesDetails de StudyTypes = "Lab HTA"
 		
-		def std44 = new StudyTypesDetails(abbreviation: "Lab HTA", description: "Adre u", completeName: "Adrenalina", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
-		def std45 = new StudyTypesDetails(abbreviation: "Lab HTA", description: "Nora u", completeName: "Noradrenalina", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
-		def std46 = new StudyTypesDetails(abbreviation: "Lab HTA", description: "T3", completeName: "Triyodotironina", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
-		def std47 = new StudyTypesDetails(abbreviation: "Lab HTA", description: "T4", completeName: "Tiroxina", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
-		def std48 = new StudyTypesDetails(abbreviation: "Lab HTA", description: "TSH", completeName: "Hormona tiroestimulante", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
-		def std49 = new StudyTypesDetails(abbreviation: "Lab HTA", description: "Renina pl", completeName: "Renina", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
-		def std50 = new StudyTypesDetails(abbreviation: "Lab HTA", description: "Aldos pl", completeName: "Aldosterona pl", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
-		def std51 = new StudyTypesDetails(abbreviation: "Lab HTA", description: "Aldos u", completeName: "Aldosterona u", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
-		def std52 = new StudyTypesDetails(abbreviation: "Lab HTA", description: "AVM", completeName: "Area valvular mitral", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
-		def std53 = new StudyTypesDetails(abbreviation: "Lab HTA", description: "Lpa", completeName: "Latido prematuro auricular", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
-		def std54 = new StudyTypesDetails(abbreviation: "Lab HTA", description: "Insulina basal", completeName: "Insulina basal", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
-		def std55 = new StudyTypesDetails(abbreviation: "Lab HTA", description: "Insulina 120", completeName: "Insulina 120", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
-		def std56 = new StudyTypesDetails(abbreviation: "Lab HTA", description: "HbA1C", completeName: "Hemoglobina glicosilada", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std44 = new StudyTypesDetails(abbreviation: "Adre u", description: "Adrenalina", completeName: "Adrenalina", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std45 = new StudyTypesDetails(abbreviation: "Nora u", description: "Noradrenalina", completeName: "Noradrenalina", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std46 = new StudyTypesDetails(abbreviation: "T3", description: "Triyodotironina", completeName: "Triyodotironina", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std47 = new StudyTypesDetails(abbreviation: "T4", description: "Tiroxina", completeName: "Tiroxina", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std48 = new StudyTypesDetails(abbreviation: "TSH", description: "Hormona tiroestimulante", completeName: "Hormona tiroestimulante", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std49 = new StudyTypesDetails(abbreviation: "Renina pl", description: "Renina", completeName: "Renina", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std50 = new StudyTypesDetails(abbreviation: "Aldos pl", description: "Aldosterona pl", completeName: "Aldosterona pl", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std51 = new StudyTypesDetails(abbreviation: "Aldos u", description: "Aldosterona u", completeName: "Aldosterona u", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std52 = new StudyTypesDetails(abbreviation: "AVM", description: "Area valvular mitral", completeName: "Area valvular mitral", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std53 = new StudyTypesDetails(abbreviation: "Lpa", description: "Latido prematuro auricular", completeName: "Latido prematuro auricular", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std54 = new StudyTypesDetails(abbreviation: "Insulina basal", description: "Insulina basal", completeName: "Insulina basal", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std55 = new StudyTypesDetails(abbreviation: "Insulina 120", description: "Insulina 120", completeName: "Insulina 120", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std56 = new StudyTypesDetails(abbreviation: "HbA1C", description: "Hemoglobina glicosilada", completeName: "Hemoglobina glicosilada", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+
+		// 	StudyTypesDetails de StudyTypes = "Pletismografia"
+		
+		def std57 = new StudyTypesDetails(abbreviation: "PA media", description: "PA media", completeName: "Pletismografia media", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std58 = new StudyTypesDetails(abbreviation: "Flujo basal", description: "Flujo basal", completeName: "Flujo basal", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std59 = new StudyTypesDetails(abbreviation: "Resist basal", description: "Resistencia basal", completeName: "Resistencia basal", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std60 = new StudyTypesDetails(abbreviation: "PA postisq", description: "Pletismografia postisq", completeName: "Pletismografia postisq", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std61 = new StudyTypesDetails(abbreviation: "Flujo postisq", description: "Flujo postisq", completeName: "Flujo postisq", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std62 = new StudyTypesDetails(abbreviation: "Resistencia minima", description: "Resistencia minima", completeName: "Resistencia minima", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std63 = new StudyTypesDetails(abbreviation: "Compliance", description: "Compliance", completeName: "Compliance", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std64 = new StudyTypesDetails(abbreviation: "Distancia carotida/femoral", description: "Distancia carotida/femoral", completeName: "Distancia carotida/femoral", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+		def std65 = new StudyTypesDetails(abbreviation: "VOP", description: "Velocidad de onda de pulso", completeName: "Velocidad de onda de pulso", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st3 ).save()
+
+		// 	StudyTypesDetails de StudyTypes = "PEG"
+		
+		def std66 = new StudyTypesDetails(abbreviation: "FC basal", description: "Frecuencia cardidaca basal", completeName: "Frecuencia cardiaca basal", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st5 ).save()
+		def std67 = new StudyTypesDetails(abbreviation: "TA basal", description: "Tension arterial basal", completeName: "Tension arterial basal", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st5 ).save()
+		def std68 = new StudyTypesDetails(abbreviation: "FC maxima", description: "Frecuencia cardiaca maxima", completeName: "Frecuencia cardiaca maxima", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st5 ).save()
+		def std69 = new StudyTypesDetails(abbreviation: "TA maxima", description: "Tension arterial maxima", completeName: "Tension arterial maxima", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st5 ).save()
+		def std70 = new StudyTypesDetails(abbreviation: "METs", description: "Unidades de esfuerzo fisico", completeName: "Unidades de esfuerzo fisico", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st5 ).save()
+		def std71 = new StudyTypesDetails(abbreviation: "Terminacion", description: "Terminacion", completeName: "Terminacion", decimalsQuantity: 0, minRange: 0, maxRange: 0, studyTypes: st5 ).save()
+		def std72 = new StudyTypesDetails(abbreviation: "resultado", description: "Resultado", completeName: "Resultado", decimalsQuantity: 0, minRange: 0, maxRange: 0, studyTypes: st5 ).save()
+		def std73 = new StudyTypesDetails(abbreviation: "Riesgo isque", description: "Riesgo isquemico", completeName: "Riesgo isquemico", decimalsQuantity: 0, minRange: 0, maxRange: 0, studyTypes: st5 ).save()
+		def std74 = new StudyTypesDetails(abbreviation: "Angina", description: "Angina", completeName: "Angina", decimalsQuantity: 0, minRange: 0, maxRange: 1, studyTypes: st5 ).save()
+		def std75 = new StudyTypesDetails(abbreviation: "Disnea", description: "Disnea", completeName: "Disnea", decimalsQuantity: 0, minRange: 0, maxRange: 1, studyTypes: st5 ).save()
+		def std76 = new StudyTypesDetails(abbreviation: "Sincope", description: "Sincope", completeName: "Sincope", decimalsQuantity: 0, minRange: 0, maxRange: 1, studyTypes: st5 ).save()
+		def std77 = new StudyTypesDetails(abbreviation: "TV", description: "Taquicardia ventricular", completeName: "Taquicardia ventricular", decimalsQuantity: 0, minRange: 0, maxRange: 1, studyTypes: st5 ).save()
+		def std78 = new StudyTypesDetails(abbreviation: "Hipo TA", description: "Hipotension arterial", completeName: "Hipotension arterial", decimalsQuantity: 0, minRange: 0, maxRange: 1, studyTypes: st5 ).save()
+		def std79 = new StudyTypesDetails(abbreviation: "ST", description: "Secrecion tubular", completeName: "Secrecion tubular", decimalsQuantity: 0, minRange: 0, maxRange: 1, studyTypes: st5 ).save()
+		def std80 = new StudyTypesDetails(abbreviation: "Equiv angin", description: "Equivalente angina", completeName: "Equivalente angina", decimalsQuantity: 0, minRange: 0, maxRange: 1, studyTypes: st5 ).save()
+		
+		// 	StudyTypesDetails de StudyTypes = "Camara Gamma"
+		
+		def std81 = new StudyTypesDetails(abbreviation: "Normal", description: "Normal", completeName: "Normal", decimalsQuantity: 0, minRange: 0, maxRange: 0, studyTypes: st6 ).save()
+		def std82 = new StudyTypesDetails(abbreviation: "Apremio", description: "Apremio", completeName: "Apremio", decimalsQuantity: 0, minRange: 0, maxRange: 0, studyTypes: st6 ).save()
+		def std83 = new StudyTypesDetails(abbreviation: "Anterior", description: "Anterior", completeName: "Anterior", decimalsQuantity: 0, minRange: 0, maxRange: 0, studyTypes: st6 ).save()
+		def std84 = new StudyTypesDetails(abbreviation: "Inferior", description: "Inferior", completeName: "Inferior", decimalsQuantity: 0, minRange: 0, maxRange: 0, studyTypes: st6 ).save()
+		def std85 = new StudyTypesDetails(abbreviation: "Lateral", description: "Lateral", completeName: "Lateral", decimalsQuantity: 0, minRange: 0, maxRange: 0, studyTypes: st6 ).save()
+		def std86 = new StudyTypesDetails(abbreviation: "Posterior", description: "Posterior", completeName: "Posterior", decimalsQuantity: 0, minRange: 0, maxRange: 0, studyTypes: st6 ).save()
+		def std87 = new StudyTypesDetails(abbreviation: "Captacion pulm", description: "Captacion pulmonar", completeName: "Captacion pulmonar", decimalsQuantity: 0, minRange: 0, maxRange: 1, studyTypes: st6 ).save()
+		def std88 = new StudyTypesDetails(abbreviation: "Dil del VI", description: "Dilatacion del ventriculo izquierdo", completeName: "Dilatacion del ventriculo izquierdo", decimalsQuantity: 0, minRange: 0, maxRange: 1, studyTypes: st6 ).save()
 		
 		
 
