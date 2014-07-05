@@ -16,5 +16,7 @@ target
 .project
 *.sublime-workspace
 /target-eclipse
+/target-eclipse/
+/target-eclipse/*
 /bin
 bin
