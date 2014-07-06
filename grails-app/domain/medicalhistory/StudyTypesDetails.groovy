@@ -8,6 +8,7 @@ class StudyTypesDetails {
     String abbreviation
     String completeName
 
+    //esto no anda
     enum FieldType {
 
         NUM("NUMERICO"), ALFANUMERICO("ALFANUMERICO")

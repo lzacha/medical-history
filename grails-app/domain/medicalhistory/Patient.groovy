@@ -1,5 +1,7 @@
 package medicalhistory
 
+
+
 class Patient {
 
     //Para el seach
@@ -10,13 +12,31 @@ class Patient {
     int patientId
 	String firstName
 	String lastName
-	String sexId
+	
+	enum Sex {
+		
+				MASCULINO("MASCULINO"), FEMENINO("FEMENINO")
+		
+				final String value
+
+                Sex(String value) {
+					this.value = value
+				}
+		
+				String toString() {
+					value
+				}
+	}
+	
+	
 	Date birthDate
+
+    Sex sex
 
     double height
     double weight
-    double abdominalDiameter //Porque esta esto aca? cambia con el tiempo
-
+    double abdominalDiameter //Porque esta esto aca? cambia con el tiempo	
+	
     String medicalHistory //Ver como es este campo...
 
     //static hasMany = [antecedents:Antecedent, treatments:Treatment, medicalStudies:MedicalStudy,plates:Plate]
@@ -24,7 +44,6 @@ class Patient {
     static constraints = {
         firstName(blank:false)
         lastName(blank:false)
-        sexId(blank:false)
         birthDate(blank:false)
     }
 }

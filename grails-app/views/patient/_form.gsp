@@ -18,14 +18,6 @@
 	<g:textField name="lastName" required="" value="${patientInstance?.lastName}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: patientInstance, field: 'sexId', 'error')} required">
-	<label for="sexId">
-		<g:message code="patient.sexId.label" default="Sex Id" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="sexId" required="" value="${patientInstance?.sexId}"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: patientInstance, field: 'birthDate', 'error')} required">
 	<label for="birthDate">
 		<g:message code="patient.birthDate.label" default="Birth Date" />
@@ -64,6 +56,14 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:field name="patientId" type="number" value="${patientInstance.patientId}" required=""/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: patientInstance, field: 'sex', 'error')} required">
+	<label for="sex">
+		<g:message code="patient.sex.label" default="Sex" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select name="sex" from="${medicalhistory.Patient$Sex?.values()}" keys="${medicalhistory.Patient$Sex.values()*.name()}" required="" value="${patientInstance?.sex?.name()}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: patientInstance, field: 'weight', 'error')} required">

@@ -15,6 +15,7 @@ import medicalhistory.TreatmentFrequency
 import medicalhistory.TreatmentDetail
 import medicalhistory.Antecedent
 import medicalhistory.StudyTypes
+import medicalhistory.Sex
 
 class BootStrap {
 
@@ -238,15 +239,18 @@ class BootStrap {
 		def ar6 = new AgeRanges(rangeDescription:"Entre 56 y 65", minValue:56, maxValue:65).save()
 		def ar7 = new AgeRanges(rangeDescription:"Entre 66 y 75", minValue:66, maxValue:75).save()
 		def ar8 = new AgeRanges(rangeDescription:"Mayor de 75", minValue:76, maxValue:120).save()
-        
 
-        def patient1 = new Patient(height:1, weight:1, abdominalDiameter:1, medicalHistory:1, patientId: 1,firstName: "Ariel", lastName: "Ortega", sexId: "Masculino", birthDate: new Date())
-        def patient2 = new Patient(height:2, weight:2, abdominalDiameter:2, medicalHistory:2, patientId: 2,firstName: "Diego", lastName: "Latorre", sexId: "Masculino", birthDate:new Date())
-        def patient3 = new Patient(height:3, weight:3, abdominalDiameter:3, medicalHistory:3, patientId: 3,firstName: "Carlos", lastName: "Tevez", sexId: "Masculino", birthDate:new Date())
-        def patient4 = new Patient(height:4, weight:4, abdominalDiameter:4, medicalHistory:4, patientId: 4,firstName: "Martin", lastName: "Palermo", sexId: "Masculino", birthDate:new Date())
-        def patient5 = new Patient(height:5, weight:5, abdominalDiameter:5, medicalHistory:5, patientId: 5,firstName: "Martin", lastName: "Zanetti", sexId: "Masculino", birthDate:new Date())
-        def patient6 = new Patient(height:6, weight:6, abdominalDiameter:6, medicalHistory:6, patientId: 6,firstName: "Martin", lastName: "Maradona", sexId: "Masculino", birthDate:new Date())
-        def patient7 = new Patient(height:7, weight:7, abdominalDiameter:7, medicalHistory:7, patientId: 7,firstName: "Jose", lastName: "Flores", sexId: "Masculino", birthDate:new Date())
+
+        def sexMasc = new Sex(gender:"Masculino")
+        def sexFem = new Sex(gender:"Femenino")
+
+        def patient1 = new Patient(height:1, weight:1, abdominalDiameter:1, medicalHistory:1, patientId: 1,firstName: "Ariel", lastName: "Ortega", Sex: sexMasc, birthDate: new Date())
+        def patient2 = new Patient(height:2, weight:2, abdominalDiameter:2, medicalHistory:2, patientId: 2,firstName: "Diego", lastName: "Latorre", Sex:sexMasc , birthDate:new Date())
+        def patient3 = new Patient(height:3, weight:3, abdominalDiameter:3, medicalHistory:3, patientId: 3,firstName: "Carlos", lastName: "Tevez", Sex: sexMasc, birthDate:new Date())
+        def patient4 = new Patient(height:4, weight:4, abdominalDiameter:4, medicalHistory:4, patientId: 4,firstName: "Martin", lastName: "Palermo", Sex: sexMasc, birthDate:new Date())
+        def patient5 = new Patient(height:5, weight:5, abdominalDiameter:5, medicalHistory:5, patientId: 5,firstName: "Martin", lastName: "Zanetti", Sex:sexMasc, birthDate:new Date())
+        def patient6 = new Patient(height:6, weight:6, abdominalDiameter:6, medicalHistory:6, patientId: 6,firstName: "Martin", lastName: "Maradona", Sex: sexMasc, birthDate:new Date())
+        def patient7 = new Patient(height:7, weight:7, abdominalDiameter:7, medicalHistory:7, patientId: 7,firstName: "Marta", lastName: "Flores", Sex:sexFem, birthDate:new Date())
         patient1.save()
         patient2.save()
         patient3.save()
@@ -258,18 +262,22 @@ class BootStrap {
 
 		
 		
-		
-        def antecendet1 = new Antecedent(patient:patient1, antecedentDetails:antDet1, antecedentValue:"1"  )
-        def antecendet2 = new Antecedent(patient:patient1, antecedentDetails:antDet2, antecedentValue:"2"  )
-        def antecendet3 = new Antecedent(patient:patient1, antecedentDetails:antDet3, antecedentValue:"3"  )
-        def antecendet4 = new Antecedent(patient:patient1, antecedentDetails:antDet4, antecedentValue:"4"  )
-        def antecendet5 = new Antecedent(patient:patient1, antecedentDetails:antDet5, antecedentValue:"5"  )
 
-        antecendet1.save()
-        antecendet2.save()
-        antecendet3.save()
-        antecendet4.save()
-        antecendet5.save()
+        def antecedent1 = new Antecedent(patient:patient1, antecedentDetails:antDet1, antecedentValue:"1"  )
+        antecedent1.save()
+
+        /*
+        def antecedent2 = new Antecedent(patient:patient1, antecedentDetails:antDet2, antecedentValue:"2"  )
+        def antecedent3 = new Antecedent(patient:patient1, antecedentDetails:antDet3, antecedentValue:"3"  )
+        def antecedent4 = new Antecedent(patient:patient1, antecedentDetails:antDet4, antecedentValue:"4"  )
+        def antecedent5 = new Antecedent(patient:patient1, antecedentDetails:antDet5, antecedentValue:"5"  )
+
+
+        antecedent2.save()
+        antecedent3.save()
+        antecedent4.save()
+        antecedent5.save()
+        */
 
 		def stv1 = new StudyTypesValues(studyTypesDetails:std1,value:1)
 		def stv2 = new StudyTypesValues(studyTypesDetails:std2,value:2)

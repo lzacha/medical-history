@@ -28,13 +28,13 @@
 					
 						<g:sortableColumn property="lastName" title="${message(code: 'patient.lastName.label', default: 'Last Name')}" />
 					
-						<g:sortableColumn property="sexId" title="${message(code: 'patient.sexId.label', default: 'Sex Id')}" />
-					
 						<g:sortableColumn property="birthDate" title="${message(code: 'patient.birthDate.label', default: 'Birth Date')}" />
 					
 						<g:sortableColumn property="abdominalDiameter" title="${message(code: 'patient.abdominalDiameter.label', default: 'Abdominal Diameter')}" />
 					
 						<g:sortableColumn property="height" title="${message(code: 'patient.height.label', default: 'Height')}" />
+					
+						<g:sortableColumn property="medicalHistory" title="${message(code: 'patient.medicalHistory.label', default: 'Medical History')}" />
 					
 					</tr>
 				</thead>
@@ -46,13 +46,13 @@
 					
 						<td>${fieldValue(bean: patientInstance, field: "lastName")}</td>
 					
-						<td>${fieldValue(bean: patientInstance, field: "sexId")}</td>
-					
 						<td><g:formatDate date="${patientInstance.birthDate}" /></td>
 					
 						<td>${fieldValue(bean: patientInstance, field: "abdominalDiameter")}</td>
 					
 						<td>${fieldValue(bean: patientInstance, field: "height")}</td>
+					
+						<td>${fieldValue(bean: patientInstance, field: "medicalHistory")}</td>
 					
 					</tr>
 				</g:each>

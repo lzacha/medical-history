@@ -23,7 +23,11 @@ class MedicalHistoryJsonController {
     def patients() {
         render Patient.findAll() as JSON
     }
-	
+
+    def studyTypeYearEvolution() {
+        //def
+    }
+
     /*
     def antecedentByPatien() {
         Patient p = Patient.get(params.id)

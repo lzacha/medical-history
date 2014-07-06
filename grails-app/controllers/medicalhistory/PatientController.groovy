@@ -1,7 +1,6 @@
 package medicalhistory
 
 import org.springframework.dao.DataIntegrityViolationException
-import pl.touk.excel.export.WebXlsxExporter
 
 class PatientController {
 
@@ -97,7 +96,7 @@ class PatientController {
         }
         catch (DataIntegrityViolationException e) {
             flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'patient.label', default: 'Patient'), id])
-            //redirect(action: "show", id: id)
+            redirect(action: "show", id: id)
         }
     }
 }

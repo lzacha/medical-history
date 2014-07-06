@@ -4,8 +4,8 @@ dataSource {
     driverClassName = "org.h2.Driver"
     username = "sa"
     password = ""
-    
-    
+
+
     /*
     driverClassName = "com.mysql.jdbc.Driver"
     dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
@@ -35,29 +35,29 @@ hibernate {
 environments {
     development {
 
-        
+        /*
         dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-            url = "jdbc:mysql://localhost/medicalhistory"
+            dbCreate = "create" // one of 'create', 'create-drop','update'
+            url = "jdbc:mys
+            ql://localhost/medicalhistory"
             username = "medicalhistory"
             password = "medicalhistory"
 
         }
-        
-    
+        */
+
 
         /* --> To see
-        hibernate {
-            show_sql = true
-        }
-        <-- */
+       hibernate {
+           show_sql = true
+       }
+       <-- */
 
-		/*
+
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:h2:mem:devDb;MVCC=TRUE"
         }
-        */
 
     }
     test {
