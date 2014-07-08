@@ -41,13 +41,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${philiatoryInstance?.patients}">
+				<g:if test="${philiatoryInstance?.patient}">
 				<li class="fieldcontain">
-					<span id="patients-label" class="property-label"><g:message code="philiatory.patients.label" default="Patients" /></span>
+					<span id="patient-label" class="property-label"><g:message code="philiatory.patient.label" default="Patient" /></span>
 					
-						<g:each in="${philiatoryInstance.patients}" var="p">
-						<span class="property-value" aria-labelledby="patients-label"><g:link controller="patient" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
-						</g:each>
+						<span class="property-value" aria-labelledby="patient-label"><g:link controller="patient" action="show" id="${philiatoryInstance?.patient?.id}">${philiatoryInstance?.patient?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

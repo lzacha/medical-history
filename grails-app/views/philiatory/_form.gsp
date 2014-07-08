@@ -18,12 +18,12 @@
 	<g:field name="height" value="${fieldValue(bean: philiatoryInstance, field: 'height')}" required=""/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: philiatoryInstance, field: 'patients', 'error')} ">
-	<label for="patients">
-		<g:message code="philiatory.patients.label" default="Patients" />
-		
+<div class="fieldcontain ${hasErrors(bean: philiatoryInstance, field: 'patient', 'error')} required">
+	<label for="patient">
+		<g:message code="philiatory.patient.label" default="Patient" />
+		<span class="required-indicator">*</span>
 	</label>
-	<g:select name="patients" from="${medicalhistory.Patient.list()}" multiple="multiple" optionKey="id" size="5" value="${philiatoryInstance?.patients*.id}" class="many-to-many"/>
+	<g:select id="patient" name="patient.id" from="${medicalhistory.Patient.list()}" optionKey="id" required="" value="${philiatoryInstance?.patient?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: philiatoryInstance, field: 'weight', 'error')} required">

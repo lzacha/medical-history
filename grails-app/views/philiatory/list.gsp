@@ -28,6 +28,8 @@
 					
 						<g:sortableColumn property="height" title="${message(code: 'philiatory.height.label', default: 'Height')}" />
 					
+						<th><g:message code="philiatory.patient.label" default="Patient" /></th>
+					
 						<g:sortableColumn property="weight" title="${message(code: 'philiatory.weight.label', default: 'Weight')}" />
 					
 					</tr>
@@ -39,6 +41,8 @@
 						<td><g:link action="show" id="${philiatoryInstance.id}">${fieldValue(bean: philiatoryInstance, field: "abdominalDiameter")}</g:link></td>
 					
 						<td>${fieldValue(bean: philiatoryInstance, field: "height")}</td>
+					
+						<td>${fieldValue(bean: philiatoryInstance, field: "patient")}</td>
 					
 						<td>${fieldValue(bean: philiatoryInstance, field: "weight")}</td>
 					

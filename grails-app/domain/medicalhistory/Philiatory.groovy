@@ -6,7 +6,7 @@ class Philiatory {
     double weight
     double abdominalDiameter //Porque esta esto aca? cambia con el tiempo
 
-    static hasMany = [patients:Patient]
+    Patient patient
 
     static constraints = {
     }
