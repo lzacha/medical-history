@@ -1,7 +1,7 @@
 package applications
 
 import medicalhistory.StudyTypes
-import medicalhistory.StudyTypesDetails
+import medicalhistory.StudyTypesDetail
 import medicalhistory.StudyTypesValues;
 
 class StudyController {

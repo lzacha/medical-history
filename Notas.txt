@@ -2,7 +2,7 @@
 - Antecedentes (tabla si/no con checks por paciente	)
 
 
-Para generar todo el template: generate-all medicalhistory.Antecedent
+Para generar todo el template: generate-all medicalhistory.AntecedentValue
 - Patient: Como manejar el campo de "Historia Clinica"
 
 - Ver como manejar el rango de edad

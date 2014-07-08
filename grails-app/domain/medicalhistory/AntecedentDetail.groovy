@@ -2,7 +2,6 @@ package medicalhistory
 
 class AntecedentDetail {
 
-
     enum AntecedentStudyType {
  
         FRC("FRC"), ANT("Antecedente")
@@ -22,10 +21,8 @@ class AntecedentDetail {
     String completeName
     FieldType fieldType
     int decimalsQuantity
-    //MeasurementUnit measureUnit
+    MeasurementUnit measurementUnit
 
-    /* TODO: constraints definition */
-    static constraints = {
-
-    }
+    //static constraints = {
+    //}
 }

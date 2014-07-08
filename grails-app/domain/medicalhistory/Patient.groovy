@@ -9,29 +9,28 @@ class Patient {
         spellCheck "include"
     }
 
-    int patientId
+    String patientId
 	String firstName
 	String lastName
-	
+
+
 	enum Sex {
-		
-				MASCULINO("MASCULINO"), FEMENINO("FEMENINO")
-		
-				final String value
+        MASCULINO("MASCULINO"), FEMENINO("FEMENINO")
 
-                Sex(String value) {
-					this.value = value
-				}
-		
-				String toString() {
-					value
-				}
+        final String value
+
+        Sex(String value) {
+            this.value = value
+        }
+
+        String toString() {
+            value
+        }
 	}
-	
-	
-	Date birthDate
-
     Sex sex
+
+
+	Date birthDate
 
     double height
     double weight
@@ -39,11 +38,11 @@ class Patient {
 	
     String medicalHistory //Ver como es este campo...
 
-    //static hasMany = [antecedents:Antecedent, treatments:Treatment, medicalStudies:MedicalStudy,plates:Plate]
+    //static hasMany = [antecedents:AntecedentValue, treatments:TreatmentValue, medicalStudies:MedicalStudy,plates:Plate]
 
-    static constraints = {
-        firstName(blank:false)
-        lastName(blank:false)
-        birthDate(blank:false)
-    }
+    //static constraints = {
+        //firstName(blank:false)
+        //lastName(blank:false)
+        //birthDate(blank:false)
+    //}
 }

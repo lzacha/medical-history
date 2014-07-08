@@ -1,4 +1,4 @@
-<%@ page import="medicalhistory.ReferenceValue" %>
+<%@ page import="medicalhistory.StudyTypesDetail; medicalhistory.ReferenceValue" %>
 
 
 
@@ -47,6 +47,6 @@
 		<g:message code="referenceValue.studyTypesDetails.label" default="Study Types Details" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="studyTypesDetails" name="studyTypesDetails.id" from="${medicalhistory.StudyTypesDetails.list()}" optionKey="id" required="" value="${referenceValueInstance?.studyTypesDetails?.id}" class="many-to-one"/>
+	<g:select id="studyTypesDetails" name="studyTypesDetails.id" from="${StudyTypesDetail.list()}" optionKey="id" required="" value="${referenceValueInstance?.studyTypesDetails?.id}" class="many-to-one"/>
 </div>
 

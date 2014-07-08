@@ -31,7 +31,7 @@ class MedicalHistoryJsonController {
     /*
     def antecedentByPatien() {
         Patient p = Patient.get(params.id)
-        Antecedent a = Antecedent.findBy(p.id)
+        AntecedentValue a = AntecedentValue.findBy(p.id)
 
         render p as JSON
     }

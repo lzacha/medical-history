@@ -23,22 +23,29 @@
 			</g:if>
 			<ol class="property-list studyTypesValues">
 			
-				<g:if test="${studyTypesValuesInstance?.studyTypesDetails}">
+				<g:if test="${studyTypesValuesInstance?.patient}">
 				<li class="fieldcontain">
-					<span id="studyTypesDetails-label" class="property-label"><g:message code="studyTypesValues.studyTypesDetails.label" default="Study Types Details" /></span>
+					<span id="patient-label" class="property-label"><g:message code="studyTypesValues.patient.label" default="Patient" /></span>
 					
-						<g:each in="${studyTypesValuesInstance.studyTypesDetails}" var="s">
-						<span class="property-value" aria-labelledby="studyTypesDetails-label"><g:link controller="studyTypesDetails" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
-						</g:each>
+						<span class="property-value" aria-labelledby="patient-label"><g:link controller="patient" action="show" id="${studyTypesValuesInstance?.patient?.id}">${studyTypesValuesInstance?.patient?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${studyTypesValuesInstance?.value}">
+				<g:if test="${studyTypesValuesInstance?.studyTypeValue}">
 				<li class="fieldcontain">
-					<span id="value-label" class="property-label"><g:message code="studyTypesValues.value.label" default="Value" /></span>
+					<span id="studyTypeValue-label" class="property-label"><g:message code="studyTypesValues.studyTypeValue.label" default="Study Type Value" /></span>
 					
-						<span class="property-value" aria-labelledby="value-label"><g:fieldValue bean="${studyTypesValuesInstance}" field="value"/></span>
+						<span class="property-value" aria-labelledby="studyTypeValue-label"><g:fieldValue bean="${studyTypesValuesInstance}" field="studyTypeValue"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${studyTypesValuesInstance?.studyTypesDetail}">
+				<li class="fieldcontain">
+					<span id="studyTypesDetail-label" class="property-label"><g:message code="studyTypesValues.studyTypesDetail.label" default="Study Types Detail" /></span>
+					
+						<span class="property-value" aria-labelledby="studyTypesDetail-label"><g:link controller="studyTypesDetail" action="show" id="${studyTypesValuesInstance?.studyTypesDetail?.id}">${studyTypesValuesInstance?.studyTypesDetail?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

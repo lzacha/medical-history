@@ -2,7 +2,6 @@ package medicalhistory
 
 class TreatmentDetail {
 
-
     enum TreatmentType {
  
         TREATMENT("Tratamiento")
@@ -17,13 +16,15 @@ class TreatmentDetail {
         }
     }
 
-    TreatmentType treatmentType    //String antecedentStudyType	//Son fijos: Antecedent - FRC
+    TreatmentType treatmentType    //String antecedentStudyType	//Son fijos: AntecedentValue - FRC
     String abbreviation
     String completeName
     FieldType fieldType
+    MeasurementUnit measurementUnit
     int decimalsQuantity
+
     //MeasurementUnit measureUnit
     
-    static constraints = {
-    }
+    //static constraints = {
+    //}
 }

@@ -23,20 +23,11 @@
 			</g:if>
 			<ol class="property-list patient">
 			
-				<g:if test="${patientInstance?.firstName}">
+				<g:if test="${patientInstance?.abdominalDiameter}">
 				<li class="fieldcontain">
-					<span id="firstName-label" class="property-label"><g:message code="patient.firstName.label" default="First Name" /></span>
+					<span id="abdominalDiameter-label" class="property-label"><g:message code="patient.abdominalDiameter.label" default="Abdominal Diameter" /></span>
 					
-						<span class="property-value" aria-labelledby="firstName-label"><g:fieldValue bean="${patientInstance}" field="firstName"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${patientInstance?.lastName}">
-				<li class="fieldcontain">
-					<span id="lastName-label" class="property-label"><g:message code="patient.lastName.label" default="Last Name" /></span>
-					
-						<span class="property-value" aria-labelledby="lastName-label"><g:fieldValue bean="${patientInstance}" field="lastName"/></span>
+						<span class="property-value" aria-labelledby="abdominalDiameter-label"><g:fieldValue bean="${patientInstance}" field="abdominalDiameter"/></span>
 					
 				</li>
 				</g:if>
@@ -50,11 +41,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${patientInstance?.abdominalDiameter}">
+				<g:if test="${patientInstance?.firstName}">
 				<li class="fieldcontain">
-					<span id="abdominalDiameter-label" class="property-label"><g:message code="patient.abdominalDiameter.label" default="Abdominal Diameter" /></span>
+					<span id="firstName-label" class="property-label"><g:message code="patient.firstName.label" default="First Name" /></span>
 					
-						<span class="property-value" aria-labelledby="abdominalDiameter-label"><g:fieldValue bean="${patientInstance}" field="abdominalDiameter"/></span>
+						<span class="property-value" aria-labelledby="firstName-label"><g:fieldValue bean="${patientInstance}" field="firstName"/></span>
 					
 				</li>
 				</g:if>
@@ -64,6 +55,15 @@
 					<span id="height-label" class="property-label"><g:message code="patient.height.label" default="Height" /></span>
 					
 						<span class="property-value" aria-labelledby="height-label"><g:fieldValue bean="${patientInstance}" field="height"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${patientInstance?.lastName}">
+				<li class="fieldcontain">
+					<span id="lastName-label" class="property-label"><g:message code="patient.lastName.label" default="Last Name" /></span>
+					
+						<span class="property-value" aria-labelledby="lastName-label"><g:fieldValue bean="${patientInstance}" field="lastName"/></span>
 					
 				</li>
 				</g:if>

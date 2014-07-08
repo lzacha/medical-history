@@ -2,9 +2,10 @@ package medicalhistory
 
 class StudyTypesValues {
 
-	static hasMany = [studyTypesDetails:StudyTypesDetails]
-    int value
+    StudyTypesDetail studyTypesDetail
+    double studyTypeValue
+    Patient patient
 
-    static constraints = {
-    }
+    //static constraints = {
+    //}
 }

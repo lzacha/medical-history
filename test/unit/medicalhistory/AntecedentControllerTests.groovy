@@ -1,12 +1,9 @@
 package medicalhistory
 
-
-
-import org.junit.*
 import grails.test.mixin.*
 
 @TestFor(AntecedentController)
-@Mock(Antecedent)
+@Mock(AntecedentValue)
 class AntecedentControllerTests {
 
     def populateValidParams(params) {
@@ -47,7 +44,7 @@ class AntecedentControllerTests {
 
         assert response.redirectedUrl == '/antecedent/show/1'
         assert controller.flash.message != null
-        assert Antecedent.count() == 1
+        assert AntecedentValue.count() == 1
     }
 
     void testShow() {
@@ -57,7 +54,7 @@ class AntecedentControllerTests {
         assert response.redirectedUrl == '/antecedent/list'
 
         populateValidParams(params)
-        def antecedent = new Antecedent(params)
+        def antecedent = new AntecedentValue(params)
 
         assert antecedent.save() != null
 
@@ -75,7 +72,7 @@ class AntecedentControllerTests {
         assert response.redirectedUrl == '/antecedent/list'
 
         populateValidParams(params)
-        def antecedent = new Antecedent(params)
+        def antecedent = new AntecedentValue(params)
 
         assert antecedent.save() != null
 
@@ -95,7 +92,7 @@ class AntecedentControllerTests {
         response.reset()
 
         populateValidParams(params)
-        def antecedent = new Antecedent(params)
+        def antecedent = new AntecedentValue(params)
 
         assert antecedent.save() != null
 
@@ -139,17 +136,17 @@ class AntecedentControllerTests {
         response.reset()
 
         populateValidParams(params)
-        def antecedent = new Antecedent(params)
+        def antecedent = new AntecedentValue(params)
 
         assert antecedent.save() != null
-        assert Antecedent.count() == 1
+        assert AntecedentValue.count() == 1
 
         params.id = antecedent.id
 
         controller.delete()
 
-        assert Antecedent.count() == 0
-        assert Antecedent.get(antecedent.id) == null
+        assert AntecedentValue.count() == 0
+        assert AntecedentValue.get(antecedent.id) == null
         assert response.redirectedUrl == '/antecedent/list'
     }
 }

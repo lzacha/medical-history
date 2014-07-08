@@ -8,7 +8,7 @@ class ReferenceValue {
     int minValue
     int maxValue
 
-    StudyTypesDetails studyTypesDetails
+    StudyTypesDetail studyTypesDetail
 
     //MeasurementUnit unit
 

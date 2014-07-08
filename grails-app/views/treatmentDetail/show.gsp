@@ -59,6 +59,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${treatmentDetailInstance?.measurementUnit}">
+				<li class="fieldcontain">
+					<span id="measurementUnit-label" class="property-label"><g:message code="treatmentDetail.measurementUnit.label" default="Measurement Unit" /></span>
+					
+						<span class="property-value" aria-labelledby="measurementUnit-label"><g:link controller="measurementUnit" action="show" id="${treatmentDetailInstance?.measurementUnit?.id}">${treatmentDetailInstance?.measurementUnit?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${treatmentDetailInstance?.treatmentType}">
 				<li class="fieldcontain">
 					<span id="treatmentType-label" class="property-label"><g:message code="treatmentDetail.treatmentType.label" default="Treatment Type" /></span>

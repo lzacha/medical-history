@@ -1,12 +1,9 @@
 package medicalhistory
 
-
-
-import org.junit.*
 import grails.test.mixin.*
 
 @TestFor(TreatmentController)
-@Mock(Treatment)
+@Mock(TreatmentValue)
 class TreatmentControllerTests {
 
     def populateValidParams(params) {
@@ -47,7 +44,7 @@ class TreatmentControllerTests {
 
         assert response.redirectedUrl == '/treatment/show/1'
         assert controller.flash.message != null
-        assert Treatment.count() == 1
+        assert TreatmentValue.count() == 1
     }
 
     void testShow() {
@@ -57,7 +54,7 @@ class TreatmentControllerTests {
         assert response.redirectedUrl == '/treatment/list'
 
         populateValidParams(params)
-        def treatment = new Treatment(params)
+        def treatment = new TreatmentValue(params)
 
         assert treatment.save() != null
 
@@ -75,7 +72,7 @@ class TreatmentControllerTests {
         assert response.redirectedUrl == '/treatment/list'
 
         populateValidParams(params)
-        def treatment = new Treatment(params)
+        def treatment = new TreatmentValue(params)
 
         assert treatment.save() != null
 
@@ -95,7 +92,7 @@ class TreatmentControllerTests {
         response.reset()
 
         populateValidParams(params)
-        def treatment = new Treatment(params)
+        def treatment = new TreatmentValue(params)
 
         assert treatment.save() != null
 
@@ -139,17 +136,17 @@ class TreatmentControllerTests {
         response.reset()
 
         populateValidParams(params)
-        def treatment = new Treatment(params)
+        def treatment = new TreatmentValue(params)
 
         assert treatment.save() != null
-        assert Treatment.count() == 1
+        assert TreatmentValue.count() == 1
 
         params.id = treatment.id
 
         controller.delete()
 
-        assert Treatment.count() == 0
-        assert Treatment.get(treatment.id) == null
+        assert TreatmentValue.count() == 0
+        assert TreatmentValue.get(treatment.id) == null
         assert response.redirectedUrl == '/treatment/list'
     }
 }

@@ -3,7 +3,7 @@ package applications
 import grails.converters.JSON
 //import org.compass.core.engine.SearchEngineQueryParseException
 import medicalhistory.Patient
-import medicalhistory.Antecedent
+import medicalhistory.AntecedentValue
 
 import javax.servlet.http.Cookie
 
@@ -105,13 +105,13 @@ class MedicalHistoryController {
 
     def listAntecedentsByPatient(){
         Patient p = Patient.get(params.id)
-        def results = Antecedent.findAllByPatient(p)
+        def results = AntecedentValue.findAllByPatient(p)
         render (template:'listAntecedentsByPatient', model: [ants:results])
     }
 
     def listStudiesByPatient(){
         Patient p = Patient.get(params.id)
-        def results = Antecedent.findAllByPatient(p)
+        def results = AntecedentValue.findAllByPatient(p)
         render (template:'listAntecedentsByPatient', model: [ants:results])
     }
 

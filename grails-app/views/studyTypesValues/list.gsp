@@ -24,7 +24,11 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="value" title="${message(code: 'studyTypesValues.value.label', default: 'Value')}" />
+						<th><g:message code="studyTypesValues.patient.label" default="Patient" /></th>
+					
+						<g:sortableColumn property="studyTypeValue" title="${message(code: 'studyTypesValues.studyTypeValue.label', default: 'Study Type Value')}" />
+					
+						<th><g:message code="studyTypesValues.studyTypesDetail.label" default="Study Types Detail" /></th>
 					
 					</tr>
 				</thead>
@@ -32,7 +36,11 @@
 				<g:each in="${studyTypesValuesInstanceList}" status="i" var="studyTypesValuesInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${studyTypesValuesInstance.id}">${fieldValue(bean: studyTypesValuesInstance, field: "value")}</g:link></td>
+						<td><g:link action="show" id="${studyTypesValuesInstance.id}">${fieldValue(bean: studyTypesValuesInstance, field: "patient")}</g:link></td>
+					
+						<td>${fieldValue(bean: studyTypesValuesInstance, field: "studyTypeValue")}</td>
+					
+						<td>${fieldValue(bean: studyTypesValuesInstance, field: "studyTypesDetail")}</td>
 					
 					</tr>
 				</g:each>

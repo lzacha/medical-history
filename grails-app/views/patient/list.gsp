@@ -24,17 +24,23 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="firstName" title="${message(code: 'patient.firstName.label', default: 'First Name')}" />
-					
-						<g:sortableColumn property="lastName" title="${message(code: 'patient.lastName.label', default: 'Last Name')}" />
+						<g:sortableColumn property="abdominalDiameter" title="${message(code: 'patient.abdominalDiameter.label', default: 'Abdominal Diameter')}" />
 					
 						<g:sortableColumn property="birthDate" title="${message(code: 'patient.birthDate.label', default: 'Birth Date')}" />
 					
-						<g:sortableColumn property="abdominalDiameter" title="${message(code: 'patient.abdominalDiameter.label', default: 'Abdominal Diameter')}" />
+						<g:sortableColumn property="firstName" title="${message(code: 'patient.firstName.label', default: 'First Name')}" />
 					
 						<g:sortableColumn property="height" title="${message(code: 'patient.height.label', default: 'Height')}" />
 					
+						<g:sortableColumn property="lastName" title="${message(code: 'patient.lastName.label', default: 'Last Name')}" />
+					
 						<g:sortableColumn property="medicalHistory" title="${message(code: 'patient.medicalHistory.label', default: 'Medical History')}" />
+					
+						<g:sortableColumn property="patientId" title="${message(code: 'patient.patientId.label', default: 'Patient Id')}" />
+					
+						<g:sortableColumn property="sex" title="${message(code: 'patient.sex.label', default: 'Sex')}" />
+					
+						<g:sortableColumn property="weight" title="${message(code: 'patient.weight.label', default: 'Weight')}" />
 					
 					</tr>
 				</thead>
@@ -42,17 +48,23 @@
 				<g:each in="${patientInstanceList}" status="i" var="patientInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${patientInstance.id}">${fieldValue(bean: patientInstance, field: "firstName")}</g:link></td>
-					
-						<td>${fieldValue(bean: patientInstance, field: "lastName")}</td>
+						<td><g:link action="show" id="${patientInstance.id}">${fieldValue(bean: patientInstance, field: "abdominalDiameter")}</g:link></td>
 					
 						<td><g:formatDate date="${patientInstance.birthDate}" /></td>
 					
-						<td>${fieldValue(bean: patientInstance, field: "abdominalDiameter")}</td>
+						<td>${fieldValue(bean: patientInstance, field: "firstName")}</td>
 					
 						<td>${fieldValue(bean: patientInstance, field: "height")}</td>
 					
+						<td>${fieldValue(bean: patientInstance, field: "lastName")}</td>
+					
 						<td>${fieldValue(bean: patientInstance, field: "medicalHistory")}</td>
+					
+						<td>${fieldValue(bean: patientInstance, field: "patientId")}</td>
+					
+						<td>${fieldValue(bean: patientInstance, field: "sex")}</td>
+					
+						<td>${fieldValue(bean: patientInstance, field: "weight")}</td>
 					
 					</tr>
 				</g:each>

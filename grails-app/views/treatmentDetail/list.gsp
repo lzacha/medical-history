@@ -32,6 +32,8 @@
 					
 						<th><g:message code="treatmentDetail.fieldType.label" default="Field Type" /></th>
 					
+						<th><g:message code="treatmentDetail.measurementUnit.label" default="Measurement Unit" /></th>
+					
 						<g:sortableColumn property="treatmentType" title="${message(code: 'treatmentDetail.treatmentType.label', default: 'Treatment Type')}" />
 					
 					</tr>
@@ -47,6 +49,8 @@
 						<td>${fieldValue(bean: treatmentDetailInstance, field: "decimalsQuantity")}</td>
 					
 						<td>${fieldValue(bean: treatmentDetailInstance, field: "fieldType")}</td>
+					
+						<td>${fieldValue(bean: treatmentDetailInstance, field: "measurementUnit")}</td>
 					
 						<td>${fieldValue(bean: treatmentDetailInstance, field: "treatmentType")}</td>
 					
