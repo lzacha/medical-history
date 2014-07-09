@@ -14,6 +14,6 @@ class ReferenceValue {
 
     int decimalQuantity
 
-    static constraints = {
-    }
+    //static constraints = {
+    //}
 }

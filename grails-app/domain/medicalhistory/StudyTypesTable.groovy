@@ -10,9 +10,9 @@ class StudyTypesTable {
     Patient patient
 
     //Datos
-    double height
-    double weight
-    double abdominalDiameter
+    //double height
+    //double weight
+    //double abdominalDiameter
 
     def antecedents = [:]
     def treatments = [:]
@@ -25,6 +25,6 @@ class StudyTypesTable {
     //
 
 
-    static constraints = {
-    }
+    //static constraints = {
+    //}
 }

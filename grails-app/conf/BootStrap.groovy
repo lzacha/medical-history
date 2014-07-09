@@ -69,9 +69,9 @@ class BootStrap {
         def mst3 = new MainStudyType(mainStudyType:"DgHTA", description:"DgHTA").save()
 
 		// Doctor
-        def doc1 = new Doctor(docId:1, medicalEnrollment:"e1", firstName:"Gustavo", lastName:"Giunta").save()
-        def doc2 = new Doctor(docId:2, medicalEnrollment:"e1", firstName:"Rene2", lastName:"Favaloro2").save()
-        def doc3 = new Doctor(docId:3, medicalEnrollment:"e1", firstName:"Rene3", lastName:"Favaloro3").save()
+        def doc1 = new Doctor(medicalEnrollment:"e1", specialistType: "Ginecologo", firstName:"Gustavo", lastName:"Giunta").save()
+        def doc2 = new Doctor(medicalEnrollment:"e1", specialistType: "Traumatologo", firstName:"Rene2", lastName:"Favaloro2").save()
+        def doc3 = new Doctor(medicalEnrollment:"e1", specialistType: "Clinico", firstName:"Rene3", lastName:"Favaloro3").save()
 
         //MeasurementUnit
         def mu1 = new MeasurementUnit(descriptionUnit:"Centimetros cuadrados", unit:"cm2").save()
@@ -177,10 +177,10 @@ class BootStrap {
 
 		// 	StudyTypesDetail de StudyTypes = "PEG"
 
-		def std66 = new StudyTypesDetail(measurementUnit:mu1, fieldType: ft1, abbreviation: "FC basal", description: "Frecuencia cardidaca basal", completeName: "Frecuencia cardiaca basal", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st5 ).save()
-		def std67 = new StudyTypesDetail(measurementUnit:mu1, fieldType: ft1, abbreviation: "TA basal", description: "Tension arterial basal", completeName: "Tension arterial basal", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st5 ).save()
-		def std68 = new StudyTypesDetail(measurementUnit:mu1, fieldType: ft1, abbreviation: "FC maxima", description: "Frecuencia cardiaca maxima", completeName: "Frecuencia cardiaca maxima", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st5 ).save()
-		def std69 = new StudyTypesDetail(measurementUnit:mu1, fieldType: ft1, abbreviation: "TA maxima", description: "Tension arterial maxima", completeName: "Tension arterial maxima", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st5 ).save()
+		def std66 = new StudyTypesDetail(measurementUnit:mu1, fieldType: ft1, abbreviation: "FC_basal", description: "Frecuencia cardidaca basal", completeName: "Frecuencia cardiaca basal", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st5 ).save()
+		def std67 = new StudyTypesDetail(measurementUnit:mu1, fieldType: ft1, abbreviation: "TA_basal", description: "Tension arterial basal", completeName: "Tension arterial basal", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st5 ).save()
+		def std68 = new StudyTypesDetail(measurementUnit:mu1, fieldType: ft1, abbreviation: "FC_maxima", description: "Frecuencia cardiaca maxima", completeName: "Frecuencia cardiaca maxima", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st5 ).save()
+		def std69 = new StudyTypesDetail(measurementUnit:mu1, fieldType: ft1, abbreviation: "TA_maxima", description: "Tension arterial maxima", completeName: "Tension arterial maxima", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st5 ).save()
 		def std70 = new StudyTypesDetail(measurementUnit:mu1, fieldType: ft1, abbreviation: "METs", description: "Unidades de esfuerzo fisico", completeName: "Unidades de esfuerzo fisico", decimalsQuantity: 2, minRange: 0, maxRange: 1000, studyTypes: st5 ).save()
 		def std71 = new StudyTypesDetail(measurementUnit:mu1, fieldType: ft1, abbreviation: "Terminacion", description: "Terminacion", completeName: "Terminacion", decimalsQuantity: 0, minRange: 0, maxRange: 0, studyTypes: st5 ).save()
 		def std72 = new StudyTypesDetail(measurementUnit:mu1, fieldType: ft1, abbreviation: "resultado", description: "Resultado", completeName: "Resultado", decimalsQuantity: 0, minRange: 0, maxRange: 0, studyTypes: st5 ).save()

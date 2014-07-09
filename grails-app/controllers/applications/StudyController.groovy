@@ -34,20 +34,25 @@ class StudyController {
 	
 	//load del template
 	def loadStudyTypesInputs() {
-		//render "test"
-		//def country = params['id']
 
- 
-		def studyTypeDetails = StudyTypesDetails.list()
-		def list = StudyTypesDetails.list()
-		def list2 = []
-		
-		list.collect(list2){
+        //Id del studyType
+		def studyTypeId = params['id']
+
+        //Traigo el studyTpe
+        StudyTypes studyType = StudyTypes.findById(studyTypeId)
+
+        //Levanto details del studyType
+		def studyTypeDetails = StudyTypesDetail.findAllByStudyTypes(studyType)
+
+        //Listado de abbrevations
+		def studyTypeDetailsAbbreviation = []
+
+        studyTypeDetails.collect(studyTypeDetailsAbbreviation){
 			it.abbreviation
 		}
 		
 		//render(template:'result', model:[std: studyTypeDetails.collect{it.description}])
-		render (template: 'inputs', model:[inputs: list2])
+		render (template: 'inputs', model:[inputs: studyTypeDetailsAbbreviation])
 	}
 	
 	//load del template

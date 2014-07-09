@@ -6,6 +6,6 @@ class AgeRanges {
     int minValue
     int maxValue
 
-    static constraints = {
-    }
+    //static constraints = {
+    //}
 }

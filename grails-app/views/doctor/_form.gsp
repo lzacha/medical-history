@@ -2,14 +2,6 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: doctorInstance, field: 'docId', 'error')} required">
-	<label for="docId">
-		<g:message code="doctor.docId.label" default="Doc Id" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field name="docId" type="number" value="${doctorInstance.docId}" required=""/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: doctorInstance, field: 'firstName', 'error')} ">
 	<label for="firstName">
 		<g:message code="doctor.firstName.label" default="First Name" />
@@ -32,5 +24,13 @@
 		
 	</label>
 	<g:textField name="medicalEnrollment" value="${doctorInstance?.medicalEnrollment}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: doctorInstance, field: 'specialistType', 'error')} ">
+	<label for="specialistType">
+		<g:message code="doctor.specialistType.label" default="Specialist Type" />
+		
+	</label>
+	<g:textField name="specialistType" value="${doctorInstance?.specialistType}"/>
 </div>
 

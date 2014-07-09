@@ -10,24 +10,22 @@
         <li><a id="referenceValue-tab" href="#iframe6">Valores de referencia</a></li>
     </ul>
 
-    <iframe id="iframe1" src="/medical-history/mainStudyType/list/" class="frameref">
+    <iframe id="iframe1" src="/medical-history/mainStudyType/list/" class="frameref-std">
     </iframe>
 
-    <iframe id="iframe2" src="/medical-history/StudyTypes/list/" style="width:100%;">
+    <iframe id="iframe2" src="/medical-history/StudyTypes/list/" class="frameref-std">
     </iframe>
 
-    <iframe id="iframe3" src="/medical-history/studyTypesDetails/show/" style="width:100%;">
+    <iframe id="iframe3" src="/medical-history/studyTypesDetail/list/" class="frameref-std">
     </iframe>
 
-    <iframe id="iframe4" src="/medical-history/ageRanges/list" style="width:100%;">
+    <iframe id="iframe4" src="/medical-history/ageRanges/list" class="frameref-std">
     </iframe>
 
-    <iframe id="iframe5" src="/medical-history/doctor/list" style="width:100%;">
+    <iframe id="iframe5" src="/medical-history/doctor/list" class="frameref-std">
     </iframe>
 
-    <iframe id="iframe6" src="/medical-history/referenceValue/list" style="width:100%;">
+    <iframe id="iframe6" src="/medical-history/referenceValue/list" class="frameref-std">
     </iframe>
-
-
 
 </div>

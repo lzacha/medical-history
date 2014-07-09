@@ -8,6 +8,6 @@ class Philiatory {
 
     Patient patient
 
-    static constraints = {
-    }
+    //static constraints = {
+    //}
 }

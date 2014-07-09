@@ -4,6 +4,6 @@ class Observation {
 
 	String observation
 	
-    static constraints = {
-    }
+    //static constraints = {
+    //}
 }

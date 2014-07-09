@@ -14,6 +14,6 @@ class Plate {
 	//List observations = new List(
 	//static hasMany = [observations:PlateDetail]
 
-    static constraints = {
-    }
+    //static constraints = {
+    //}
 }

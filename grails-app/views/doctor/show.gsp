@@ -23,15 +23,6 @@
 			</g:if>
 			<ol class="property-list doctor">
 			
-				<g:if test="${doctorInstance?.docId}">
-				<li class="fieldcontain">
-					<span id="docId-label" class="property-label"><g:message code="doctor.docId.label" default="Doc Id" /></span>
-					
-						<span class="property-value" aria-labelledby="docId-label"><g:fieldValue bean="${doctorInstance}" field="docId"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${doctorInstance?.firstName}">
 				<li class="fieldcontain">
 					<span id="firstName-label" class="property-label"><g:message code="doctor.firstName.label" default="First Name" /></span>
@@ -55,6 +46,15 @@
 					<span id="medicalEnrollment-label" class="property-label"><g:message code="doctor.medicalEnrollment.label" default="Medical Enrollment" /></span>
 					
 						<span class="property-value" aria-labelledby="medicalEnrollment-label"><g:fieldValue bean="${doctorInstance}" field="medicalEnrollment"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${doctorInstance?.specialistType}">
+				<li class="fieldcontain">
+					<span id="specialistType-label" class="property-label"><g:message code="doctor.specialistType.label" default="Specialist Type" /></span>
+					
+						<span class="property-value" aria-labelledby="specialistType-label"><g:fieldValue bean="${doctorInstance}" field="specialistType"/></span>
 					
 				</li>
 				</g:if>

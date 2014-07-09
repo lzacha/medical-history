@@ -1,5 +1,8 @@
 package medicalhistory
 
+/*
+ * Iba a ser el tablon
+ */
 class MedicalStudy {
 
     Patient patient
@@ -14,6 +17,6 @@ class MedicalStudy {
 
     //static hasMany = [studyType:StudyType]
 	
-    static constraints = {
-    }
+    //static constraints = {
+    //}
 }

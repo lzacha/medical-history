@@ -8,7 +8,7 @@
 	optionValue="${{ st -> "${st.description}" }}" 
 	
 	onChange="${remoteFunction( controller: 'Study',
-								action:'studyTypeDetails',
+								action:'loadStudyTypesInputs',
                                 params: '\'id=\'+escape(this.value)',
                                 update: 'studyTypesDetailsDiv' )}"/>
 	
@@ -18,7 +18,7 @@
 	
 	<!--  
 	<label for="studyTypesDetails" >std:</label>
-  		<g:select name="studyTypesDetails" noSelection="['':'Select one...']" from="${std}">
+  	<g:select name="studyTypesDetails" noSelection="['':'Select one...']" from="${std}">
 	</g:select>	
     -->
 

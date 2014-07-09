@@ -4,6 +4,6 @@ class TreatmentFrequency {
 
 	String frequencyDescription
 	
-    static constraints = {
-    }
+    //static constraints = {
+    //}
 }
