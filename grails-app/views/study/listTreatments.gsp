@@ -1,25 +1,22 @@
 <div>
-	<label for="studyTypes">
-		<g:message code="studyTypesValues.studyTypes.label" default="Study Types" />
-		
-	</label>
-	<g:select name="studyTypes" from="${medicalhistory.StudyTypes.list()}" multiple="multiple" 
-	optionKey="id" size="5" value="${studyTypesInstance?.studyTypesInstance*.id}" class="many-to-many"
-	optionValue="${{ st -> "${st.description}" }}" 
-	
-	onChange="${remoteFunction( controller: 'Study',
-								action:'loadStudyTypesInputs',
-                                params: '\'id=\'+escape(this.value)',
-                                update: 'studyTypesDetailsDiv' )}"/>
-	
-	<div id="studyTypesDetailsDiv">
-	
-	</div>
-	
-	<!--  
+    Tratamientos
+    <g:select name="antecedents" from="${medicalhistory.Treatment.list()}" multiple="multiple"
+              optionKey="id" size="5" value="${treatmentInstance?.treatmentInstance*.id}" class="many-to-many"
+              optionValue="${{ trt -> "${trt.description}" }}"
+
+              onChange="${remoteFunction( controller: 'Study',
+                      action:'loadTreatmentsInputs',
+                      params: '\'id=\'+escape(this.value)',
+                      update: 'treatmentDetailsDiv' )}"/>
+
+    <div id="treatmentDetailsDiv">
+
+    </div>
+
+    <!--
 	<label for="studyTypesDetails" >std:</label>
-  		<g:select name="studyTypesDetails" noSelection="['':'Select one...']" from="${std}">
-	</g:select>	
+  	<g:select name="treatmentDetails" noSelection="['':'Select one...']" from="${std}">
+    </g:select>
     -->
 
 </div>

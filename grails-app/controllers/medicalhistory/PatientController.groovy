@@ -5,7 +5,8 @@ import org.springframework.dao.DataIntegrityViolationException
 class PatientController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
-
+	def loginService
+	
     def index() {
         redirect(action: "list", params: params)
     }
@@ -26,8 +27,11 @@ class PatientController {
             return
         }
 
+		//updatePhiliatoryData(patientInstance)
+		
         flash.message = message(code: 'default.created.message', args: [message(code: 'patient.label', default: 'Patient'), patientInstance.id])
-        redirect(action: "show", id: patientInstance.id)
+		loginService.setCookiesPatient(patientInstance, response)
+		redirect(action: "show", id: patientInstance.id)
     }
 
     def show(Long id) {
@@ -99,4 +103,15 @@ class PatientController {
             redirect(action: "show", id: id)
         }
     }
+	
+	def updatePhiliatoryData(Patient p){
+		Philiatory phi = new Philiatory()
+		phi.height = p.height
+		phi.weight = p.weight
+		phi.abdominalDiameter = p.abdominalDiameter
+		phi.patient = p
+        phi.save(flush: true)
+        return
+	}
+	
 }

@@ -23,7 +23,7 @@
 		<g:message code="philiatory.patient.label" default="Patient" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="patient" name="patient.id" from="${medicalhistory.Patient.list()}" optionKey="id" required="" value="${philiatoryInstance?.patient?.id}" class="many-to-one"/>
+	<g:select id="patient" name="patient.id" from="${medicalhistory.Patient.list()}" optionKey="id" required="" optionValue="${{it.firstName +' '+it.lastName}}" value="${philiatoryInstance?.patient?.id?:request.getCookie('mhid')}" class="many-to-one" />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: philiatoryInstance, field: 'weight', 'error')} required">

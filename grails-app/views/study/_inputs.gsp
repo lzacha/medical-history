@@ -1,8 +1,6 @@
-<g:form action="saveStudyTypesValues">
 
 <g:each in="${inputs}">
-    <p>id: ${it}</p><g:textField name="ST_${it}" value="" />
+    id: ${it}<g:textField name="PID_${it}" value="" /> <br>
     
 </g:each>
-<g:submitButton name="update" value="Update" />
-</g:form>
+

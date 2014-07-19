@@ -10,7 +10,8 @@ import javax.servlet.http.Cookie
 class MedicalHistoryController {
 
     def searchableService
-
+	def loginService
+	
     def index() { }
 
     def stats() {
@@ -29,16 +30,7 @@ class MedicalHistoryController {
     def patient() {
         Patient p = Patient.get(params.hiddenPatient	)
 
-        Cookie mhid = new Cookie("mhid", p.patientId+"")
-        mhid.maxAge = 60 * 60 * 24  * 30
-        mhid.setPath("/")
-
-        Cookie mhn = new Cookie("mhn", p.firstName+" "+p.lastName)
-        mhn.maxAge = 60 * 60 * 24  * 30
-        mhn.setPath("/")
-
-        response.addCookie(mhid)
-        response.addCookie(mhn)
+		loginService.setCookiesPatient(p, response)
 
         if(params.webCtx == "modif"){
             render(view: "patientModif", model: [patient:p])

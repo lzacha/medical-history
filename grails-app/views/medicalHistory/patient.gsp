@@ -21,13 +21,13 @@
     <iframe id="iframe1" src="/medical-history/philiatory/create/" class="frameref-philiatory">
     </iframe>
 
-    <iframe id="iframe2" src="/medical-history/medicalStudy/create/" class="frameref-study">
+    <iframe id="iframe2" src="/medical-history/study/listStudies" class="frameref-study">
     </iframe>
 
-    <iframe id="iframe3" src="/medical-history/treatmentDetail/create" class="frameref-treatment">
+    <iframe id="iframe3" src="/medical-history/study/listTreatments" class="frameref-treatment">
     </iframe>
 
-    <iframe id="iframe4" src="/medical-history/antecedentDetail/create" class="frameref-antecedent">
+    <iframe id="iframe4" src="/medical-history/study/listAntecedents" class="frameref-antecedent">
     </iframe>
 
     <iframe id="iframe5" src="/medical-history/plate/create" class="frameref-plate">

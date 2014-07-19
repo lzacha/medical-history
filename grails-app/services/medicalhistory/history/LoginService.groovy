@@ -1,5 +1,6 @@
 package medicalhistory.history
 
+import medicalhistory.Patient
 import medicalhistory.SystemUser
 import javax.servlet.http.Cookie
 
@@ -33,4 +34,26 @@ class LoginService {
         cookie
     }
 
+	/**
+	 * Setting login cookie
+	 * maxAge: 30 days
+	 * path: /
+	 * @return cookie
+	 */
+	def setCookiesPatient(patient, response){
+		
+		Cookie mhid = new Cookie("mhid", patient.patientId+"")
+		mhid.maxAge = 60 * 60 * 24  * 30
+		mhid.setPath("/")
+
+		Cookie mhn = new Cookie("mhn", patient.firstName+" "+patient.lastName)
+		mhn.maxAge = 60 * 60 * 24  * 30
+		mhn.setPath("/")
+
+		response.addCookie(mhid)
+		response.addCookie(mhn)
+
+	}
+	
+	
 }

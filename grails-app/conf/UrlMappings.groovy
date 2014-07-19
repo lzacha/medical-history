@@ -13,7 +13,8 @@ class UrlMappings {
         //Don't like /searchable
         "/suggest"(controller: "medicalHistory", action: "suggest")
 
-        "/"(view:"/index")
+        "/"(controller: "medicalLogin", action: "index")
+
 		"500"(view:'/error')
 	}
 }
