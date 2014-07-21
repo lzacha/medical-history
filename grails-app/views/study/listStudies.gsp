@@ -1,22 +1,28 @@
 <div>
 Estudios
-    <g:select name="studyTypes" from="${medicalhistory.StudyTypes.list()}" multiple="multiple"
-              optionKey="id" size="5" value="${studyTypesInstance?.studyTypesInstance*.id}" class="many-to-many"
+    <g:select name="studySelect"
+              from="${medicalhistory.StudyTypes.list()}"
+              multiple="multiple"
+              optionKey="id"
+              size="5"
+              value="${studyTypesInstance?.studyTypesInstance*.id}"
+              class="many-to-many"
               optionValue="${{ st -> "${st.description}" }}"
-
               onChange="${remoteFunction( controller: 'Study',
                       action:'loadStudyTypesInputs',
                       params: '\'id=\'+escape(this.value)',
                       update: 'studyTypesDetailsDiv' )}"/>
 
-    <div id="studyTypesDetailsDiv">
-
-    </div>
-
-    <!--
-	<label for="studyTypesDetails" >std:</label>
-  	<g:select name="studyTypesDetails" noSelection="['':'Select one...']" from="${std}">
-    </g:select>
-    -->
-
+    <g:form action="saveStudyTypesValues">
+        <div id="studyTypesDetailsDiv"></div>
+        <g:hiddenField name="studyId" value="" />
+    </g:form>
 </div>
+
+<script>
+    $("#studySelect").change(
+            function() {
+                $("#studyId").val( $("#studySelect").val());
+            }
+    );
+</script>

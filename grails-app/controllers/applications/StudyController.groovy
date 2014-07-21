@@ -8,7 +8,8 @@ import medicalhistory.AntecedentDetail
 import medicalhistory.Treatment
 import medicalhistory.TreatmentDetail
 import medicalhistory.AntecedentValue
-import medicalhistory.Patient;
+import medicalhistory.Patient
+import medicalhistory.TreatmentValue;
 
 class StudyController {
 
@@ -16,44 +17,47 @@ class StudyController {
 	def loadStudyTypes() {
 
 	}
-	
+
 	def saveStudyTypesValues() {
-		println params
-		//redirect(action:'index') grail
-
-        StudyTypesValues stv =
-
+        Patient patient = Patient.findById(request.getCookie("mhid"))
+        def list = []
         params.each {key, value ->
-
+            if (key.contains("PID_")){
+                def abbreviation = key.split("_")[1]
+                StudyTypesDetail std = StudyTypesDetail.findByAbbreviation(abbreviation)
+                def stv = new StudyTypesValues(patient:patient, studyTypesDetail:std, studyTypeValue:value).save()
+                //list.add(stv)
+            }
         }
+        render (template: 'loadValues', model:[values: params])
 	}
 
     def saveAntecedentValues() {
-        println params
-        //redirect(action:'index') grail
-
-        Antecedent ant = Antecedent.findById(params.antecedentId)
         Patient patient = Patient.findById(request.getCookie("mhid"))
-
+        def list = []
         params.each {key, value ->
-
-            /*
             if (key.contains("PID_")){
-                AntecedentDetail ant = AntecedentDetail.
-                def antecedent1 = new AntecedentValue(patient:patient, antecedentDetail:antDet1, antecedentValue:1)
-
+                def abbreviation = key.split("_")[1]
+                AntecedentDetail ad = AntecedentDetail.findByAbbreviation(abbreviation)
+                def av = new AntecedentValue(patient:patient, antecedentDetail:ad, antecedentValue:value).save()
+                //list.add(av)
             }
-            */
         }
+        render (template: 'loadValues', model:[values: params])
     }
 
-
     def saveTreatmentsValues() {
-        println params
-        //redirect(action:'index') grail
-        StudyTypesValues stv =
+        Patient patient = Patient.findById(request.getCookie("mhid"))
+        def list = []
         params.each {key, value ->
+            if (key.contains("PID_")){
+                def abbreviation = key.split("_")[1]
+                TreatmentDetail td = TreatmentDetail.findByAbbreviation(abbreviation)
+                def tv = new TreatmentValue(patient:patient, treatmentDetail: td, treatmentValue: value).save()
+                //list.add(tv)
+            }
         }
+        render (template: 'loadValues', model:[values: params])
     }
 
     def listStudies() {
@@ -70,35 +74,22 @@ class StudyController {
 	
 	//load del template
 	def loadStudyTypesInputs() {
-
-        //Id del studyType
 		def studyTypeId = params['id']
-
-        //Traigo el studyTpe
         StudyTypes studyType = StudyTypes.findById(studyTypeId)
-
-        //Levanto details del studyType
 		def studyTypeDetails = StudyTypesDetail.findAllByStudyTypes(studyType)
-
-        //Listado de abbrevations
 		def studyTypeDetailsAbbreviation = []
-
         studyTypeDetails.collect(studyTypeDetailsAbbreviation){
 			it.abbreviation
 		}
-		
-		//render(template:'result', model:[std: studyTypeDetails.collect{it.description}])
 		render (template: 'inputs', model:[inputs: studyTypeDetailsAbbreviation])
 	}
 
     //load del template
     def loadAntecedentsInputs() {
-
         def antecedentId = params['id']
         Antecedent ant = Antecedent.findById(antecedentId)
         def antecedentsDetails = AntecedentDetail.findAllByAntecedent(ant)
         def antecedentsDetailsAbbreviation = []
-
         antecedentsDetails.collect(antecedentsDetailsAbbreviation){
             it.abbreviation
         }
@@ -107,31 +98,14 @@ class StudyController {
 
     //load del template
     def loadTreatmentsInputs() {
-
         def treatmentId = params['id']
         Treatment trt = Treatment.findById(treatmentId)
         def treatmentDetail = TreatmentDetail.findAllByTreatment(trt)
         def treatmentsDetailsAbbreviation = []
-
         treatmentDetail.collect(treatmentsDetailsAbbreviation){
             it.abbreviation
         }
         render (template: 'inputs', model:[inputs: treatmentsDetailsAbbreviation])
     }
 
-
-
-	//load del template
-	def loadStudyTypesValues() {
-		//render "test"
-		def studyType = params['studyType']
-		println "studyType --> " + studyType
- 
-		def studyTypeValues = StudyTypesValues.list()
-
-		//render(template:'result', model:[std: studyTypeDetails.collect{it.description}])
-		render (template: 'loadValues', model:[values: studyTypeValues])
-	}
-
-	
 }
