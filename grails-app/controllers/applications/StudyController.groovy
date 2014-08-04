@@ -9,10 +9,13 @@ import medicalhistory.Treatment
 import medicalhistory.TreatmentDetail
 import medicalhistory.AntecedentValue
 import medicalhistory.Patient
-import medicalhistory.TreatmentValue;
+import medicalhistory.TreatmentValue
+import medicalhistory.StudyTypesTable
+import medicalhistory.history.StudyService;
 
 class StudyController {
 
+    StudyService studyService
 	
 	def loadStudyTypes() {
 
@@ -26,9 +29,12 @@ class StudyController {
                 def abbreviation = key.split("_")[1]
                 StudyTypesDetail std = StudyTypesDetail.findByAbbreviation(abbreviation)
                 def stv = new StudyTypesValues(patient:patient, studyTypesDetail:std, studyTypeValue:value).save()
-                //list.add(stv)
+                list.add(stv)
             }
         }
+
+        studyService.saveStudyTypesFromPatient(patient, list)
+
         render (template: 'loadValues', model:[values: params])
 	}
 
@@ -40,9 +46,12 @@ class StudyController {
                 def abbreviation = key.split("_")[1]
                 AntecedentDetail ad = AntecedentDetail.findByAbbreviation(abbreviation)
                 def av = new AntecedentValue(patient:patient, antecedentDetail:ad, antecedentValue:value).save()
-                //list.add(av)
+                list.add(av)
             }
         }
+
+        studyService.saveAntecedentsFromPatient(patient, list)
+
         render (template: 'loadValues', model:[values: params])
     }
 
@@ -54,9 +63,12 @@ class StudyController {
                 def abbreviation = key.split("_")[1]
                 TreatmentDetail td = TreatmentDetail.findByAbbreviation(abbreviation)
                 def tv = new TreatmentValue(patient:patient, treatmentDetail: td, treatmentValue: value).save()
-                //list.add(tv)
+                list.add(tv)
             }
         }
+
+        studyService.saveTreatmentsFromPatient(patient, list)
+
         render (template: 'loadValues', model:[values: params])
     }
 

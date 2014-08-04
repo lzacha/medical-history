@@ -14,11 +14,10 @@ class StudyTypesTable {
     //double weight
     //double abdominalDiameter
 
-    def antecedents = [:]
-    def treatments = [:]
-    def studies = [:]
-
-    def plates = [:]
+    def antecedents = []
+    def treatments = []
+    def studies = []
+    def plates = []
 
 
     //static hasMany = [studyTypes:StudyTypes]
