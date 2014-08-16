@@ -54,6 +54,12 @@ class LoginService {
 		response.addCookie(mhn)
 
 	}
-	
+
+
+    def doLogout(response){
+        response.deleteCookie('mhid')
+        response.deleteCookie('mhn')
+        response.deleteCookie('isLogin')
+    }
 	
 }

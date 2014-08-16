@@ -12,7 +12,9 @@ class MedicalHistoryController {
     def searchableService
 	def loginService
 	
-    def index() { }
+    def index() {
+
+    }
 
     def stats() {
     
@@ -117,6 +119,11 @@ class MedicalHistoryController {
 
     def studyEntry() {
     
+    }
+
+    def logout(){
+        loginService.doLogout(response)
+        redirect(controller: "medicalLogin", action:"login")
     }
 
 }

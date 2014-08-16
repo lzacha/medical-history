@@ -1,3 +1,6 @@
 <div class="ch-header ch-box">
-    <h1>My Site Header</h1>
+    <div>My Site Header</div>
+    <div style="float:right;">Bienvenido <g:cookie name="isLogin"/><p>
+    (<g:link controller="medicalHistory" action="logout">Salir</g:link>)
+    </div>
 </div>
