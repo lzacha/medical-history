@@ -16,7 +16,9 @@ import medicalhistory.history.StudyService;
 class StudyController {
 
     StudyService studyService
-	
+
+    static layout = 'study'
+
 	def loadStudyTypes() {
 
 	}

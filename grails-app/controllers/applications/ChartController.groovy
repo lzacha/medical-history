@@ -2,6 +2,7 @@ package applications
 
 class ChartController {
 
+    static layout = 'chart'
     def index() { 
 
 	}

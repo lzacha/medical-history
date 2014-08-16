@@ -5,7 +5,7 @@
 </head>
 <body>
        <!-- Init medicalHistory/index.gsp -->
-      <center><img src="${createLinkTo(dir: 'images', file: 'icon1.png')}" alt="Grails"/></center>
+      <img src="${createLinkTo(dir: 'images', file: 'icon1.png')}" alt="Grails"/>
        <!-- Final medicalHistory/index.gsp -->
 </body>
 </html>

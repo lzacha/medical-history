@@ -9,9 +9,11 @@ import javax.servlet.http.Cookie
 
 class MedicalHistoryController {
 
+    static layout = 'medicalhistory'
+
     def searchableService
 	def loginService
-	
+
     def index() {
 
     }

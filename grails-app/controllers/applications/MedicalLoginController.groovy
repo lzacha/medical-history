@@ -9,6 +9,8 @@ class MedicalLoginController {
     */
     def loginService
 
+    static layout = 'medicallogin'
+
     def index() {
         redirect(action: "login")
     }
