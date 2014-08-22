@@ -29,6 +29,7 @@
         <link href="/medical-history/css/medicalHistory.css" type="text/css" rel="stylesheet" media="screen, projection" />
 
         <!-- chico-ui css-->
+        <link href="${resource(dir: 'css', file: 'new-chico-ui/chico.min.css')}" type="text/css" rel="stylesheet" media="screen, projection" />
 
         <!-- g:layoutHead -->
         <g:layoutHead/>

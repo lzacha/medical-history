@@ -60,7 +60,7 @@
 <body>
 
 <div class="ch-header ch-box">
-(Logo) <center><h1>SIGPHA</h1></center>
+    <center><h1>SIGPHA</h1></center>
 </div>
 <div class="ch-g4-5">
     <div class="ch-box ch-rightcolumn">

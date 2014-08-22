@@ -74,3 +74,23 @@ body {
     width:99%;
     height: 450px;
 }
+
+.frameref-logoPage {
+    width:99%;
+    height: 250px;
+}
+
+
+.logoPage {
+    position: relative;
+    top: 15px;
+    left: 35%;
+}
+
+.logoButtons {
+    margin-left: 260px;
+}
+
+.bigButton{
+    padding: 10px 10px;
+}

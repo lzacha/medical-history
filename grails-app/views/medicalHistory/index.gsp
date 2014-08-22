@@ -1,11 +1,15 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
-<html>
-<head>
-  <title>Title Medical History</title>
-</head>
-<body>
+<div class="frameref-logoPage">
+
        <!-- Init medicalHistory/index.gsp -->
-      <img src="${createLinkTo(dir: 'images', file: 'icon1.png')}" alt="Grails"/>
+      <div class="logoPage"><img src="${createLinkTo(dir: 'images', file: 'icon1.png')}" alt="Grails"/></div>
        <!-- Final medicalHistory/index.gsp -->
-</body>
-</html>
+
+<p>
+<div class="logoButtons">
+
+    <div>
+    <a href="/medical-history/medicalHistory/addPatient" class="ch-btn ch-btn-big bigButton" style="margin-right:50px;">Nuevo Paciente</a>
+    <a href="/medical-history/medicalHistory/searchPatient" class="ch-btn ch-btn-big bigButton">Buscar Paciente</a>
+    </div>
+</div>
+</div>
